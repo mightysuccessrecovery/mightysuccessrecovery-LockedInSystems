@@ -58,10 +58,6 @@ export function Footer() {
                 <p className="text-xs text-primary-foreground/70">operated by Mighty Success Recovery Inc.</p>
               </div>
             </Link>
-            <p className="mt-4 text-sm text-primary-foreground/70 text-center md:text-left max-w-2xl leading-relaxed">
-              We provide a secure platform that supports commissary services, deposits, and approved
-              support services for individuals in correctional facilities and their families.
-            </p>
           </div>
 
           {/* Quick Links */}
