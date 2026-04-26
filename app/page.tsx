@@ -50,6 +50,14 @@ export default function HomePage() {
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               LockedIn Systems
             </h1>
+            <p className="mt-3 max-w-2xl mx-auto text-center text-base font-medium leading-snug text-foreground sm:text-lg">
+              A secure vendor demonstration platform for commissary coordination and support
+              services for correctional facilities.
+            </p>
+            <p className="mt-2 max-w-2xl mx-auto text-center text-xs leading-relaxed text-muted-foreground sm:text-sm">
+              This platform is presented for evaluation purposes and does not process live
+              transactions.
+            </p>
             <p className="mt-3 text-xl text-gold font-semibold">
               operated by Mighty Success Recovery Inc.
             </p>
