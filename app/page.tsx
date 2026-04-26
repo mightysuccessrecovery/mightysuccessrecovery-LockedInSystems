@@ -51,7 +51,7 @@ export default function HomePage() {
               LockedIn Systems
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-center text-base font-medium leading-snug text-foreground sm:text-lg md:text-xl">
-              Vendor demonstration platform for correctional commissary and support services.
+              A vendor demo platform for services.
             </p>
 
             {/* Trust Badges */}
