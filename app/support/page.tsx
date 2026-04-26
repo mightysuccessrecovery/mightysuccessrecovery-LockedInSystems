@@ -1,4 +1,4 @@
-import { Mail, Clock, AlertCircle, CheckCircle, Calendar } from "lucide-react"
+import { Mail, Clock, AlertCircle, CheckCircle, Calendar, ListOrdered } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
@@ -34,6 +34,23 @@ export default function SupportPage() {
                 info@mightysuccessrecovery.org
               </a>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Transaction history requests */}
+        <Card className="border-border mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <ListOrdered className="h-5 w-5 text-gold" />
+              Transaction History Requests
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground leading-relaxed">
+              If you need a history of your transactions, please send a detailed email to our
+              support team with your full name, account information, and request details. Our team
+              will review and respond as soon as possible.
+            </p>
           </CardContent>
         </Card>
 

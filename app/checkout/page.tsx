@@ -163,7 +163,7 @@ export default function CheckoutPage() {
         <Button asChild variant="ghost" className="mb-6 -ml-2">
           <Link href="/store">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Store
+            Back to Commissary Services
           </Link>
         </Button>
 

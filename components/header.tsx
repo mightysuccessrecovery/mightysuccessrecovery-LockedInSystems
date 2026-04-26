@@ -16,8 +16,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/facilities", label: "Facilities" },
   { href: "/deposit", label: "Deposit Money" },
-  { href: "/store", label: "Commissary Store" },
-  { href: "/history", label: "History" },
+  { href: "/store", label: "Commissary Services" },
   { href: "/support", label: "Support" },
   { href: "/about", label: "About" },
   { href: "/fees", label: "Fees" },
@@ -45,10 +44,11 @@ export function Header() {
       </div>
 
       {/* Platform Positioning Banner */}
-      <div className="border-b border-border bg-secondary/60 py-2">
+      <div className="border-b border-border bg-secondary/60 py-2.5 sm:py-3">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs text-muted-foreground">
-            We provide a platform to support incarcerated individuals.
+          <p className="mx-auto max-w-5xl text-center text-xs text-muted-foreground leading-snug sm:text-sm">
+            We provide a secure platform that supports commissary services, deposits, and approved
+            support services for individuals in correctional facilities and their families.
           </p>
         </div>
       </div>

@@ -63,7 +63,7 @@ export default function StorePage() {
                 <ShoppingBag className="h-6 w-6 text-gold" />
               </div>
               <h1 className="text-2xl font-bold text-foreground sm:text-3xl">
-                Commissary Store
+                Commissary Services
               </h1>
               <p className="mt-2 text-muted-foreground">
                 Select one package for your loved one
