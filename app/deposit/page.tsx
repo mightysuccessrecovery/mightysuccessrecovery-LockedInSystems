@@ -19,7 +19,6 @@ import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { useCart } from "@/components/cart-provider"
 import { StripeCheckout } from "@/components/stripe-checkout"
-import { PhoneVerification } from "@/components/phone-verification"
 import { startDepositCheckout } from "@/app/actions/stripe"
 import { calculateFees } from "@/lib/data"
 
@@ -29,8 +28,6 @@ export default function DepositPage() {
   const { selectedInmate } = useCart()
   const [amount, setAmount] = useState("")
   const [customAmount, setCustomAmount] = useState("")
-  const [isPhoneVerified, setIsPhoneVerified] = useState(false)
-  const [verifiedPhone, setVerifiedPhone] = useState("")
   const [showPayment, setShowPayment] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
 
@@ -47,13 +44,8 @@ export default function DepositPage() {
     setAmount("")
   }
 
-  const handlePhoneVerified = (phone: string) => {
-    setIsPhoneVerified(true)
-    setVerifiedPhone(phone)
-  }
-
   const handleProceedToPayment = () => {
-    if (selectedAmount >= 10 && selectedAmount <= 300 && selectedInmate && isPhoneVerified) {
+    if (selectedAmount >= 10 && selectedAmount <= 300 && selectedInmate) {
       setShowPayment(true)
     }
   }
@@ -67,7 +59,7 @@ export default function DepositPage() {
       inmateName: `${selectedInmate.firstName} ${selectedInmate.lastName}`,
       facility: selectedInmate.facility,
       state: selectedInmate.state,
-      phone: verifiedPhone,
+      phone: "",
     })
     return secret
   }
@@ -118,7 +110,10 @@ export default function DepositPage() {
 
           <Card className="border-border">
             <CardContent className="pt-6">
-              <StripeCheckout fetchClientSecret={fetchClientSecret} />
+              <StripeCheckout
+                fetchClientSecret={fetchClientSecret}
+                onComplete={() => setIsComplete(true)}
+              />
             </CardContent>
           </Card>
         </div>
@@ -191,27 +186,6 @@ export default function DepositPage() {
               </div>
             </CardContent>
           </Card>
-        )}
-
-        {/* Phone Verification */}
-        {selectedInmate && !isPhoneVerified && (
-          <div className="mb-6">
-            <PhoneVerification
-              onVerified={handlePhoneVerified}
-              title="Phone Verification Required"
-              description="For your security, please verify your phone number before sending money."
-            />
-          </div>
-        )}
-
-        {/* Verified Phone Badge */}
-        {isPhoneVerified && (
-          <Alert className="mb-6 border-green-500/50 bg-green-500/10">
-            <CheckCircle className="h-4 w-4 text-green-500" />
-            <AlertDescription className="text-foreground">
-              Phone verified: {verifiedPhone}
-            </AlertDescription>
-          </Alert>
         )}
 
         {/* Deposit Form */}
@@ -290,19 +264,13 @@ export default function DepositPage() {
             {/* Submit Button */}
             <Button
               onClick={handleProceedToPayment}
-              disabled={!selectedInmate || selectedAmount < 10 || selectedAmount > 300 || !isPhoneVerified}
+              disabled={!selectedInmate || selectedAmount < 10 || selectedAmount > 300}
               className="w-full bg-gold text-gold-foreground hover:bg-gold/90 h-12 text-base"
             >
               <CreditCard className="mr-2 h-5 w-5" />
               Proceed to Payment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-
-            {!isPhoneVerified && selectedInmate && (
-              <p className="text-xs text-center text-destructive">
-                Phone verification required before proceeding to payment
-              </p>
-            )}
 
             <p className="text-xs text-center text-muted-foreground">
               Secure payment processing via Stripe. See{" "}

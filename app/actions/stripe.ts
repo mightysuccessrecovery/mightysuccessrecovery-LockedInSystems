@@ -17,6 +17,8 @@ interface CheckoutMetadata {
   state: string
   phone?: string
   packageName?: string
+  customerName?: string
+  customerEmail?: string
 }
 
 // Start checkout session for commissary orders
@@ -79,6 +81,8 @@ export async function startCommissaryCheckout(
       state: metadata.state,
       phone: metadata.phone || '',
       packageName: metadata.packageName || '',
+      customerName: metadata.customerName || '',
+      customerEmail: metadata.customerEmail || '',
     },
     payment_intent_data: {
       metadata: {
@@ -89,6 +93,8 @@ export async function startCommissaryCheckout(
         state: metadata.state,
         phone: metadata.phone || '',
         packageName: metadata.packageName || '',
+        customerName: metadata.customerName || '',
+        customerEmail: metadata.customerEmail || '',
       },
     },
   })

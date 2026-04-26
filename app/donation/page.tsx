@@ -8,9 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Alert, AlertDescription } from "@/components/ui/alert"
 import { StripeCheckout } from "@/components/stripe-checkout"
-import { PhoneVerification } from "@/components/phone-verification"
 import { startDonationCheckout } from "@/app/actions/stripe"
 
 const PRESET_AMOUNTS = [25, 50, 100, 250, 500, 1000]
@@ -21,8 +19,6 @@ export default function DonationPage() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [isPhoneVerified, setIsPhoneVerified] = useState(false)
-  const [verifiedPhone, setVerifiedPhone] = useState("")
   const [showPayment, setShowPayment] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
 
@@ -38,19 +34,14 @@ export default function DonationPage() {
     setAmount("")
   }
 
-  const handlePhoneVerified = (phone: string) => {
-    setIsPhoneVerified(true)
-    setVerifiedPhone(phone)
-  }
-
   const handleProceedToPayment = () => {
-    if (selectedAmount >= 5 && email && isPhoneVerified) {
+    if (selectedAmount >= 5 && email.trim()) {
       setShowPayment(true)
     }
   }
 
   const fetchClientSecret = async () => {
-    const secret = await startDonationCheckout(selectedAmount, verifiedPhone)
+    const secret = await startDonationCheckout(selectedAmount)
     return secret
   }
 
@@ -100,7 +91,10 @@ export default function DonationPage() {
 
           <Card className="border-border">
             <CardContent className="pt-6">
-              <StripeCheckout fetchClientSecret={fetchClientSecret} />
+              <StripeCheckout
+                fetchClientSecret={fetchClientSecret}
+                onComplete={() => setIsComplete(true)}
+              />
             </CardContent>
           </Card>
         </div>
@@ -140,24 +134,6 @@ export default function DonationPage() {
             </p>
           </CardContent>
         </Card>
-
-        {/* Phone Verification */}
-        {!isPhoneVerified ? (
-          <div className="mb-6">
-            <PhoneVerification
-              onVerified={handlePhoneVerified}
-              title="Phone Verification Required"
-              description="For your security, please verify your phone number before making a donation."
-            />
-          </div>
-        ) : (
-          <Alert className="mb-6 border-green-500/50 bg-green-500/10">
-            <CheckCircle className="h-4 w-4 text-green-500" />
-            <AlertDescription className="text-foreground">
-              Phone verified: {verifiedPhone}
-            </AlertDescription>
-          </Alert>
-        )}
 
         {/* Donation Form */}
         <Card className="border-border">
@@ -276,18 +252,12 @@ export default function DonationPage() {
             {/* Submit Button */}
             <Button
               onClick={handleProceedToPayment}
-              disabled={selectedAmount < 5 || !email || !isPhoneVerified}
+              disabled={selectedAmount < 5 || !email.trim()}
               className="w-full bg-gold text-gold-foreground hover:bg-gold/90 h-12 text-base"
             >
               <CreditCard className="mr-2 h-5 w-5" />
               Proceed to Payment
             </Button>
-
-            {!isPhoneVerified && (
-              <p className="text-xs text-center text-destructive">
-                Phone verification required before proceeding to payment
-              </p>
-            )}
 
             <p className="text-xs text-center text-muted-foreground">
               Secure payment processing via Stripe

@@ -12,9 +12,10 @@ const stripePromise = publishableKey ? loadStripe(publishableKey) : null
 
 interface StripeCheckoutProps {
   fetchClientSecret: () => Promise<string>
+  onComplete?: () => void
 }
 
-export function StripeCheckout({ fetchClientSecret }: StripeCheckoutProps) {
+export function StripeCheckout({ fetchClientSecret, onComplete }: StripeCheckoutProps) {
   const fetchClientSecretCallback = useCallback(fetchClientSecret, [fetchClientSecret])
 
   if (!stripePromise) {
@@ -29,7 +30,10 @@ export function StripeCheckout({ fetchClientSecret }: StripeCheckoutProps) {
     <div id="checkout">
       <EmbeddedCheckoutProvider
         stripe={stripePromise}
-        options={{ fetchClientSecret: fetchClientSecretCallback }}
+        options={{
+          fetchClientSecret: fetchClientSecretCallback,
+          ...(onComplete ? { onComplete } : {}),
+        }}
       >
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>

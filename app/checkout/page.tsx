@@ -13,22 +13,32 @@ import {
   MapPin,
   CheckCircle,
   Package,
+  Mail,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { useCart } from "@/components/cart-provider"
 import { StripeCheckout } from "@/components/stripe-checkout"
-import { PhoneVerification } from "@/components/phone-verification"
 import { startCommissaryCheckout } from "@/app/actions/stripe"
 import { calculateFees, getDeliveryDate, formatDate } from "@/lib/data"
 
+function isValidEmail(value: string) {
+  const v = value.trim()
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
+}
+
 export default function CheckoutPage() {
   const { selectedPackage, selectedInmate, clearSelection } = useCart()
-  const [isPhoneVerified, setIsPhoneVerified] = useState(false)
-  const [verifiedPhone, setVerifiedPhone] = useState("")
+  const [customerName, setCustomerName] = useState("")
+  const [customerEmail, setCustomerEmail] = useState("")
   const [showPayment, setShowPayment] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
+
+  const canProceed =
+    customerName.trim().length > 0 && isValidEmail(customerEmail)
 
   if (!selectedInmate || !selectedPackage) {
     return (
@@ -87,20 +97,12 @@ export default function CheckoutPage() {
   const fees = calculateFees(selectedPackage.price)
   const orderDate = new Date()
 
-  const handlePhoneVerified = (phone: string) => {
-    setIsPhoneVerified(true)
-    setVerifiedPhone(phone)
-  }
-
   const handleProceedToPayment = () => {
-    if (isPhoneVerified) {
-      // If package has a Stripe payment link, redirect directly to Stripe
-      if (selectedPackage.paymentLink) {
-        window.location.href = selectedPackage.paymentLink
-      } else {
-        // Fallback to embedded checkout
-        setShowPayment(true)
-      }
+    if (!canProceed) return
+    if (selectedPackage.paymentLink) {
+      window.location.href = selectedPackage.paymentLink
+    } else {
+      setShowPayment(true)
     }
   }
 
@@ -119,8 +121,10 @@ export default function CheckoutPage() {
         inmateName: `${selectedInmate.firstName} ${selectedInmate.lastName}`,
         facility: selectedInmate.facility,
         state: selectedInmate.state,
-        phone: verifiedPhone,
+        phone: "",
         packageName: selectedPackage.name,
+        customerName: customerName.trim(),
+        customerEmail: customerEmail.trim(),
       }
     )
     return secret
@@ -148,7 +152,10 @@ export default function CheckoutPage() {
 
           <Card className="border-border">
             <CardContent className="pt-6">
-              <StripeCheckout fetchClientSecret={fetchClientSecret} />
+              <StripeCheckout
+                fetchClientSecret={fetchClientSecret}
+                onComplete={() => setIsComplete(true)}
+              />
             </CardContent>
           </Card>
         </div>
@@ -159,7 +166,6 @@ export default function CheckoutPage() {
   return (
     <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Back Button */}
         <Button asChild variant="ghost" className="mb-6 -ml-2">
           <Link href="/store">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -168,32 +174,47 @@ export default function CheckoutPage() {
         </Button>
 
         <div className="flex flex-col gap-8 lg:flex-row">
-          {/* Main Content */}
           <div className="flex-1">
             <div className="mb-8">
               <h1 className="text-2xl font-bold text-foreground sm:text-3xl">Checkout</h1>
               <p className="mt-2 text-muted-foreground">Review your order before payment</p>
             </div>
 
-            {/* Phone Verification */}
-            {!isPhoneVerified ? (
-              <div className="mb-6">
-                <PhoneVerification
-                  onVerified={handlePhoneVerified}
-                  title="Phone Verification Required"
-                  description="For your security, please verify your phone number before completing your order."
-                />
-              </div>
-            ) : (
-              <Alert className="mb-6 border-green-500/50 bg-green-500/10">
-                <CheckCircle className="h-4 w-4 text-green-500" />
-                <AlertDescription className="text-foreground">
-                  Phone verified: {verifiedPhone}
-                </AlertDescription>
-              </Alert>
-            )}
+            <Card className="border-border mb-6">
+              <CardHeader className="border-b border-border bg-secondary">
+                <CardTitle className="text-base flex items-center gap-2">
+                  <User className="h-5 w-5 text-gold" />
+                  Your information
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 pt-4">
+                <div className="space-y-2">
+                  <Label htmlFor="checkout-name">Name</Label>
+                  <Input
+                    id="checkout-name"
+                    value={customerName}
+                    onChange={(e) => setCustomerName(e.target.value)}
+                    autoComplete="name"
+                    placeholder="Full name"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="checkout-email" className="flex items-center gap-2">
+                    <Mail className="h-4 w-4 text-muted-foreground" />
+                    Email
+                  </Label>
+                  <Input
+                    id="checkout-email"
+                    type="email"
+                    value={customerEmail}
+                    onChange={(e) => setCustomerEmail(e.target.value)}
+                    autoComplete="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </CardContent>
+            </Card>
 
-            {/* Order Item */}
             <Card className="border-border mb-6">
               <CardHeader className="border-b border-border bg-secondary">
                 <CardTitle className="text-base flex items-center gap-2">
@@ -216,7 +237,6 @@ export default function CheckoutPage() {
               </CardContent>
             </Card>
 
-            {/* Notice */}
             <Alert className="border-gold/50 bg-gold/10">
               <AlertTriangle className="h-4 w-4 text-gold" />
               <AlertTitle className="text-foreground font-semibold">
@@ -235,14 +255,12 @@ export default function CheckoutPage() {
             </Alert>
           </div>
 
-          {/* Order Summary Sidebar */}
           <div className="lg:w-96 lg:shrink-0">
             <Card className="border-border sticky top-24">
               <CardHeader className="border-b border-border bg-secondary">
                 <CardTitle className="text-base">Order Summary</CardTitle>
               </CardHeader>
               <CardContent className="pt-4">
-                {/* Order Details */}
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-gold shrink-0 mt-0.5" />
@@ -274,7 +292,6 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                {/* Inmate Details */}
                 <div className="py-4 border-t border-border">
                   <div className="flex items-start gap-3">
                     <User className="h-5 w-5 text-gold shrink-0 mt-0.5" />
@@ -292,7 +309,6 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                {/* Pricing */}
                 <div className="space-y-2 pt-4 border-t border-border">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Package Price</span>
@@ -308,19 +324,18 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                {/* Checkout Button */}
                 <Button
                   onClick={handleProceedToPayment}
-                  disabled={!isPhoneVerified}
+                  disabled={!canProceed}
                   className="w-full mt-6 bg-gold text-gold-foreground hover:bg-gold/90 h-12 text-base"
                 >
                   <CreditCard className="mr-2 h-5 w-5" />
                   Proceed to Payment
                 </Button>
 
-                {!isPhoneVerified && (
+                {!canProceed && (
                   <p className="mt-2 text-xs text-center text-destructive">
-                    Phone verification required
+                    Enter your name and a valid email to continue
                   </p>
                 )}
 
