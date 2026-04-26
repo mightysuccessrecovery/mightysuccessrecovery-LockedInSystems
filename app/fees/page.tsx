@@ -26,7 +26,7 @@ export default function FeesPage() {
             Transparent, simple pricing for all transactions
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Mighty Success Recovery Inc. | 501(c)(3) | EIN: 88-1712603
+            Mighty Success Recovery Inc.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function FeesPage() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-0.5" />
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Supports nonprofit operations</strong> — Fees
+                  <strong className="text-foreground">Supports operations</strong> — Fees
                   help maintain and improve the platform
                 </p>
               </div>
@@ -225,8 +225,7 @@ export default function FeesPage() {
           <Info className="h-4 w-4 text-gold" />
           <AlertDescription className="text-foreground">
             All fees support the operation and maintenance of the LockedIn Systems platform by
-            Mighty Success Recovery Inc., a 501(c)(3) nonprofit organization. Questions? Contact us
-            at{" "}
+            Mighty Success Recovery Inc. Questions? Contact us at{" "}
             <a
               href="mailto:info@mightysuccessrecovery.org"
               className="text-gold hover:underline font-medium"

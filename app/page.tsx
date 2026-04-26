@@ -54,7 +54,7 @@ export default function HomePage() {
               operated by Mighty Success Recovery Inc.
             </p>
             <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              A trusted platform for secure commissary purchases and inmate deposits. Supporting families with dignity and transparency.
+              Secure processing services for authorized facilities and partners.
             </p>
 
             {/* Trust Badges */}
@@ -65,7 +65,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-1.5 rounded-full bg-gold/10 px-4 py-1.5 text-sm text-gold">
                 <Shield className="h-4 w-4" />
-                <span>501(c)(3) Nonprofit</span>
+                <span>Trusted Organization</span>
               </div>
               <div className="flex items-center gap-1.5 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm text-blue-700">
                 <CreditCard className="h-4 w-4" />
@@ -78,13 +78,13 @@ export default function HomePage() {
               <Button asChild size="lg" className="bg-gold text-gold-foreground hover:bg-gold/90 text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-all">
                 <Link href="/deposit">
                   <DollarSign className="mr-2 h-6 w-6" />
-                  Deposit Money
+                  Send Funds
                 </Link>
               </Button>
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-all">
                 <Link href="/store">
                   <ShoppingBag className="mr-2 h-6 w-6" />
-                  Commissary Store
+                  Commissary Services
                 </Link>
               </Button>
             </div>
@@ -191,8 +191,8 @@ export default function HomePage() {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gold/20">
                 <Shield className="h-7 w-7 text-gold" />
               </div>
-              <h3 className="font-semibold">501(c)(3) Nonprofit</h3>
-              <p className="mt-2 text-sm text-primary-foreground/70">Registered charitable organization</p>
+              <h3 className="font-semibold">Trusted Organization</h3>
+              <p className="mt-2 text-sm text-primary-foreground/70">Committed to transparency and service</p>
             </div>
 
             <div className="flex flex-col items-center text-center p-4">
@@ -204,12 +204,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* EIN Display */}
-          <div className="mt-10 text-center">
-            <p className="text-sm text-primary-foreground/80">
-              EIN: 88-1712603 | Mighty Success Recovery Inc.
-            </p>
-          </div>
         </div>
       </section>
     </div>

@@ -127,7 +127,7 @@ export default function DonationPage() {
         {/* Trust Verification */}
         <div className="mb-6 rounded-lg border border-gold/30 bg-gold/5 p-4 text-center">
           <p className="text-sm font-medium text-foreground">
-            Registered Nonprofit Organization: Mighty Success Recovery Inc. | 501(c)(3) | EIN: 88-1712603
+            Your support helps us maintain and improve the platform.
           </p>
         </div>
 
@@ -135,10 +135,8 @@ export default function DonationPage() {
         <Card className="border-border mb-8">
           <CardContent className="pt-6">
             <p className="text-center text-muted-foreground leading-relaxed">
-              Mighty Success Recovery Inc. is a 501(c)(3) nonprofit organization dedicated to providing
-              secure, accessible commissary and deposit services for incarcerated individuals and
-              their families. Your generous donation helps us maintain and improve our platform,
-              keeping families connected.
+              Your donation supports continued access to secure commissary and deposit services for
+              incarcerated individuals and their families, helping keep loved ones connected.
             </p>
           </CardContent>
         </Card>

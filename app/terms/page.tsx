@@ -29,9 +29,6 @@ export default function TermsPage() {
           <p className="mt-2 text-muted-foreground">
             LockedIn Systems operated by Mighty Success Recovery Inc.
           </p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            501(c)(3) Nonprofit Organization | EIN: 88-1712603
-          </p>
           <p className="mt-1 text-sm text-muted-foreground">Last Updated: April 2026</p>
         </div>
 
@@ -58,7 +55,7 @@ export default function TermsPage() {
               <p>
                 These Terms & Conditions ("Terms") constitute a legally binding agreement between
                 you ("User," "you," or "your") and Mighty Success Recovery Inc. ("we," "us," or
-                "our"), a 501(c)(3) nonprofit organization operating the LockedIn Systems platform.
+                "our") operating the LockedIn Systems platform.
               </p>
               <p className="mt-3">
                 By accessing, browsing, or using our platform, you acknowledge that you have read,
@@ -405,8 +402,6 @@ export default function TermsPage() {
               </p>
               <div className="mt-4 rounded-lg bg-secondary p-4">
                 <p className="font-semibold text-foreground">Mighty Success Recovery Inc.</p>
-                <p className="text-sm mt-1">501(c)(3) Nonprofit Organization</p>
-                <p className="text-sm">EIN: 88-1712603</p>
                 <a
                   href="mailto:info@mightysuccessrecovery.org"
                   className="mt-3 inline-flex items-center gap-2 text-gold hover:underline"

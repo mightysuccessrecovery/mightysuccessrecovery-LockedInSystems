@@ -29,19 +29,11 @@ export default function LegalPage() {
           </CardHeader>
           <CardContent className="pt-6">
             <div className="space-y-4">
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-1">
                 <div className="rounded-lg border border-border bg-background p-4">
                   <p className="text-sm text-muted-foreground">Organization Name</p>
                   <p className="font-semibold text-foreground">Mighty Success Recovery Inc.</p>
                 </div>
-                <div className="rounded-lg border border-border bg-background p-4">
-                  <p className="text-sm text-muted-foreground">EIN (Employer Identification Number)</p>
-                  <p className="font-semibold text-foreground">88-1712603</p>
-                </div>
-              </div>
-              <div className="rounded-lg border border-border bg-background p-4">
-                <p className="text-sm text-muted-foreground">Registration Status</p>
-                <p className="font-semibold text-foreground">Registered 501(c)(3) nonprofit organization</p>
               </div>
             </div>
           </CardContent>
@@ -57,9 +49,8 @@ export default function LegalPage() {
           </CardHeader>
           <CardContent className="pt-6">
             <p className="text-foreground leading-relaxed">
-              LockedIn Systems is a nonprofit-supported digital platform designed to facilitate
-              commissary purchases and financial deposits for incarcerated individuals through
-              approved facility systems.
+              LockedIn Systems is a digital platform designed to facilitate commissary purchases
+              and financial deposits for incarcerated individuals through approved facility systems.
             </p>
           </CardContent>
         </Card>
@@ -75,8 +66,8 @@ export default function LegalPage() {
           <CardContent className="pt-6">
             <p className="mb-4 text-foreground leading-relaxed">
               All funds processed through LockedIn Systems are used to support the operational
-              costs of the platform and to advance the nonprofit mission of Mighty Success
-              Recovery Inc., including:
+              costs of the platform and to advance the mission of Mighty Success Recovery Inc.,
+              including:
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -117,18 +108,17 @@ export default function LegalPage() {
           </CardContent>
         </Card>
 
-        {/* Section E: Nonprofit Compliance Statement */}
+        {/* Section E: Compliance Statement */}
         <Card className="border-border mb-6">
           <CardHeader className="border-b border-border bg-secondary">
             <CardTitle className="flex items-center gap-2 text-base">
               <Scale className="h-5 w-5 text-gold" />
-              E. Nonprofit Compliance Statement
+              E. Compliance Statement
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-6">
             <p className="text-foreground leading-relaxed">
-              The organization operates under nonprofit governance principles and adheres to
-              applicable IRS guidelines and state-level charitable organization requirements.
+              The organization adheres to applicable laws and regulations for its operations.
               All funds are processed through approved financial service providers (e.g., Stripe).
             </p>
           </CardContent>

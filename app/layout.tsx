@@ -18,20 +18,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LockedIn Systems — Secure Commissary & Deposit Platform",
   description:
-    "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure, nonprofit-style commissary and inmate deposit platform.",
+    "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure commissary and inmate deposit platform.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   openGraph: {
     type: "website",
     title: "LockedIn Systems — Secure Commissary & Deposit Platform",
     description:
-      "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure, nonprofit-style commissary and inmate deposit platform.",
+      "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure commissary and inmate deposit platform.",
     url: "/",
   },
   twitter: {
     card: "summary",
     title: "LockedIn Systems — Secure Commissary & Deposit Platform",
     description:
-      "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure, nonprofit-style commissary and inmate deposit platform.",
+      "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure commissary and inmate deposit platform.",
   },
   icons: {
     icon: [

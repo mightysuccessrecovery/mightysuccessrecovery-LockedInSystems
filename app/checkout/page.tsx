@@ -328,7 +328,7 @@ export default function CheckoutPage() {
                   Secure payment processing via Stripe
                 </p>
                 <p className="mt-2 text-xs text-center text-muted-foreground">
-                  Payments processed on behalf of Mighty Success Recovery Inc. | 501(c)(3) | EIN: 88-1712603
+                  Payments processed on behalf of Mighty Success Recovery Inc.
                 </p>
               </CardContent>
             </Card>

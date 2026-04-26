@@ -18,7 +18,7 @@ export default function AboutPage() {
             501(c)(3) Public Charity | EIN: 88-1712603
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Serving Summit County, Ohio, and Surrounding Communities
+            Delivering trusted services across the United States.
           </p>
         </div>
 
@@ -42,6 +42,21 @@ export default function AboutPage() {
               job readiness, and family support to promote independence, stability, and long-term 
               well-being.
             </p>
+            <div className="mt-6">
+              <h3 className="font-semibold text-foreground">Who We Support</h3>
+              <ul className="mt-3 list-disc pl-5 text-muted-foreground space-y-2">
+                <li>Individuals suffering from addiction</li>
+                <li>Individuals experiencing post-incarceration syndrome</li>
+                <li>Displaced individuals and families</li>
+                <li>Disabled veterans</li>
+                <li>Families of fallen soldiers and fallen police officers</li>
+                <li>Violence prevention initiatives</li>
+                <li>Sober living and halfway housing</li>
+                <li>Vision-impaired individuals</li>
+                <li>Supporters of the American Red Cross, Blue Lives Matter, and first responders</li>
+                <li>Victims of house fires and domestic violence</li>
+              </ul>
+            </div>
           </CardContent>
         </Card>
 
@@ -56,7 +71,7 @@ export default function AboutPage() {
           <CardContent className="pt-6 space-y-4">
             <p className="text-foreground leading-relaxed">
               Mighty Success Recovery Inc. is a 
-              501(c)(3) public charity serving Summit County, Ohio, and surrounding communities. 
+              501(c)(3) public charity serving communities across the United States. 
               We offer trauma-informed, holistic programs that integrate housing stabilization, 
               substance use counseling, mobile food pantry services, crisis intervention, and 
               community referrals.
@@ -250,8 +265,7 @@ export default function AboutPage() {
         {/* Legal Link */}
         <div className="rounded-lg border border-border bg-secondary p-6 text-center">
           <p className="text-sm text-muted-foreground">
-            For information about our nonprofit status, funding disclosures, and compliance
-            statements, please visit our{" "}
+            For funding disclosures and compliance statements, please visit our{" "}
             <Link href="/legal" className="font-medium text-gold hover:underline">
               Legal & Compliance Transparency
             </Link>{" "}

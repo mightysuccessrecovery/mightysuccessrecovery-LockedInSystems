@@ -44,6 +44,15 @@ export function Header() {
         </div>
       </div>
 
+      {/* Platform Positioning Banner */}
+      <div className="border-b border-border bg-secondary/60 py-2">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs text-muted-foreground">
+            We provide a platform to support incarcerated individuals.
+          </p>
+        </div>
+      </div>
+
       {/* Main Header */}
       <div className="border-b border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

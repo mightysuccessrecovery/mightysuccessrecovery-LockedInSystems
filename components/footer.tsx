@@ -23,8 +23,8 @@ export function Footer() {
                 <Shield className="h-5 w-5 text-gold" />
               </div>
               <div>
-                <p className="text-sm font-semibold">501(c)(3)</p>
-                <p className="text-xs text-primary-foreground/60">Nonprofit Organization</p>
+                <p className="text-sm font-semibold">Trusted</p>
+                <p className="text-xs text-primary-foreground/60">Service organization</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70 text-center md:text-left max-w-xs">
-              A trusted platform for secure commissary purchases and inmate deposits.
+              We provide a platform to support incarcerated individuals.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export function Footer() {
           <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
             <div className="text-center md:text-left">
               <p className="text-sm font-medium">
-                Mighty Success Recovery Inc. | 501(c)(3) | EIN: 88-1712603
+                Mighty Success Recovery Inc.
               </p>
             </div>
             <div className="text-center md:text-right">
