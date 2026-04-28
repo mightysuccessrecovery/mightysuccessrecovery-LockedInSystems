@@ -9,7 +9,7 @@ export default function Home() {
           Correctional Commissary &amp; Inmate Financial Support Services
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-white/70">
+        <p className="mx-auto mt-6 max-w-2xl text-muted">
           A 501(c)(3) Public Charity providing secure, compliant, and accountable commissary
           and inmate fund support services for correctional facilities and their families.
         </p>
@@ -17,14 +17,14 @@ export default function Home() {
         <div className="mt-8 flex justify-center gap-4">
           <Link
             href="/contact"
-            className="rounded bg-gold px-6 py-3 font-semibold text-black"
+            className="btn-gold"
           >
             Contact for Partnership
           </Link>
 
           <Link
             href="#demo"
-            className="rounded border border-gold px-6 py-3 text-gold"
+            className="btn-outline-gold"
           >
             Request a Demonstration
           </Link>
@@ -44,7 +44,7 @@ export default function Home() {
           "Family Payment Access Systems",
           "Transaction Tracking & Reporting",
         ].map((item, i) => (
-          <div key={i} className="rounded border border-white/10 p-6">
+          <div key={i} className="card p-6">
             <h3 className="font-semibold text-gold">{item}</h3>
           </div>
         ))}
@@ -56,31 +56,31 @@ export default function Home() {
           Operational Benefits for Correctional Facilities &amp; Families
         </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-white/70">
+        <p className="mx-auto mt-6 max-w-3xl text-center text-muted">
           Our services are designed to support correctional operations by improving financial access
           systems for families while reducing administrative burden on facility staff.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded border border-white/10 p-6">
+          <div className="card p-6">
             <h3 className="font-semibold text-gold">Reduced Administrative Burden</h3>
-            <p className="mt-3 text-sm text-white/70">
+            <p className="mt-3 text-sm text-muted">
               Streamlined payment and commissary support systems reduce manual processing and help
               facility staff focus on core operational responsibilities.
             </p>
           </div>
 
-          <div className="rounded border border-white/10 p-6">
+          <div className="card p-6">
             <h3 className="font-semibold text-gold">Improved Family Affordability</h3>
-            <p className="mt-3 text-sm text-white/70">
+            <p className="mt-3 text-sm text-muted">
               Our structure is designed to minimize unnecessary fees and improve access for families
               supporting incarcerated individuals.
             </p>
           </div>
 
-          <div className="rounded border border-white/10 p-6">
+          <div className="card p-6">
             <h3 className="font-semibold text-gold">Better Inmate Stability</h3>
-            <p className="mt-3 text-sm text-white/70">
+            <p className="mt-3 text-sm text-muted">
               Consistent and reliable access to funds and commissary support contributes to reduced
               stress, fewer disruptions, and improved institutional stability.
             </p>
@@ -97,7 +97,7 @@ export default function Home() {
       <section className="border-t border-white/10 px-6 py-20 text-center">
         <h2 className="text-2xl font-bold text-gold">Security &amp; Compliance</h2>
 
-        <p className="mx-auto mt-4 max-w-3xl text-white/70">
+        <p className="mx-auto mt-4 max-w-3xl text-muted">
           Secure payment processing via Stripe, encrypted transactions, audit logs, and controlled
           access systems designed for correctional environments.
         </p>
