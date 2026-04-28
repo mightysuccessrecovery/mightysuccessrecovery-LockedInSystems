@@ -17,6 +17,7 @@ const navLinks = [
   { href: "/facilities", label: "Facilities" },
   { href: "/deposit", label: "Deposit Money" },
   { href: "/store", label: "Commissary Services" },
+  { href: "/procurement", label: "Procurement" },
   { href: "/support", label: "Support" },
   { href: "/about", label: "About" },
   { href: "/fees", label: "Fees" },
