@@ -20,7 +20,7 @@ export default function DonatePage() {
             Donation processing will be connected securely in a future update.
           </p>
           <Link
-            href="#"
+            href="/donation"
             className="mt-6 inline-flex w-full items-center justify-center rounded px-6 py-3 text-sm font-semibold text-white hover:opacity-95"
             style={{ background: "#0F2A44" }}
           >
