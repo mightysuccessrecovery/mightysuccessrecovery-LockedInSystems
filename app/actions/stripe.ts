@@ -3,6 +3,9 @@
 import { getStripe } from '@/lib/stripe'
 import { COMMISSARY_PACKAGES, calculateFees } from '@/lib/data'
 
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+const siteUrl = rawSiteUrl.endsWith('/') ? rawSiteUrl.slice(0, -1) : rawSiteUrl
+
 interface CheckoutItem {
   id: string
   name: string
@@ -71,6 +74,7 @@ export async function startCommissaryCheckout(
   const session = await getStripe().checkout.sessions.create({
     ui_mode: 'embedded' as any,
     redirect_on_completion: 'never',
+    return_url: `${siteUrl}/checkout`,
     line_items: validatedLineItems,
     mode: 'payment',
     metadata: {
@@ -121,6 +125,7 @@ export async function startDepositCheckout(
   const session = await getStripe().checkout.sessions.create({
     ui_mode: 'embedded' as any,
     redirect_on_completion: 'never',
+    return_url: `${siteUrl}/deposit`,
     line_items: [
       {
         price_data: {
@@ -183,6 +188,7 @@ export async function startDonationCheckout(amount: number, phone?: string) {
   const session = await getStripe().checkout.sessions.create({
     ui_mode: 'embedded' as any,
     redirect_on_completion: 'never',
+    return_url: `${siteUrl}/donation`,
     line_items: [
       {
         price_data: {
