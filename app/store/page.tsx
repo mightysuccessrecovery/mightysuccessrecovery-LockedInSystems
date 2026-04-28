@@ -11,6 +11,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { getPackagesForFacility, calculateFees } from "@/lib/data"
 import { useCart } from "@/components/cart-provider"
 import { OrderSummary } from "@/components/order-summary"
+import { TransactionSecurityNotice } from "@/components/transaction-security-notice"
 
 export default function StorePage() {
   const router = useRouter()
@@ -53,6 +54,7 @@ export default function StorePage() {
 
   return (
     <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
+      <TransactionSecurityNotice />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_300px]">
           {/* Main Content */}

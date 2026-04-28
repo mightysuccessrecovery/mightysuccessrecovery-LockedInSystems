@@ -19,6 +19,7 @@ import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { useCart } from "@/components/cart-provider"
 import { StripeCheckout } from "@/components/stripe-checkout"
+import { TransactionSecurityNotice } from "@/components/transaction-security-notice"
 import { startDepositCheckout } from "@/app/actions/stripe"
 import { calculateFees } from "@/lib/data"
 
@@ -123,6 +124,7 @@ export default function DepositPage() {
 
   return (
     <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
+      <TransactionSecurityNotice />
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8 text-center">
