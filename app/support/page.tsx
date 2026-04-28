@@ -1,6 +1,8 @@
 import { Mail, Clock, AlertCircle, CheckCircle, Calendar, ListOrdered } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function SupportPage() {
   return (
@@ -179,6 +181,22 @@ export default function SupportPage() {
                 </p>
               </div>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Support & Donations */}
+        <Card className="border-border mt-8">
+          <CardHeader>
+            <CardTitle className="text-base">Support &amp; Donations</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-muted-foreground leading-relaxed">
+              Optional contributions help fund housing, sober living, and reintegration programs for
+              individuals and families in need.
+            </p>
+            <Button asChild className="bg-gold text-gold-foreground hover:bg-gold/90">
+              <Link href="/donate">Make a Donation</Link>
+            </Button>
           </CardContent>
         </Card>
       </div>
