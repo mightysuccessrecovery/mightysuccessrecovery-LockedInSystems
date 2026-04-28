@@ -121,6 +121,10 @@ export default function LegalPage() {
               The organization adheres to applicable laws and regulations for its operations.
               All funds are processed through approved financial service providers (e.g., Stripe).
             </p>
+            <p className="mt-4 text-foreground leading-relaxed">
+              Payments are processed through licensed financial service providers and applied to
+              inmate accounts by authorized correctional facility systems.
+            </p>
           </CardContent>
         </Card>
 
