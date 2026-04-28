@@ -91,6 +91,43 @@ export default function AboutPage() {
           </CardContent>
         </Card>
 
+        {/* Community Commitment */}
+        <Card className="border-border mb-8">
+          <CardHeader className="border-b border-border bg-secondary">
+            <CardTitle className="flex items-center gap-2">
+              <Users className="h-5 w-5 text-gold" />
+              Community Commitment
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6">
+            <p className="text-foreground leading-relaxed">
+              Mighty Success Recovery Inc. is committed to supporting correctional systems and the
+              broader community, including first responders, veterans, and individuals transitioning
+              from incarceration.
+            </p>
+            <p className="mt-4 text-foreground leading-relaxed">
+              Through structured funding support and program development, the organization
+              contributes to initiatives that promote housing stability, recovery support, and
+              reintegration pathways.
+            </p>
+
+            <div className="mt-6">
+              <h3 className="font-semibold text-foreground">Focus areas include:</h3>
+              <ul className="mt-3 list-disc pl-5 text-muted-foreground space-y-2">
+                <li>Transitional and supportive housing</li>
+                <li>Recovery and sober living environments</li>
+                <li>Reentry and post-incarceration support services</li>
+                <li>Assistance for individuals experiencing mental health and disability-related challenges</li>
+              </ul>
+            </div>
+
+            <p className="mt-6 text-foreground leading-relaxed">
+              Programs are designed to promote long-term stability, accountability, and community
+              reintegration.
+            </p>
+          </CardContent>
+        </Card>
+
         {/* Our Story */}
         <Card className="border-border mb-8">
           <CardHeader className="border-b border-border bg-secondary">
