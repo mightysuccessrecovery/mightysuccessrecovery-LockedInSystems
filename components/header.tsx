@@ -16,12 +16,12 @@ const supportLinks = [
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/facilities", label: "Facilities" },
+  { href: "/about", label: "Platform Overview" },
+  { href: "/services", label: "Services" },
+  { href: "/partnerships", label: "Partnerships" },
+  { href: "/fees", label: "Fees" },
   { href: "/support", label: "Support" },
-  { href: "/about", label: "About / Mission" },
-  { href: "/deposit", label: "Deposit Access" },
-  { href: "/commissary", label: "Commissary Access" },
-  { href: "/procurement", label: "Procurement" },
+  { href: "/contact", label: "Contact" },
 ]
 
 const legalLinks = [

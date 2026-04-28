@@ -16,36 +16,60 @@ export function Footer() {
           <Link href="/" className="block hover:text-[#0F2A44]">
             Home
           </Link>
-          <Link href="/facilities" className="block hover:text-[#0F2A44]">
-            Facilities
-          </Link>
-          <Link href="/support" className="block hover:text-[#0F2A44]">
-            Support
-          </Link>
           <Link href="/about" className="block hover:text-[#0F2A44]">
-            Mission
+            Platform Overview
           </Link>
-          <Link href="/history" className="block hover:text-[#0F2A44]">
-            History
+          <Link href="/services" className="block hover:text-[#0F2A44]">
+            Services
           </Link>
-        </nav>
-
-        {/* COLUMN 3 */}
-        <nav className="space-y-2 text-gray-600">
-          <Link href="/privacy" className="block hover:text-[#0F2A44]">
-            Privacy Statement
-          </Link>
-          <Link href="/terms" className="block hover:text-[#0F2A44]">
-            Terms and Conditions
+          <Link href="/partnerships" className="block hover:text-[#0F2A44]">
+            Partnerships
           </Link>
           <Link href="/fees" className="block hover:text-[#0F2A44]">
             Fees
           </Link>
-          <Link href="/donate" className="block hover:text-[#0F2A44]">
-            Donate
+          <Link href="/support" className="block hover:text-[#0F2A44]">
+            Support
           </Link>
-          <p className="pt-1 text-xs text-gray-500">Support our nonprofit mission initiatives</p>
+          <Link href="/contact" className="block hover:text-[#0F2A44]">
+            Contact
+          </Link>
         </nav>
+
+        {/* COLUMN 3 */}
+        <div className="space-y-6">
+          <div>
+            <p className="font-semibold text-[#0F2A44]">Organization</p>
+            <nav className="mt-2 space-y-2 text-gray-600">
+              <Link href="/mission" className="block hover:text-[#0F2A44]">
+                Mission
+              </Link>
+              <Link href="/legal" className="block hover:text-[#0F2A44]">
+                Legal &amp; Compliance
+              </Link>
+              <Link href="/privacy" className="block hover:text-[#0F2A44]">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="block hover:text-[#0F2A44]">
+                Terms of Service
+              </Link>
+            </nav>
+          </div>
+
+          <div>
+            <p className="font-semibold text-[#0F2A44]">Support Our Mission</p>
+            <p className="mt-2 text-sm text-gray-600">
+              Support our nonprofit mission initiatives.
+            </p>
+            <Link
+              href="/donate"
+              className="mt-3 inline-flex items-center justify-center rounded px-4 py-2 text-sm font-semibold text-white"
+              style={{ background: "#0F2A44" }}
+            >
+              Donate
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className="mx-auto mt-10 max-w-6xl px-6">
@@ -55,16 +79,16 @@ export function Footer() {
             <p className="mt-2 text-sm text-gray-600">
               We accept secure payments via Stripe-powered processing.
             </p>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-2 md:justify-start">
-              {["Visa", "Mastercard", "American Express", "Discover"].map((label) => (
-                <span
-                  key={label}
-                  className="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1 text-xs font-semibold text-gray-700"
-                  aria-label={label}
-                >
-                  {label}
-                </span>
-              ))}
+            <div className="mt-4">
+              <div className="payment-methods">
+                <h3 className="sr-only">Accepted Payment Methods</h3>
+                <div className="logos flex flex-wrap items-center justify-center gap-4 md:justify-start">
+                  <img src="/assets/visa.svg" alt="Visa" className="h-6 w-auto opacity-80" />
+                  <img src="/assets/mastercard.svg" alt="Mastercard" className="h-6 w-auto opacity-80" />
+                  <img src="/assets/amex.svg" alt="American Express" className="h-6 w-auto opacity-80" />
+                  <img src="/assets/discover.svg" alt="Discover" className="h-6 w-auto opacity-80" />
+                </div>
+              </div>
             </div>
           </div>
 
