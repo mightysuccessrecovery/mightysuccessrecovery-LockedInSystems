@@ -1,34 +1,49 @@
+import Link from "next/link"
+
 export function Footer() {
   return (
-    <footer className="mt-20 border-t border-border bg-white py-10 text-center">
-      <p className="font-bold text-[var(--primary)]">
-        Mighty Success Recovery Inc. | LockedIn Systems
-      </p>
+    <footer className="mt-20 border-t border-gray-200 bg-white py-10">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 text-sm md:grid-cols-3 md:gap-8">
+        {/* COLUMN 1 */}
+        <div>
+          <p className="font-bold text-[#0F2A44]">Mighty Success Recovery Inc.</p>
+          <p className="mt-2 text-gray-600">DBA LockedIn Systems</p>
+          <p className="mt-2 text-gray-600">501(c)(3) Public Charity</p>
+        </div>
 
-      <p className="mt-2 text-gray-700">501(c)(3) Public Charity</p>
+        {/* COLUMN 2 */}
+        <nav className="space-y-2 text-gray-600">
+          <Link href="/" className="block hover:text-[#0F2A44]">
+            Home
+          </Link>
+          <Link href="/facilities" className="block hover:text-[#0F2A44]">
+            Facilities
+          </Link>
+          <Link href="/support" className="block hover:text-[#0F2A44]">
+            Support
+          </Link>
+          <Link href="/history" className="block hover:text-[#0F2A44]">
+            History
+          </Link>
+        </nav>
 
-      <p className="mt-2 text-sm text-gray-600">
-        EIN: 88-1712603 &bull; NPI: 1295522035 &bull; SIC: 8322 &bull; Benevity ID: 881712603
-      </p>
+        {/* COLUMN 3 */}
+        <nav className="space-y-2 text-gray-600">
+          <Link href="/privacy" className="block hover:text-[#0F2A44]">
+            Privacy Statement
+          </Link>
+          <Link href="/terms" className="block hover:text-[#0F2A44]">
+            Terms and Conditions
+          </Link>
+          <Link href="/fees" className="block hover:text-[#0F2A44]">
+            Fees
+          </Link>
+        </nav>
+      </div>
 
-      <p className="mt-2 text-gray-600">
-        <a
-          href="mailto:info@mightysuccessrecovery.org"
-          className="hover:text-[var(--primary)] hover:underline"
-        >
-          info@mightysuccessrecovery.org
-        </a>
-      </p>
-
-      <p className="mt-3">
-        <a href="/procurement" className="text-gray-600 hover:text-[var(--primary)]">
-          Procurement
-        </a>
-      </p>
-
-      <p className="mt-6 text-sm text-gray-500">
+      <div className="mt-10 text-center text-xs text-gray-500">
         &copy; Mighty Success Recovery Inc. &bull; All Rights Reserved
-      </p>
+      </div>
     </footer>
   )
 }

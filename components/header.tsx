@@ -5,22 +5,14 @@ import Image from "next/image"
 import { useState } from "react"
 import { Menu, X, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu"
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/facilities", label: "Facilities" },
-  { href: "/deposit", label: "Deposit Money" },
-  { href: "/store", label: "Commissary Services" },
-  { href: "/procurement", label: "Procurement" },
   { href: "/support", label: "Support" },
-  { href: "/about", label: "About" },
-  { href: "/fees", label: "Fees" },
+  { href: "/deposit", label: "Deposit Access" },
+  { href: "/commissary", label: "Commissary Access" },
+  { href: "/procurement", label: "Procurement" },
 ]
 
 const legalLinks = [
@@ -66,22 +58,17 @@ export function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <NavigationMenu className="hidden lg:flex">
-              <NavigationMenuList className="gap-1">
-                {navLinks.map((link) => (
-                  <NavigationMenuItem key={link.href}>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href={link.href}
-                        className="inline-flex h-10 items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-foreground transition-all hover:bg-gold/10 hover:text-gold focus:bg-gold/10 focus:text-gold focus:outline-none"
-                      >
-                        {link.label}
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
+            <nav className="hidden flex-wrap items-center gap-6 text-sm lg:flex">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-700 transition-colors hover:text-[#0F2A44]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
 
             {/* Mobile menu button */}
             <Button
@@ -106,7 +93,7 @@ export function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-gold/10 hover:text-gold"
+                    className="block rounded-lg px-4 py-3 text-sm text-gray-700 transition-colors hover:bg-gold/10 hover:text-[#0F2A44]"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}

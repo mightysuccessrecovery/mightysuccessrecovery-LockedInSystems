@@ -30,6 +30,24 @@ export default function FeesPage() {
           </p>
         </div>
 
+        <div className="mb-8 rounded-lg border border-[color:rgb(15_42_68_/_12%)] bg-secondary/30 px-6 py-6 text-muted-foreground leading-relaxed md:px-8">
+          <p className="text-foreground font-medium">
+            This platform is designed to maintain transparent and structured service fees associated
+            with operational processing.
+          </p>
+          <p className="mt-4">
+            Fee Principles:
+          </p>
+          <ul className="mt-2 list-disc space-y-2 pl-5">
+            <li>Fees are applied only to service processing where applicable</li>
+            <li>No hidden or undisclosed charges</li>
+            <li>Fee structures are designed to support operational sustainability</li>
+          </ul>
+          <p className="mt-4">
+            Detailed fee breakdowns may be provided to authorized institutional partners upon request.
+          </p>
+        </div>
+
         {/* How Fees Work */}
         <Card className="border-border mb-8">
           <CardHeader>

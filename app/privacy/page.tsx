@@ -21,6 +21,25 @@ export default function PrivacyPage() {
 
         {/* Content */}
         <div className="space-y-6">
+          <div className="rounded-lg border border-[color:rgb(15_42_68_/_12%)] bg-secondary/30 px-6 py-6 text-muted-foreground leading-relaxed md:px-8">
+            <p className="text-foreground font-medium">
+              We are committed to protecting the privacy and security of all users and institutional
+              partners.
+            </p>
+            <p className="mt-4">
+              Information collected is limited to what is necessary to:
+            </p>
+            <ul className="mt-2 list-disc space-y-2 pl-5">
+              <li>Process transactions</li>
+              <li>Maintain system access</li>
+              <li>Support operational functions</li>
+            </ul>
+            <p className="mt-4">
+              We do not sell or distribute personal data to third parties unrelated to service
+              operations.
+            </p>
+          </div>
+
           <Card className="border-border">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">

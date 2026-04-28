@@ -32,12 +32,34 @@ export default function TermsPage() {
           <p className="mt-1 text-sm text-muted-foreground">Last Updated: April 2026</p>
         </div>
 
+        <div className="mb-8 rounded-lg border border-[color:rgb(15_42_68_/_12%)] bg-secondary/30 px-6 py-6 text-muted-foreground leading-relaxed md:px-8">
+          <p className="text-foreground font-medium">
+            By accessing this system, users agree to use the platform solely for authorized
+            operational purposes.
+          </p>
+          <p className="mt-4">
+            The organization reserves the right to:
+          </p>
+          <ul className="mt-2 list-disc space-y-2 pl-5">
+            <li>Maintain system integrity</li>
+            <li>Restrict unauthorized access</li>
+            <li>Update service structure as needed</li>
+          </ul>
+          <p className="mt-4">
+            All services are provided in accordance with applicable nonprofit operational guidelines
+            and institutional agreements.
+          </p>
+        </div>
+
         {/* Important Notice */}
         <Alert className="mb-8 border-gold/50 bg-gold/10">
           <AlertCircle className="h-4 w-4 text-gold" />
           <AlertDescription className="text-foreground">
-            By using LockedIn Systems, you agree to these Terms & Conditions and our Privacy
-            Policy. Please read them carefully before making any transactions.
+            Please read these Terms &amp; Conditions in full, including the sections below, and our{" "}
+            <Link href="/privacy" className="font-medium text-gold underline-offset-2 hover:underline">
+              Privacy Statement
+            </Link>
+            , before making any transactions.
           </AlertDescription>
         </Alert>
 

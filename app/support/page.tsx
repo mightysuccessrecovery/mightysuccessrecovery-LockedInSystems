@@ -14,10 +14,31 @@ export default function SupportPage() {
           <h1 className="text-2xl font-bold text-foreground sm:text-3xl">
             Support
           </h1>
+          <p className="mt-4 text-foreground leading-relaxed">
+            Facilities and authorized users may access support for operational questions, account
+            assistance, and system guidance.
+          </p>
           <p className="mt-2 text-muted-foreground">
             Support is available 7 days a week via email only.
           </p>
         </div>
+
+        <Card className="border-border mb-8 text-left">
+          <CardHeader>
+            <CardTitle className="text-base">Support Areas</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc space-y-2 pl-5 text-muted-foreground leading-relaxed">
+              <li>Account and access support</li>
+              <li>Transaction inquiries</li>
+              <li>System navigation guidance</li>
+              <li>Operational clarification</li>
+            </ul>
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+              Response times are structured to align with institutional operational requirements.
+            </p>
+          </CardContent>
+        </Card>
 
         {/* Contact Card */}
         <Card className="border-border mb-8">
@@ -119,9 +140,10 @@ export default function SupportPage() {
                 <Clock className="h-5 w-5 text-gold" />
               </div>
               <div>
-                <h4 className="font-semibold text-foreground">Within 2 Business Days</h4>
+                <h4 className="font-semibold text-foreground">Structured response times</h4>
                 <p className="text-muted-foreground">
-                  We respond to all inquiries within 2 business days.
+                  Response timelines align with institutional operational requirements. Where
+                  applicable, we aim to acknowledge inquiries within two business days.
                 </p>
               </div>
             </div>
