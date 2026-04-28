@@ -4,33 +4,34 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* PRIMARY THEME */
-  --background: #0B0B0B;
-  --surface: #121212;
-  --surface-2: #161616;
+  --background: #F7F9FC;
+  --surface: #FFFFFF;
 
-  /* TEXT */
-  --foreground: #FFFFFF;
-  --muted: #B8B8B8;
-  --subtle: #8A8A8A;
+  --primary: #0F2A44;
+  --primary-dark: #0B1C2C;
 
-  /* ACCENT (GOLD SYSTEM) */
-  --gold: #C9A227;
-  --gold-strong: #D4AF37;
-  --gold-soft: #E6C76A;
+  --gold: #B38B2D;
+  --gold-soft: #D6B25E;
 
-  /* BORDERS */
-  --border: rgba(255, 255, 255, 0.10);
+  --text: #111827;
+  --muted: #6B7280;
+
+  --border: #E5E7EB;
+
+  /* Compatibility mappings */
+  --foreground: var(--text);
+  --surface-2: var(--surface);
+  --subtle: var(--muted);
+  --gold-strong: var(--gold-soft);
 
   /* App tokens mapped to theme tokens */
   --card: var(--surface);
-  --card-foreground: var(--foreground);
+  --card-foreground: var(--text);
   --popover: var(--surface);
-  --popover-foreground: var(--foreground);
-  --primary: #ffffff;
-  --primary-foreground: #0b0b0b;
+  --popover-foreground: var(--text);
+  --primary-foreground: #FFFFFF;
   --secondary: var(--surface-2);
-  --secondary-foreground: var(--foreground);
+  --secondary-foreground: var(--text);
   --muted-foreground: var(--muted);
   --accent: oklch(0.75 0.15 85);
   --accent-foreground: oklch(0.145 0 0);
@@ -52,31 +53,37 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: var(--border);
   --sidebar-ring: oklch(0.75 0.15 85);
-  --gold-foreground: #000000;
+  --gold-foreground: #111827;
 }
 
 .dark {
   --background: #0B0B0B;
   --surface: #121212;
   --surface-2: #161616;
-  --foreground: #FFFFFF;
+
+  --primary: #0F2A44;
+  --primary-dark: #0B1C2C;
+
+  --gold: #B38B2D;
+  --gold-soft: #D6B25E;
+  --gold-strong: var(--gold-soft);
+
+  --text: #FFFFFF;
+  --foreground: var(--text);
   --muted: #B8B8B8;
   --subtle: #8A8A8A;
+
   --border: rgba(255, 255, 255, 0.10);
 
   --card: var(--surface);
-  --card-foreground: var(--foreground);
+  --card-foreground: var(--text);
   --popover: var(--surface);
-  --popover-foreground: var(--foreground);
-  --primary: #ffffff;
-  --primary-foreground: #0b0b0b;
+  --popover-foreground: var(--text);
+  --primary-foreground: #FFFFFF;
   --secondary: var(--surface-2);
-  --secondary-foreground: var(--foreground);
+  --secondary-foreground: var(--text);
   --muted-foreground: var(--muted);
   --input: var(--border);
-  --gold: #C9A227;
-  --gold-strong: #D4AF37;
-  --gold-soft: #E6C76A;
   --gold-foreground: #000000;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
@@ -144,7 +151,7 @@
   }
   body {
     background: var(--background);
-    color: var(--foreground);
+    color: var(--text);
   }
 }
 
