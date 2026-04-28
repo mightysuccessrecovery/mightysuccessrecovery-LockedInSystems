@@ -10,6 +10,8 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { StripeCheckout } from "@/components/stripe-checkout"
 import { startDonationCheckout } from "@/app/actions/stripe"
+import { STRIPE_LINKS } from "@/lib/stripeLinks"
+import { redirectToPayment } from "@/lib/redirect"
 
 const PRESET_AMOUNTS = [25, 50, 100, 250, 500, 1000]
 
@@ -257,6 +259,15 @@ export default function DonationPage() {
             >
               <CreditCard className="mr-2 h-5 w-5" />
               Proceed to Payment
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full border-gold/40 hover:border-gold/60 hover:bg-gold/5"
+              onClick={() => redirectToPayment(STRIPE_LINKS.donation.url)}
+            >
+              Donate
             </Button>
 
             <p className="text-xs text-center text-muted-foreground">

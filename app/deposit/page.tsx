@@ -22,6 +22,8 @@ import { StripeCheckout } from "@/components/stripe-checkout"
 import { TransactionSecurityNotice } from "@/components/transaction-security-notice"
 import { startDepositCheckout } from "@/app/actions/stripe"
 import { calculateFees } from "@/lib/data"
+import { STRIPE_LINKS } from "@/lib/stripeLinks"
+import { redirectToPayment } from "@/lib/redirect"
 
 const PRESET_AMOUNTS = [25, 50, 100, 200, 300]
 
@@ -272,6 +274,15 @@ export default function DepositPage() {
               <CreditCard className="mr-2 h-5 w-5" />
               Proceed to Payment
               <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full border-gold/40 hover:border-gold/60 hover:bg-gold/5"
+              onClick={() => redirectToPayment(STRIPE_LINKS.deposit.url)}
+            >
+              Complete Deposit
             </Button>
 
             <p className="text-xs text-center text-muted-foreground">

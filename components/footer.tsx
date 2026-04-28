@@ -79,17 +79,6 @@ export function Footer() {
             <p className="mt-2 text-sm text-gray-600">
               We accept secure payments via Stripe-powered processing.
             </p>
-            <div className="mt-4">
-              <div className="payment-methods">
-                <h3 className="sr-only">Accepted Payment Methods</h3>
-                <div className="logos flex flex-wrap items-center justify-center gap-4 md:justify-start">
-                  <img src="/assets/visa.svg" alt="Visa" className="h-6 w-auto opacity-80" />
-                  <img src="/assets/mastercard.svg" alt="Mastercard" className="h-6 w-auto opacity-80" />
-                  <img src="/assets/amex.svg" alt="American Express" className="h-6 w-auto opacity-80" />
-                  <img src="/assets/discover.svg" alt="Discover" className="h-6 w-auto opacity-80" />
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="md:text-right">
