@@ -12,6 +12,7 @@ import {
   MapPin,
   Package,
   Mail,
+  Phone,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -28,12 +29,25 @@ function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
 }
 
+function digitsOnly(value: string) {
+  return value.replace(/\D/g, "")
+}
+
+/** US-style: 10 digits or 11 starting with 1 */
+function isValidPhone(value: string) {
+  const d = digitsOnly(value)
+  return d.length === 10 || (d.length === 11 && d.startsWith("1"))
+}
+
 export default function CheckoutPage() {
   const { selectedPackage, selectedInmate } = useCart()
   const [customerName, setCustomerName] = useState("")
   const [customerEmail, setCustomerEmail] = useState("")
+  const [customerPhone, setCustomerPhone] = useState("")
   const canProceed =
-    customerName.trim().length > 0 && isValidEmail(customerEmail)
+    customerName.trim().length > 0 &&
+    isValidEmail(customerEmail) &&
+    isValidPhone(customerPhone)
 
   if (!selectedInmate || !selectedPackage) {
     return (
@@ -115,6 +129,26 @@ export default function CheckoutPage() {
                     autoComplete="email"
                     placeholder="you@example.com"
                   />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="checkout-phone" className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 text-muted-foreground" />
+                    Phone number
+                  </Label>
+                  <Input
+                    id="checkout-phone"
+                    type="tel"
+                    value={customerPhone}
+                    onChange={(e) => setCustomerPhone(e.target.value)}
+                    autoComplete="tel"
+                    inputMode="tel"
+                    placeholder="(555) 123-4567"
+                  />
+                  {customerPhone.trim().length > 0 && !isValidPhone(customerPhone) && (
+                    <p className="text-sm text-destructive">
+                      Enter a valid 10-digit U.S. phone number
+                    </p>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -263,7 +297,7 @@ export default function CheckoutPage() {
 
                 {!canProceed && (
                   <p className="mt-4 text-xs text-center text-destructive">
-                    Enter your name and a valid email to continue
+                    Enter your name, a valid email, and phone number to continue
                   </p>
                 )}
 

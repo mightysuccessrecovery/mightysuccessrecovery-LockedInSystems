@@ -1,8 +1,6 @@
 "use client"
 
 export default function Contact() {
-  const fields = ["Full Name", "Organization / Agency", "Title / Role", "Email"] as const
-
   return (
     <main className="min-h-screen bg-[var(--background)] px-6 py-20">
       <h1 className="text-center text-3xl font-bold text-[#0F2A44]">Contact for Partnership</h1>
@@ -25,31 +23,51 @@ export default function Contact() {
       </div>
 
       {/* FORM */}
-      <form
-        className="mx-auto mt-10 max-w-xl space-y-4"
-        onSubmit={(e) => {
-          e.preventDefault()
-        }}
-      >
-        {fields.map((p) => (
-          <input
-            key={p}
-            type="text"
-            name={p.toLowerCase().replace(/\s+/g, "-")}
-            placeholder={p}
-            className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
-            autoComplete={
-              p === "Email" ? "email" : p === "Full Name" ? "name" : "organization"
-            }
-          />
-        ))}
+      <form name="contact" method="POST" data-netlify="true" className="mx-auto mt-10 max-w-xl space-y-4">
+        <input type="hidden" name="form-name" value="contact" />
 
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows={5}
-          className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
-        />
+        <label className="block space-y-2">
+          <span className="text-sm font-medium text-[#0F2A44]">Full Name</span>
+          <input
+            type="text"
+            name="name"
+            required
+            autoComplete="name"
+            className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+          />
+        </label>
+
+        <label className="block space-y-2">
+          <span className="text-sm font-medium text-[#0F2A44]">Email</span>
+          <input
+            type="email"
+            name="email"
+            required
+            autoComplete="email"
+            className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+          />
+        </label>
+
+        <label className="block space-y-2">
+          <span className="text-sm font-medium text-[#0F2A44]">Phone Number</span>
+          <input
+            type="tel"
+            name="phone"
+            required
+            autoComplete="tel"
+            className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+          />
+        </label>
+
+        <label className="block space-y-2">
+          <span className="text-sm font-medium text-[#0F2A44]">Message</span>
+          <textarea
+            name="message"
+            required
+            rows={5}
+            className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+          />
+        </label>
 
         <button
           type="submit"
