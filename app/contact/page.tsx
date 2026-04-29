@@ -12,12 +12,12 @@ export default function Contact() {
       </p>
 
       <a
-        href="mailto:info@mightysuccessrecovery.org?subject=Mighty%20Success%20Recovery%20Inquiry"
-        className="email-box mx-auto mt-10 max-w-xl rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
+        href="mailto:info@mightysuccessrecovery.org"
+        className="email-box mx-auto mt-10 block max-w-xl bg-black p-5 text-white no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
       >
-        <div className="black-box rounded text-center text-sm font-semibold">
-          info@mightysuccessrecovery.org
-        </div>
+        <span className="block text-center text-sm font-semibold">
+          Tap or click anywhere in this box to email us
+        </span>
       </a>
 
       {/* OPTIONAL DETAILS (compose your message in email when the link opens) */}
