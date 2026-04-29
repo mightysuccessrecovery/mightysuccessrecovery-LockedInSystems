@@ -180,10 +180,14 @@ export default function Home() {
 
         <a
           href="/contact"
-          className="mt-6 inline-block rounded px-8 py-3 font-semibold text-white"
-          style={{ background: "#0F2A44" }}
+          className="mt-6 inline-block"
+          style={{
+            color: "#635BFF",
+            fontWeight: 600,
+            textDecoration: "underline",
+          }}
         >
-          Contact for Partnership
+          Submit Partnership Request
         </a>
       </section>
     </main>

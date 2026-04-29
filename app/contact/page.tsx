@@ -23,7 +23,13 @@ export default function Contact() {
       </div>
 
       {/* FORM */}
-      <form name="contact" method="POST" data-netlify="true" className="mx-auto mt-10 max-w-xl space-y-4">
+      <form
+        name="contact"
+        method="POST"
+        action="/contact"
+        data-netlify="true"
+        className="mx-auto mt-10 max-w-xl space-y-4"
+      >
         <input type="hidden" name="form-name" value="contact" />
 
         <label className="block space-y-2">
@@ -71,7 +77,7 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="w-full rounded bg-[#0F2A44] py-3 font-semibold text-white hover:opacity-95"
+          className="w-full cursor-pointer rounded bg-[#0F2A44] py-3 font-semibold text-white hover:opacity-95"
         >
           Submit Partnership Request
         </button>
