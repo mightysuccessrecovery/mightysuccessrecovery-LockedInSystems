@@ -49,8 +49,8 @@ export const STRIPE_LINKS = {
   } satisfies StripeStandaloneLink,
 
   deposit: {
-    name: "Complete Deposit",
-    url: "https://buy.stripe.com/14AcN59bh0nO1MB0pIdEs00",
+    name: "Proceed to Payment",
+    url: "https://buy.stripe.com/bJe14n87db2s76V2xQdEs07",
   } satisfies StripeStandaloneLink,
 
   /** Default commissary checkout when no package-specific payment link applies */

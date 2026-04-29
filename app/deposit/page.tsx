@@ -7,10 +7,10 @@ import {
   User,
   Building2,
   CreditCard,
+  MapPin,
   AlertTriangle,
   ArrowRight,
-  ArrowLeft,
-  CheckCircle,
+  ChevronRight,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -18,24 +18,20 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { useCart } from "@/components/cart-provider"
-import { StripeCheckout } from "@/components/stripe-checkout"
 import { TransactionSecurityNotice } from "@/components/transaction-security-notice"
-import { startDepositCheckout } from "@/app/actions/stripe"
 import { calculateFees } from "@/lib/data"
 import { STRIPE_LINKS } from "@/lib/stripeLinks"
-import { redirectToPayment } from "@/lib/redirect"
 
 const PRESET_AMOUNTS = [25, 50, 100, 200, 300]
 
 export default function DepositPage() {
-  const { selectedInmate } = useCart()
+  const { selectedState, selectedFacility, selectedInmate } = useCart()
   const [amount, setAmount] = useState("")
   const [customAmount, setCustomAmount] = useState("")
-  const [showPayment, setShowPayment] = useState(false)
-  const [isComplete, setIsComplete] = useState(false)
 
-  const selectedAmount = customAmount ? parseFloat(customAmount) : parseFloat(amount) || 0
-  const fees = calculateFees(selectedAmount)
+  const selectedAmount =
+    customAmount !== "" ? parseFloat(customAmount) : parseFloat(amount) || 0
+  const fees = selectedAmount > 0 ? calculateFees(selectedAmount) : null
 
   const handleAmountSelect = (value: number) => {
     setAmount(value.toString())
@@ -47,166 +43,184 @@ export default function DepositPage() {
     setAmount("")
   }
 
+  const recipientReady = !!(selectedState && selectedFacility && selectedInmate)
+
+  const amountValid = selectedAmount >= 10 && selectedAmount <= 300
+
+  const canProceed = recipientReady && amountValid
+
   const handleProceedToPayment = () => {
-    if (selectedAmount >= 10 && selectedAmount <= 300 && selectedInmate) {
-      setShowPayment(true)
-    }
+    if (!canProceed) return
+    window.open(STRIPE_LINKS.deposit.url, "_blank", "noopener,noreferrer")
   }
 
-  const fetchClientSecret = async () => {
-    if (!selectedInmate) {
-      throw new Error("No inmate selected")
-    }
-    const secret = await startDepositCheckout(selectedAmount, {
-      inmateId: selectedInmate.id,
-      inmateName: `${selectedInmate.firstName} ${selectedInmate.lastName}`,
-      facility: selectedInmate.facility,
-      state: selectedInmate.state,
-      phone: "",
-    })
-    return secret
-  }
-
-  if (isComplete) {
-    return (
-      <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-          <Card className="border-border">
-            <CardContent className="py-12 text-center">
-              <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-500" />
-              <h3 className="text-2xl font-bold text-foreground">Deposit Successful!</h3>
-              <p className="mt-2 text-muted-foreground">
-                Your deposit of ${selectedAmount.toFixed(2)} for {selectedInmate?.firstName} {selectedInmate?.lastName} has been processed.
-              </p>
-              <p className="mt-4 text-sm text-muted-foreground">
-                Funds will be available within 24-48 hours.
-              </p>
-              <Button asChild className="mt-6 bg-gold text-gold-foreground hover:bg-gold/90">
-                <Link href="/">Return Home</Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    )
-  }
-
-  if (showPayment && selectedInmate) {
-    return (
-      <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Button
-            variant="ghost"
-            className="mb-6 -ml-2"
-            onClick={() => setShowPayment(false)}
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Deposit Form
-          </Button>
-
-          <div className="mb-6">
-            <h1 className="text-2xl font-bold text-foreground sm:text-3xl">Complete Deposit</h1>
-            <p className="mt-2 text-muted-foreground">
-              Depositing ${selectedAmount.toFixed(2)} for {selectedInmate.firstName} {selectedInmate.lastName}
-            </p>
-          </div>
-
-          <Card className="border-border">
-            <CardContent className="pt-6">
-              <StripeCheckout
-                fetchClientSecret={fetchClientSecret}
-                onComplete={() => setIsComplete(true)}
-              />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    )
-  }
+  const stateFacilitySearchHref =
+    selectedState && selectedFacility
+      ? `/facilities/${selectedState.code.toLowerCase()}/${selectedFacility.id}/search`
+      : null
+  const facilityListHref =
+    selectedState !== null ? `/facilities/${selectedState.code.toLowerCase()}` : null
 
   return (
     <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
       <TransactionSecurityNotice />
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-8 text-center">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/10">
             <DollarSign className="h-6 w-6 text-gold" />
           </div>
           <h1 className="text-2xl font-bold text-foreground sm:text-3xl">Deposit Money</h1>
           <p className="mt-2 text-muted-foreground">
-            Send funds to your loved one securely
+            Choose state and facility, find your recipient, enter an amount, then pay securely
           </p>
         </div>
 
-        {/* Inmate Selection */}
-        {!selectedInmate ? (
-          <Alert className="mb-6 border-gold/50 bg-gold/10">
-            <AlertTriangle className="h-4 w-4 text-gold" />
-            <AlertDescription className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-foreground">
-                Please select an inmate to make a deposit.
-              </span>
-              <Button
-                asChild
-                size="sm"
-                className="bg-gold text-gold-foreground hover:bg-gold/90"
-              >
-                <Link href="/facilities">
-                  <User className="mr-2 h-4 w-4" />
-                  Find Inmate
-                </Link>
-              </Button>
-            </AlertDescription>
-          </Alert>
-        ) : (
-          <Card className="mb-6 border-border">
-            <CardHeader className="border-b border-border bg-secondary">
+        {/* 1–3 Recipient path */}
+        <div className="space-y-4 mb-8">
+          <Card className="border-border">
+            <CardHeader className="border-b border-border bg-secondary pb-3">
               <CardTitle className="text-base flex items-center gap-2">
-                <User className="h-5 w-5 text-gold" />
-                Recipient Information
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-foreground">
+                  1
+                </span>
+                <MapPin className="h-5 w-5 text-gold" />
+                State
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-4">
-              <div className="flex items-start justify-between">
-                <div className="flex items-start gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/10">
-                    <User className="h-6 w-6 text-gold" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">
-                      {selectedInmate.lastName}, {selectedInmate.firstName}
-                    </p>
-                    <p className="text-sm text-muted-foreground">ID: {selectedInmate.id}</p>
-                    <p className="mt-1 flex items-center gap-1 text-sm text-muted-foreground">
-                      <Building2 className="h-3 w-3" />
-                      {selectedInmate.facility}
-                    </p>
-                  </div>
-                </div>
-                <Button asChild variant="outline" size="sm">
-                  <Link href="/facilities">Change</Link>
+            <CardContent className="pt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {selectedState ? (
+                <>
+                  <p className="font-medium text-foreground">{selectedState.name}</p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link href="/facilities">Change state</Link>
+                  </Button>
+                </>
+              ) : (
+                <Button asChild className="w-full sm:w-auto bg-gold text-gold-foreground hover:bg-gold/90">
+                  <Link href="/facilities">
+                    Select state
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </Link>
                 </Button>
-              </div>
+              )}
             </CardContent>
           </Card>
+
+          <Card
+            className={`border-border ${!selectedState ? "opacity-60 pointer-events-none" : ""}`}
+          >
+            <CardHeader className="border-b border-border bg-secondary pb-3">
+              <CardTitle className="text-base flex items-center gap-2">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-foreground">
+                  2
+                </span>
+                <Building2 className="h-5 w-5 text-gold" />
+                Facility
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {!selectedState ? (
+                <p className="text-sm text-muted-foreground">Select a state first.</p>
+              ) : selectedFacility ? (
+                <>
+                  <div>
+                    <p className="font-medium text-foreground">{selectedFacility.name}</p>
+                    <p className="text-sm text-muted-foreground">{selectedFacility.address}</p>
+                  </div>
+                  <Button asChild variant="outline" size="sm">
+                    <Link href={facilityListHref!}>Change facility</Link>
+                  </Button>
+                </>
+              ) : (
+                <Button asChild className="w-full sm:w-auto bg-gold text-gold-foreground hover:bg-gold/90">
+                  <Link href={facilityListHref!}>
+                    Select facility
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </Button>
+              )}
+            </CardContent>
+          </Card>
+
+          <Card
+            className={`border-border ${!selectedFacility ? "opacity-60 pointer-events-none" : ""}`}
+          >
+            <CardHeader className="border-b border-border bg-secondary pb-3">
+              <CardTitle className="text-base flex items-center gap-2">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-foreground">
+                  3
+                </span>
+                <User className="h-5 w-5 text-gold" />
+                Inmate
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              {!selectedFacility ? (
+                <p className="text-sm text-muted-foreground">Select a facility first.</p>
+              ) : selectedInmate ? (
+                <>
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10">
+                      <User className="h-5 w-5 text-gold" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">
+                        {selectedInmate.lastName}, {selectedInmate.firstName}
+                      </p>
+                      <p className="text-sm text-muted-foreground">ID: {selectedInmate.id}</p>
+                    </div>
+                  </div>
+                  <Button asChild variant="outline" size="sm">
+                    <Link href={stateFacilitySearchHref!}>Change inmate</Link>
+                  </Button>
+                </>
+              ) : (
+                <Button asChild className="w-full sm:w-auto bg-gold text-gold-foreground hover:bg-gold/90">
+                  <Link href={stateFacilitySearchHref!}>
+                    Find inmate
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </Link>
+                </Button>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+
+        {!recipientReady && (
+          <Alert className="mb-6 border-gold/50 bg-gold/10">
+            <AlertTriangle className="h-4 w-4 text-gold" />
+            <AlertDescription className="text-foreground">
+              Complete steps 1–3 above (or use{" "}
+              <Link href="/facilities" className="font-medium text-gold underline underline-offset-2">
+                Find an inmate
+              </Link>
+              ) before choosing a deposit amount.
+            </AlertDescription>
+          </Alert>
         )}
 
-        {/* Deposit Form */}
-        <Card className="border-border">
+        {/* 4 Amount + pay */}
+        <Card className={`border-border ${!recipientReady ? "opacity-60" : ""}`}>
           <CardHeader>
-            <CardTitle className="text-lg">Select Deposit Amount</CardTitle>
+            <CardTitle className="text-lg flex items-center gap-2">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-foreground">
+                4
+              </span>
+              Deposit amount
+            </CardTitle>
             <CardDescription>
-              Choose a preset amount or enter a custom amount ($10 - $300)
+              Choose a preset or custom amount ($10 – $300). You can adjust the final amount on
+              Stripe if your link allows it.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            {/* Preset Amounts */}
             <div className="grid grid-cols-3 gap-3">
               {PRESET_AMOUNTS.map((preset) => (
                 <Button
                   key={preset}
+                  type="button"
                   variant={amount === preset.toString() ? "default" : "outline"}
+                  disabled={!recipientReady}
                   onClick={() => handleAmountSelect(preset)}
                   className={
                     amount === preset.toString()
@@ -219,16 +233,16 @@ export default function DepositPage() {
               ))}
             </div>
 
-            {/* Custom Amount */}
             <div className="space-y-2">
-              <Label htmlFor="customAmount">Or Enter Custom Amount</Label>
+              <Label htmlFor="deposit-customAmount">Or enter custom amount</Label>
               <div className="relative">
                 <DollarSign className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
                 <Input
-                  id="customAmount"
+                  id="deposit-customAmount"
                   type="number"
                   placeholder="0.00"
                   value={customAmount}
+                  disabled={!recipientReady}
                   onChange={(e) => handleCustomAmountChange(e.target.value)}
                   className="pl-10 h-12 text-lg"
                   min="10"
@@ -236,39 +250,37 @@ export default function DepositPage() {
                   step="0.01"
                 />
               </div>
-              {customAmount && (parseFloat(customAmount) < 10 || parseFloat(customAmount) > 300) && (
-                <p className="text-sm text-destructive">Amount must be between $10 and $300</p>
-              )}
+              {customAmount !== "" &&
+                (parseFloat(customAmount) < 10 || parseFloat(customAmount) > 300) && (
+                  <p className="text-sm text-destructive">Amount must be between $10 and $300</p>
+                )}
             </div>
 
-            {/* Fee Breakdown */}
-            {selectedAmount > 0 && (
+            {fees && recipientReady && (
               <Card className="border-border bg-secondary">
                 <CardContent className="pt-4">
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">Deposit Amount</span>
+                      <span className="text-muted-foreground">Deposit amount</span>
                       <span className="font-medium">${selectedAmount.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">Service Fee</span>
+                      <span className="text-muted-foreground">Service fee (est.)</span>
                       <span className="font-medium">${fees.serviceFee.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between pt-2 border-t border-border">
-                      <span className="font-semibold text-foreground">Total Charge</span>
-                      <span className="font-bold text-gold text-lg">
-                        ${fees.total.toFixed(2)}
-                      </span>
+                      <span className="font-semibold text-foreground">Total (est.)</span>
+                      <span className="font-bold text-gold text-lg">${fees.total.toFixed(2)}</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             )}
 
-            {/* Submit Button */}
             <Button
+              type="button"
               onClick={handleProceedToPayment}
-              disabled={!selectedInmate || selectedAmount < 10 || selectedAmount > 300}
+              disabled={!canProceed}
               className="w-full bg-gold text-gold-foreground hover:bg-gold/90 h-12 text-base"
             >
               <CreditCard className="mr-2 h-5 w-5" />
@@ -276,21 +288,18 @@ export default function DepositPage() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 
-            <Button
-              type="button"
-              variant="outline"
-              className="w-full border-gold/40 hover:border-gold/60 hover:bg-gold/5"
-              onClick={() => redirectToPayment(STRIPE_LINKS.deposit.url)}
-            >
-              Complete Deposit
-            </Button>
+            {!canProceed && recipientReady && !amountValid && (
+              <p className="text-xs text-center text-destructive">
+                Enter a deposit amount between $10 and $300 to continue.
+              </p>
+            )}
 
             <p className="text-xs text-center text-muted-foreground">
               Secure payment processing via Stripe. See{" "}
               <Link href="/fees" className="text-gold hover:underline">
                 fee schedule
               </Link>{" "}
-              for details.
+              for details. You may enter the final amount on Stripe&apos;s checkout page.
             </p>
           </CardContent>
         </Card>
