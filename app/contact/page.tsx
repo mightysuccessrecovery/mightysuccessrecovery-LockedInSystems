@@ -10,13 +10,34 @@ export default function Contact() {
       </p>
 
       <a
-        href="mailto:info@mightysuccessrecovery.org?subject=Support%20Request"
+        href="mailto:info@mightysuccessrecovery.org?subject=Partnership%20Request"
         className="email-box mx-auto mt-10 block max-w-xl text-black no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
       >
         <strong>Email Support Only</strong>
         <br />
         info@mightysuccessrecovery.org
       </a>
+      <p className="mx-auto mt-3 max-w-xl text-center text-xs text-gray-600">
+        If your device doesn’t open email automatically, use{" "}
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mightysuccessrecovery.org&su=Partnership%20Request"
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-[#0F2A44] underline"
+        >
+          Gmail
+        </a>{" "}
+        or{" "}
+        <a
+          href="https://outlook.office.com/mail/deeplink/compose?to=info@mightysuccessrecovery.org&subject=Partnership%20Request"
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-[#0F2A44] underline"
+        >
+          Outlook
+        </a>
+        .
+      </p>
 
       <form
         action="https://formspree.io/f/xlgaqvro"

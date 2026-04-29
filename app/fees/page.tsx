@@ -232,6 +232,24 @@ export default function FeesPage() {
             >
               info@mightysuccessrecovery.org
             </a>
+            . If your device doesn’t open email automatically, use{" "}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mightysuccessrecovery.org&su=Mighty%20Success%20Recovery%20Inquiry"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-gold hover:underline"
+            >
+              Gmail
+            </a>{" "}
+            or{" "}
+            <a
+              href="https://outlook.office.com/mail/deeplink/compose?to=info@mightysuccessrecovery.org&subject=Mighty%20Success%20Recovery%20Inquiry"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-gold hover:underline"
+            >
+              Outlook
+            </a>
             .
           </AlertDescription>
         </Alert>

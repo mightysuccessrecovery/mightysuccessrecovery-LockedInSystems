@@ -56,6 +56,27 @@ export default function SupportPage() {
               <br />
               info@mightysuccessrecovery.org
             </a>
+            <p className="mt-3 text-xs text-muted-foreground">
+              If your device doesn’t open email automatically, use{" "}
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mightysuccessrecovery.org&su=Support%20Request"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gold hover:underline"
+              >
+                Gmail
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://outlook.office.com/mail/deeplink/compose?to=info@mightysuccessrecovery.org&subject=Support%20Request"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gold hover:underline"
+              >
+                Outlook
+              </a>
+              .
+            </p>
           </CardContent>
         </Card>
 

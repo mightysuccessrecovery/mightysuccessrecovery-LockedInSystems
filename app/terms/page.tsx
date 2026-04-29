@@ -431,6 +431,27 @@ export default function TermsPage() {
                   <Mail className="h-4 w-4" />
                   info@mightysuccessrecovery.org
                 </a>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  If your device doesn’t open email automatically, use{" "}
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mightysuccessrecovery.org&su=Mighty%20Success%20Recovery%20Inquiry"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gold hover:underline"
+                  >
+                    Gmail
+                  </a>{" "}
+                  or{" "}
+                  <a
+                    href="https://outlook.office.com/mail/deeplink/compose?to=info@mightysuccessrecovery.org&subject=Mighty%20Success%20Recovery%20Inquiry"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gold hover:underline"
+                  >
+                    Outlook
+                  </a>
+                  .
+                </p>
               </div>
             </CardContent>
           </Card>
