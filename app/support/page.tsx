@@ -48,15 +48,13 @@ export default function SupportPage() {
             <CardTitle className="text-lg">Email Support Only</CardTitle>
           </CardHeader>
           <CardContent className="pt-6 text-center">
-            <div className="inline-flex items-center gap-2 rounded-lg bg-gold/10 px-6 py-4">
-              <Mail className="h-6 w-6 text-gold" />
-              <a
-                href="mailto:info@mightysuccessrecovery.org"
-                className="text-lg font-semibold text-gold hover:underline"
-              >
-                info@mightysuccessrecovery.org
-              </a>
-            </div>
+            <a
+              href="mailto:info@mightysuccessrecovery.org"
+              className="inline-flex cursor-pointer items-center gap-3 rounded-lg bg-gold/10 px-6 py-4 text-lg font-semibold text-gold underline-offset-4 transition-colors hover:bg-gold/15 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            >
+              <Mail className="h-6 w-6 shrink-0 text-gold" aria-hidden />
+              <span className="break-all">info@mightysuccessrecovery.org</span>
+            </a>
           </CardContent>
         </Card>
 
