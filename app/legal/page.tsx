@@ -172,7 +172,7 @@ export default function LegalPage() {
             disclosure of Mighty Success Recovery Inc. For questions regarding compliance
             or organizational matters, please contact{" "}
             <a
-              href="mailto:info@mightysuccessrecovery.org"
+              href="mailto:info@mightysuccessrecovery.org?subject=Mighty%20Success%20Recovery%20Inquiry"
               className="font-medium text-gold hover:underline"
             >
               info@mightysuccessrecovery.org

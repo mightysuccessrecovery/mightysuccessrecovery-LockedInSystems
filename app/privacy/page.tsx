@@ -153,7 +153,7 @@ export default function PrivacyPage() {
             <CardContent className="text-muted-foreground">
               <p>For privacy-related questions or concerns, please contact us at:</p>
               <a
-                href="mailto:info@mightysuccessrecovery.org"
+                href="mailto:info@mightysuccessrecovery.org?subject=Mighty%20Success%20Recovery%20Inquiry"
                 className="mt-2 inline-flex items-center gap-2 text-gold hover:underline"
               >
                 <Mail className="h-4 w-4" />

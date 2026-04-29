@@ -210,4 +210,18 @@
     height: 32px;
     width: auto;
   }
+
+  /* Contact page — mailto helpers */
+  .email-box {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .black-box {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+  }
 }

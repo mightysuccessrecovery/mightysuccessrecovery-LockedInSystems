@@ -425,7 +425,7 @@ export default function TermsPage() {
               <div className="mt-4 rounded-lg bg-secondary p-4">
                 <p className="font-semibold text-foreground">Mighty Success Recovery Inc.</p>
                 <a
-                  href="mailto:info@mightysuccessrecovery.org"
+                  href="mailto:info@mightysuccessrecovery.org?subject=Mighty%20Success%20Recovery%20Inquiry"
                   className="mt-3 inline-flex items-center gap-2 text-gold hover:underline"
                 >
                   <Mail className="h-4 w-4" />

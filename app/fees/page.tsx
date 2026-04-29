@@ -227,7 +227,7 @@ export default function FeesPage() {
             <strong>Institutional access and procurement requests:</strong> Authorized institutional partners may
             request additional fee documentation or supporting materials by contacting{" "}
             <a
-              href="mailto:info@mightysuccessrecovery.org"
+              href="mailto:info@mightysuccessrecovery.org?subject=Mighty%20Success%20Recovery%20Inquiry"
               className="font-medium text-gold hover:underline"
             >
               info@mightysuccessrecovery.org
