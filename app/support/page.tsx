@@ -49,11 +49,12 @@ export default function SupportPage() {
           </CardHeader>
           <CardContent className="pt-6 text-center">
             <a
-              href="mailto:info@mightysuccessrecovery.org?subject=Mighty%20Success%20Recovery%20Inquiry"
-              className="inline-flex cursor-pointer items-center gap-3 rounded-lg bg-gold/10 px-6 py-4 text-lg font-semibold text-gold underline-offset-4 transition-colors hover:bg-gold/15 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              href="mailto:info@mightysuccessrecovery.org?subject=Support%20Request"
+              className="mt-2 inline-block text-black no-underline"
             >
-              <Mail className="h-6 w-6 shrink-0 text-gold" aria-hidden />
-              <span className="break-all">info@mightysuccessrecovery.org</span>
+              <strong>Email Support Only</strong>
+              <br />
+              info@mightysuccessrecovery.org
             </a>
           </CardContent>
         </Card>

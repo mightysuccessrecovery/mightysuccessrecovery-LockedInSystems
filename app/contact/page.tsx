@@ -10,12 +10,12 @@ export default function Contact() {
       </p>
 
       <a
-        href="mailto:info@mightysuccessrecovery.org"
-        className="email-box mx-auto mt-10 block max-w-xl bg-black p-5 text-white no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
+        href="mailto:info@mightysuccessrecovery.org?subject=Support%20Request"
+        className="email-box mx-auto mt-10 block max-w-xl text-black no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
       >
-        <span className="block text-center text-sm font-semibold">
-          Tap or click anywhere in this box to email us
-        </span>
+        <strong>Email Support Only</strong>
+        <br />
+        info@mightysuccessrecovery.org
       </a>
 
       <form
