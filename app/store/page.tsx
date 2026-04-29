@@ -3,7 +3,6 @@
 import { useState, useMemo } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 import { ShoppingBag, AlertTriangle, User, Check, Package, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -13,8 +12,10 @@ import { useCart } from "@/components/cart-provider"
 import { OrderSummary } from "@/components/order-summary"
 import { TransactionSecurityNotice } from "@/components/transaction-security-notice"
 
+/** Store-page-only Payment Link (`/store` Proceed to Checkout differs from sidebar → `/checkout`) */
+const STORE_PROCEED_PAYMENT_URL = "https://buy.stripe.com/cNicN51IPdaAgHvdcudEs06"
+
 export default function StorePage() {
-  const router = useRouter()
   const { selectedState, selectedFacility, selectedInmate, selectedPackage, setSelectedPackage } = useCart()
   const [hoveredPackage, setHoveredPackage] = useState<string | null>(null)
 
@@ -39,15 +40,8 @@ export default function StorePage() {
   }
 
   const handleProceedToCheckout = () => {
-    if (selectedPackage && selectedInmate) {
-      // If package has a Stripe payment link, redirect directly to Stripe
-      if (selectedPackage.paymentLink) {
-        window.location.href = selectedPackage.paymentLink
-      } else {
-        // Fallback to embedded checkout
-        router.push("/checkout")
-      }
-    }
+    if (!(selectedPackage && selectedInmate)) return
+    window.open(STORE_PROCEED_PAYMENT_URL, "_blank", "noopener,noreferrer")
   }
 
   const fees = selectedPackage ? calculateFees(selectedPackage.price) : null
