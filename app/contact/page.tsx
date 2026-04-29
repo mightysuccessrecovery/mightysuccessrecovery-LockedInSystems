@@ -1,8 +1,6 @@
 "use client"
 
 export default function Contact() {
-  const fields = ["Full Name", "Organization / Agency", "Title / Role", "Email"] as const
-
   return (
     <main className="min-h-screen bg-[var(--background)] px-6 py-20">
       <h1 className="text-center text-3xl font-bold text-[#0F2A44]">Contact for Partnership</h1>
@@ -20,22 +18,59 @@ export default function Contact() {
         </span>
       </a>
 
-      {/* OPTIONAL DETAILS (compose your message in email when the link opens) */}
-      <div className="mx-auto mt-10 max-w-xl space-y-4">
-        {fields.map((p) => (
-          <input
-            key={p}
-            type="text"
-            name={p.toLowerCase().replace(/\s+/g, "-")}
-            placeholder={p}
-            className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
-            autoComplete={
-              p === "Email" ? "email" : p === "Full Name" ? "name" : "organization"
-            }
-          />
-        ))}
+      <form
+        action="https://formspree.io/f/xlgaqvro"
+        method="POST"
+        className="mx-auto mt-10 max-w-xl space-y-4"
+      >
+        <input
+          type="text"
+          name="fullName"
+          placeholder="Full Name"
+          required
+          autoComplete="name"
+          className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+        />
 
-      </div>
+        <input
+          type="text"
+          name="organization"
+          placeholder="Organization / Agency"
+          autoComplete="organization"
+          className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+        />
+
+        <input
+          type="text"
+          name="title"
+          placeholder="Title / Role"
+          className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          autoComplete="email"
+          className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+        />
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          required
+          rows={5}
+          className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
+        />
+
+        <button
+          type="submit"
+          className="w-full rounded bg-[#0F2A44] py-3 font-semibold text-white hover:opacity-95"
+        >
+          Submit Partnership Request
+        </button>
+      </form>
     </main>
   )
 }
