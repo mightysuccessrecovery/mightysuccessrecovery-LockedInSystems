@@ -271,7 +271,11 @@ export default function DonationPage() {
             </Button>
 
             <p className="text-xs text-center text-muted-foreground">
-              Secure payment processing via Stripe
+              Secure payment processing via Stripe. See{" "}
+              <Link href="/fees" className="text-gold hover:underline">
+                fee schedule
+              </Link>{" "}
+              for details.
             </p>
           </CardContent>
         </Card>

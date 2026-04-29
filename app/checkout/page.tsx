@@ -6,12 +6,10 @@ import {
   ShoppingBag,
   ArrowLeft,
   AlertTriangle,
-  CreditCard,
   Calendar,
   User,
   Building2,
   MapPin,
-  CheckCircle,
   Package,
   Mail,
 } from "lucide-react"
@@ -21,9 +19,9 @@ import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useCart } from "@/components/cart-provider"
-import { StripeCheckout } from "@/components/stripe-checkout"
-import { startCommissaryCheckout } from "@/app/actions/stripe"
 import { calculateFees, getDeliveryDate, formatDate } from "@/lib/data"
+import { STRIPE_LINKS } from "@/lib/stripeLinks"
+import { cn } from "@/lib/utils"
 
 function isValidEmail(value: string) {
   const v = value.trim()
@@ -31,12 +29,9 @@ function isValidEmail(value: string) {
 }
 
 export default function CheckoutPage() {
-  const { selectedPackage, selectedInmate, clearSelection } = useCart()
+  const { selectedPackage, selectedInmate } = useCart()
   const [customerName, setCustomerName] = useState("")
   const [customerEmail, setCustomerEmail] = useState("")
-  const [showPayment, setShowPayment] = useState(false)
-  const [isComplete, setIsComplete] = useState(false)
-
   const canProceed =
     customerName.trim().length > 0 && isValidEmail(customerEmail)
 
@@ -65,103 +60,12 @@ export default function CheckoutPage() {
     )
   }
 
-  if (isComplete) {
-    return (
-      <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-          <Card className="border-border">
-            <CardContent className="py-12 text-center">
-              <CheckCircle className="mx-auto mb-4 h-16 w-16 text-green-500" />
-              <h3 className="text-2xl font-bold text-foreground">Order Confirmed!</h3>
-              <p className="mt-2 text-muted-foreground">
-                Your commissary order for {selectedInmate.firstName} {selectedInmate.lastName} has been placed successfully.
-              </p>
-              <p className="mt-4 text-sm text-muted-foreground">
-                A confirmation email will be sent to your email address.
-              </p>
-              <Button
-                asChild
-                className="mt-6 bg-gold text-gold-foreground hover:bg-gold/90"
-                onClick={() => clearSelection()}
-              >
-                <Link href="/">Return Home</Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    )
-  }
-
   const deliveryDate = getDeliveryDate()
   const fees = calculateFees(selectedPackage.price)
   const orderDate = new Date()
 
-  const handleProceedToPayment = () => {
-    if (!canProceed) return
-    if (selectedPackage.paymentLink) {
-      window.location.href = selectedPackage.paymentLink
-    } else {
-      setShowPayment(true)
-    }
-  }
-
-  const fetchClientSecret = async () => {
-    const secret = await startCommissaryCheckout(
-      [
-        {
-          id: selectedPackage.id,
-          name: selectedPackage.name,
-          price: selectedPackage.price,
-          quantity: 1,
-        },
-      ],
-      {
-        inmateId: selectedInmate.id,
-        inmateName: `${selectedInmate.firstName} ${selectedInmate.lastName}`,
-        facility: selectedInmate.facility,
-        state: selectedInmate.state,
-        phone: "",
-        packageName: selectedPackage.name,
-        customerName: customerName.trim(),
-        customerEmail: customerEmail.trim(),
-      }
-    )
-    return secret
-  }
-
-  if (showPayment) {
-    return (
-      <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Button
-            variant="ghost"
-            className="mb-6 -ml-2"
-            onClick={() => setShowPayment(false)}
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Order Summary
-          </Button>
-
-          <div className="mb-6">
-            <h1 className="text-2xl font-bold text-foreground sm:text-3xl">Complete Payment</h1>
-            <p className="mt-2 text-muted-foreground">
-              Ordering for {selectedInmate.firstName} {selectedInmate.lastName} at {selectedInmate.facility}
-            </p>
-          </div>
-
-          <Card className="border-border">
-            <CardContent className="pt-6">
-              <StripeCheckout
-                fetchClientSecret={fetchClientSecret}
-                onComplete={() => setIsComplete(true)}
-              />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    )
-  }
+  const commissaryPaymentHref =
+    selectedPackage.paymentLink ?? STRIPE_LINKS.checkout.url
 
   return (
     <div className="min-h-[calc(100vh-8rem)] py-8 md:py-12">
@@ -324,25 +228,46 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                <Button
-                  onClick={handleProceedToPayment}
-                  disabled={!canProceed}
-                  className="w-full mt-6 bg-gold text-gold-foreground hover:bg-gold/90 h-12 text-base"
-                >
-                  <CreditCard className="mr-2 h-5 w-5" />
-                  Proceed to Payment
-                </Button>
+                <div className="mt-[30px] text-center">
+                  <p className="mb-4 text-[14px] leading-relaxed text-[#6b7280]">
+                    Secure payment processing via Stripe. See{" "}
+                    <Link href="/fees" className="text-[#6b7280] underline underline-offset-2 hover:text-foreground">
+                      fee schedule
+                    </Link>{" "}
+                    for details.
+                  </p>
+
+                  {canProceed ? (
+                    <a
+                      href={commissaryPaymentHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(
+                        "inline-flex cursor-pointer items-center justify-center rounded-[10px] bg-[linear-gradient(135deg,#635BFF_0%,#4F46E5_100%)] px-[28px] py-4 text-base font-semibold tracking-[0.3px] text-white no-underline shadow-[0_8px_20px_rgba(99,91,255,0.25)] transition-all duration-200 ease-in-out",
+                        "hover:-translate-y-0.5 hover:shadow-[0_12px_25px_rgba(99,91,255,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#635BFF]",
+                      )}
+                    >
+                      Proceed to Payment
+                    </a>
+                  ) : (
+                    <div
+                      aria-disabled
+                      className={cn(
+                        "inline-flex cursor-not-allowed items-center justify-center rounded-[10px] bg-[linear-gradient(135deg,rgba(99,91,255,0.45)_0%,rgba(79,70,229,0.45)_100%)] px-[28px] py-4 text-base font-semibold tracking-[0.3px] text-white opacity-90 shadow-[0_8px_20px_rgba(99,91,255,0.15)]",
+                      )}
+                    >
+                      Proceed to Payment
+                    </div>
+                  )}
+                </div>
 
                 {!canProceed && (
-                  <p className="mt-2 text-xs text-center text-destructive">
+                  <p className="mt-4 text-xs text-center text-destructive">
                     Enter your name and a valid email to continue
                   </p>
                 )}
 
-                <p className="mt-3 text-xs text-center text-muted-foreground">
-                  Secure payment processing via Stripe
-                </p>
-                <p className="mt-2 text-xs text-center text-muted-foreground">
+                <p className="mt-4 text-xs text-center text-muted-foreground">
                   Payments processed on behalf of Mighty Success Recovery Inc.
                 </p>
               </CardContent>
