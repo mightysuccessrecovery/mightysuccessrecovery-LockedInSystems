@@ -16,7 +16,7 @@ export default function Contact() {
         className="email-box mx-auto mt-10 max-w-xl rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
       >
         <div className="black-box rounded text-center text-sm font-semibold">
-          Tap or click anywhere in this box to email us
+          info@mightysuccessrecovery.org
         </div>
       </a>
 
@@ -34,13 +34,6 @@ export default function Contact() {
             }
           />
         ))}
-
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows={5}
-          className="w-full rounded border border-black/70 bg-white p-3 text-gray-900 placeholder:text-gray-500 outline-none focus:border-[#0F2A44] focus:ring-2 focus:ring-[#0F2A44]/20"
-        />
 
       </div>
     </main>
