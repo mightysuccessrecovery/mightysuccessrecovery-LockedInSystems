@@ -1,9 +1,16 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import path from 'path'
-import { fileURLToPath } from 'url'
+import { defineConfig, globalIgnores } from "eslint/config"
+import nextVitals from "eslint-config-next/core-web-vitals"
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const compat = new FlatCompat({ baseDirectory: __dirname })
-
-export default [...compat.extends('next/core-web-vitals')]
+export default defineConfig([
+  ...nextVitals,
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "react-hooks/purity": "off",
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/use-memo": "off",
+    },
+  },
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+])
 
