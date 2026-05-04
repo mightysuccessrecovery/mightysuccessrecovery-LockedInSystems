@@ -1,195 +1,162 @@
+import Link from "next/link"
+import { ArrowRight, Building2, CreditCard, Heart, Landmark, ShieldCheck } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { orgEinDisplay } from "@/lib/org"
+
 export default function Home() {
   return (
-    <main>
-      {/* HERO */}
-      <section className="text-center py-24 px-6 bg-white">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#0F2A44]">
-          Correctional Commissary &amp; Inmate Financial Support Services
-        </h1>
-
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
-          A 501(c)(3) Public Charity providing secure, structured, and transparent commissary and
-          inmate financial support services for correctional facilities and their families.
-        </p>
-
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href="/contact"
-            className="rounded px-6 py-3 font-semibold text-white"
-            style={{ background: "#0F2A44" }}
-          >
-            Contact for Partnership
-          </a>
-
-          <a
-            href="/procurement"
-            className="rounded border px-6 py-3 font-semibold"
-            style={{ borderColor: "#0F2A44", color: "#0F2A44" }}
-          >
-            Request Demonstration
-          </a>
-        </div>
-
-        <p className="mt-6 text-sm text-gray-500">
-          Agency partnerships and system demonstrations available upon request
-        </p>
-      </section>
-
-      <section className="mx-auto grid max-w-6xl gap-6 border-t border-gray-200 px-6 py-16 md:grid-cols-3">
-        <div className="rounded-lg border bg-white p-6">
-          <h3 className="font-semibold text-[#0F2A44]">Operational Efficiency</h3>
-          <p className="mt-3 text-sm text-gray-600">
-            Streamlined financial workflows reduce administrative burden on correctional staff and
-            improve transaction processing consistency.
+    <div>
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#0c2238] via-[#0F2A44] to-[#0F2A44] px-4 py-20 text-white sm:px-6 sm:py-28">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.12),_transparent_55%)]" />
+        <div className="relative mx-auto max-w-4xl text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+            Mighty Success Recovery Inc. · DBA LockedIn Systems
           </p>
-        </div>
-
-        <div className="rounded-lg border bg-white p-6">
-          <h3 className="font-semibold text-[#0F2A44]">Financial Transparency</h3>
-          <p className="mt-3 text-sm text-gray-600">
-            Structured reporting and system visibility support accountability and audit readiness.
+          <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight sm:text-5xl sm:leading-tight">
+            Secure fund transfers &amp; support services for families and communities
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/85 leading-relaxed">
+            Send funds quickly and securely or support recovery programs that change lives.
           </p>
-        </div>
-
-        <div className="rounded-lg border bg-white p-6">
-          <h3 className="font-semibold text-[#0F2A44]">Family Access Support</h3>
-          <p className="mt-3 text-sm text-gray-600">
-            Improves clarity and structure for families supporting incarcerated individuals.
-          </p>
-        </div>
-      </section>
-
-      {/* FACILITY SUPPORT */}
-      <section className="bg-gray-50 px-6 py-20">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-3xl font-bold text-[#0F2A44]">
-            Facility Support &amp; Integration
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-3xl text-gray-600">
-            Designed for correctional facilities seeking structured commissary and inmate financial
-            workflow support without disrupting existing operational systems.
-          </p>
-        </div>
-
-        <div className="mx-auto mt-10 grid max-w-5xl gap-6 text-sm md:grid-cols-2">
-          <div className="rounded-lg border bg-white p-6 text-gray-600">
-            • Transaction coordination systems
-            <br />
-            • Family funding access processing
-            <br />
-            • Administrative workload reduction
-            <br />
-            • Operational reporting support
+          <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+            <Button
+              asChild
+              size="lg"
+              className="h-12 bg-white text-[#0F2A44] hover:bg-white/90"
+            >
+              <Link href="/send-funds">
+                Send funds now
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="h-12 border-white/40 bg-transparent text-white hover:bg-white/10"
+            >
+              <Link href="/donate">
+                <Heart className="mr-2 h-4 w-4" />
+                Donate to our mission
+              </Link>
+            </Button>
           </div>
-
-          <div className="rounded-lg border bg-white p-6 text-gray-600">
-            • Non-disruptive integration model
-            <br />
-            • Facility-aligned workflow structure
-            <br />
-            • Transparent reporting framework
-            <br />
-            • Scalable operational design
+          <div className="mx-auto mt-12 flex max-w-xl flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="h-5 w-5 text-emerald-300" />
+              <span>Secure payments powered by Stripe</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Building2 className="h-5 w-5 text-gold" />
+              <span>501(c)(3) verified organization</span>
+            </div>
           </div>
+          <p className="mx-auto mt-8 max-w-lg text-xs text-white/60">{orgEinDisplay()}</p>
         </div>
       </section>
 
-      {/* ORGANIZATIONAL OVERVIEW */}
-      <section className="mx-auto max-w-4xl px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold text-[#0F2A44]">Organizational Overview</h2>
-
-        <p className="mt-6 leading-relaxed text-gray-600">
-          Mighty Success Recovery Inc. operates as a nonprofit organization focused on structured
-          financial access systems within correctional environments.
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 className="text-center text-2xl font-bold text-[#0F2A44] sm:text-3xl">How it works</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+          Two clear paths: deposits for loved ones, and tax-deductible donations for mission programs.
         </p>
-
-        <p className="mt-4 leading-relaxed text-gray-600">
-          DBA LockedIn Systems serves as the operational platform supporting commissary and inmate
-          financial coordination services for institutional partners.
-        </p>
-      </section>
-
-      {/* SUPPORT & ASSISTANCE */}
-      <section className="border-t border-gray-200 bg-[var(--background)] px-6 py-16">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-center text-2xl font-bold text-[#0F2A44] md:text-3xl">
-            Support &amp; Assistance
-          </h2>
-
-          <p className="mt-6 text-center text-gray-700 leading-relaxed">
-            Facilities and authorized users may access support for operational questions, account
-            assistance, and system guidance.
-          </p>
-
-          <div className="mx-auto mt-10 max-w-2xl">
-            <p className="text-center font-semibold text-[#0F2A44]">Support Areas:</p>
-            <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-700">
-              <li>Account and access support</li>
-              <li>Transaction inquiries</li>
-              <li>System navigation guidance</li>
-              <li>Operational clarification</li>
-            </ul>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0F2A44]/10 text-sm font-bold text-[#0F2A44]">
+              1
+            </div>
+            <h3 className="mt-4 font-semibold text-foreground">Enter recipient details</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              Provide sender contact information, recipient name, and facility so we can route the
+              transfer with the metadata institutions expect.
+            </p>
           </div>
-
-          <p className="mx-auto mt-10 max-w-3xl text-center text-gray-600">
-            Response times are structured to align with institutional operational requirements.
-          </p>
+          <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0F2A44]/10 text-sm font-bold text-[#0F2A44]">
+              2
+            </div>
+            <h3 className="mt-4 font-semibold text-foreground">Choose payment method</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              <span className="inline-flex items-center gap-1 font-medium text-foreground">
+                <Landmark className="h-3.5 w-3.5 text-emerald-700" />
+                Bank (ACH)
+              </span>{" "}
+              is the lower-fee default;{" "}
+              <span className="inline-flex items-center gap-1 font-medium text-foreground">
+                <CreditCard className="h-3.5 w-3.5" />
+                card
+              </span>{" "}
+              is available when you need instant authorization.
+            </p>
+          </div>
+          <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0F2A44]/10 text-sm font-bold text-[#0F2A44]">
+              3
+            </div>
+            <h3 className="mt-4 font-semibold text-foreground">Funds processed securely</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              Stripe-hosted checkout, webhook confirmation logging, and published deposit and refund
+              policies support transparency for families and agency reviewers.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* FEES & SERVICE STRUCTURE */}
-      <section className="border-t border-gray-200 bg-white px-6 py-16">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-center text-2xl font-bold text-[#0F2A44] md:text-3xl">
-            Fees &amp; Service Structure
-          </h2>
-
-          <p className="mt-6 text-center text-gray-700 leading-relaxed">
-            This platform is designed to maintain transparent and structured service fees associated
-            with operational processing.
-          </p>
-
-          <div className="mx-auto mt-10 max-w-2xl">
-            <p className="text-center font-semibold text-[#0F2A44]">Fee Principles:</p>
-            <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-700">
-              <li>Fees are applied only to service processing where applicable</li>
-              <li>No hidden or undisclosed charges</li>
-              <li>Fee structures are designed to support operational sustainability</li>
-            </ul>
+      <section className="border-y border-border bg-muted/30 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h2 className="text-2xl font-bold text-[#0F2A44] sm:text-3xl">Built for compliance conversations</h2>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Documented fees, identity verification messaging, ACH-first options, and separate
+                donation vs. deposit journeys make it easier to align with procurement and contract
+                diligence.
+              </p>
+              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+                <li>· Published legal, privacy, deposit, and refund policies</li>
+                <li>· Stripe webhook logging for completed checkouts (configure STRIPE_WEBHOOK_SECRET)</li>
+                <li>· Facility lookup and commissary flows preserved for operational continuity</li>
+              </ul>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild variant="default" className="bg-[#0F2A44] text-white hover:bg-[#0F2A44]/90">
+                  <Link href="/procurement">Procurement &amp; demos</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/legal">Legal &amp; compliance hub</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+              <h3 className="font-semibold text-[#0F2A44]">Still need the classic flows?</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                Browse commissary packages, use guided deposit with facility selection, or reach our
+                support team — all existing tools remain available.
+              </p>
+              <div className="mt-6 flex flex-col gap-2 sm:flex-row">
+                <Button asChild variant="secondary" size="sm">
+                  <Link href="/store">Commissary</Link>
+                </Button>
+                <Button asChild variant="secondary" size="sm">
+                  <Link href="/deposit">Guided deposit</Link>
+                </Button>
+                <Button asChild variant="secondary" size="sm">
+                  <Link href="/contact">Contact</Link>
+                </Button>
+              </div>
+            </div>
           </div>
-
-          <p className="mx-auto mt-10 max-w-3xl text-center text-gray-600">
-            Detailed fee breakdowns may be provided to authorized institutional partners upon request.
-            See our{" "}
-            <a href="/fees" className="font-medium text-[#0F2A44] underline-offset-2 hover:underline">
-              Fees page
-            </a>{" "}
-            for current transaction tiers.
-          </p>
         </div>
       </section>
 
-      {/* AGENCY PARTNERSHIP */}
-      <section className="border-t border-gray-200 px-6 py-20 text-center bg-white">
-        <h2 className="text-2xl font-bold text-[#0F2A44]">Agency Partnership Inquiries</h2>
-
-        <p className="mt-3 text-gray-600">
+      <section className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold text-[#0F2A44]">Agency partnership inquiries</h2>
+        <p className="mt-3 text-muted-foreground">
           Request evaluation, demonstration, or procurement documentation.
         </p>
-
-        <a
-          href="/contact"
-          className="mt-6 inline-block"
-          style={{
-            color: "#635BFF",
-            fontWeight: 600,
-            textDecoration: "underline",
-          }}
-        >
-          Submit Partnership Request
-        </a>
+        <Button asChild className="mt-8 bg-[#0F2A44] text-white hover:bg-[#0F2A44]/90">
+          <Link href="/contact">Submit partnership request</Link>
+        </Button>
       </section>
-    </main>
+    </div>
   )
 }
