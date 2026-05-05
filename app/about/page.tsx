@@ -24,7 +24,7 @@ export default function AboutPage() {
           <section>
             <h2 className="text-lg font-semibold">Correctional Support Systems</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">
-              The organization supports structured financial access systems within correctional
+              The organization supports structured fund access systems within correctional
               environments through operational coordination that aligns with facility-authorized
               processes.
             </p>

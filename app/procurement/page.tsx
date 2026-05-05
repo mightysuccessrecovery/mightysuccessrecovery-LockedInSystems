@@ -16,7 +16,7 @@ export default function ProcurementPage() {
       <section className="mx-auto mt-12 max-w-4xl leading-relaxed text-gray-700">
         <p>
           Mighty Success Recovery Inc., DBA LockedIn Systems, is a 501(c)(3) Public Charity
-          providing structured commissary and inmate financial support services designed specifically
+          providing structured commissary and inmate support services designed specifically
           for correctional environments.
         </p>
 
@@ -45,7 +45,7 @@ export default function ProcurementPage() {
           <div className="rounded-lg border border-gray-200 p-6">
             <h3 className="font-semibold text-[#0F2A44]">Operational Stability</h3>
             <p className="mt-3 text-sm text-gray-600">
-              Predictable financial processes reduce administrative interruptions, helping maintain
+              Predictable processing reduces administrative interruptions, helping maintain
               consistent facility operations and reporting structure.
             </p>
           </div>

@@ -50,7 +50,7 @@ export default function LegalPage() {
           <CardContent className="pt-6">
             <p className="text-foreground leading-relaxed">
               LockedIn Systems is a digital platform designed to facilitate commissary purchases
-              and financial deposits for incarcerated individuals through approved facility systems.
+              and deposits for incarcerated individuals through approved facility systems.
             </p>
           </CardContent>
         </Card>
@@ -119,10 +119,10 @@ export default function LegalPage() {
           <CardContent className="pt-6">
             <p className="text-foreground leading-relaxed">
               The organization adheres to applicable laws and regulations for its operations.
-              All funds are processed through approved financial service providers (e.g., Stripe).
+              All funds are processed through approved payment service providers (e.g., Stripe).
             </p>
             <p className="mt-4 text-foreground leading-relaxed">
-              Payments are processed through licensed financial service providers and applied to
+              Payments are processed through licensed payment service providers and applied to
               inmate accounts by authorized correctional facility systems.
             </p>
           </CardContent>
@@ -140,14 +140,14 @@ export default function LegalPage() {
             <Alert className="border-border bg-secondary mb-4">
               <AlertTriangle className="h-4 w-4 text-gold" />
               <AlertDescription className="text-foreground">
-                This platform does not provide legal, financial, or correctional facility
+                This platform does not provide legal or correctional facility
                 advisory services.
               </AlertDescription>
             </Alert>
             <div className="space-y-4 text-foreground leading-relaxed">
               <p>
                 The information provided through LockedIn Systems is for general informational
-                purposes only and does not constitute legal advice, financial advice, or any
+                purposes only and does not constitute legal advice or any
                 other form of professional counsel.
               </p>
               <p>
@@ -158,7 +158,7 @@ export default function LegalPage() {
               </p>
               <p>
                 Use of this platform does not create an attorney-client relationship,
-                financial advisor relationship, or any other professional service relationship
+                advisor relationship, or any other professional service relationship
                 between the user and Mighty Success Recovery Inc.
               </p>
             </div>

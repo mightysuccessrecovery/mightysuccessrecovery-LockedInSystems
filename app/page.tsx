@@ -4,12 +4,12 @@ export default function Home() {
       {/* HERO */}
       <section className="text-center py-24 px-6 bg-white">
         <h1 className="text-4xl md:text-5xl font-bold text-[#0F2A44]">
-          Correctional Commissary &amp; Inmate Financial Support Services
+          Correctional Commissary &amp; Inmate Support Services
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
           A 501(c)(3) Public Charity providing secure, structured, and transparent commissary and
-          inmate financial support services for correctional facilities and their families.
+          inmate support services for correctional facilities and their families.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -39,13 +39,13 @@ export default function Home() {
         <div className="rounded-lg border bg-white p-6">
           <h3 className="font-semibold text-[#0F2A44]">Operational Efficiency</h3>
           <p className="mt-3 text-sm text-gray-600">
-            Streamlined financial workflows reduce administrative burden on correctional staff and
+            Streamlined payment workflows reduce administrative burden on correctional staff and
             improve transaction processing consistency.
           </p>
         </div>
 
         <div className="rounded-lg border bg-white p-6">
-          <h3 className="font-semibold text-[#0F2A44]">Financial Transparency</h3>
+          <h3 className="font-semibold text-[#0F2A44]">Transaction Transparency</h3>
           <p className="mt-3 text-sm text-gray-600">
             Structured reporting and system visibility support accountability and audit readiness.
           </p>
@@ -67,7 +67,7 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-gray-600">
-            Designed for correctional facilities seeking structured commissary and inmate financial
+            Designed for correctional facilities seeking structured commissary and inmate fund
             workflow support without disrupting existing operational systems.
           </p>
         </div>
@@ -101,12 +101,12 @@ export default function Home() {
 
         <p className="mt-6 leading-relaxed text-gray-600">
           Mighty Success Recovery Inc. operates as a nonprofit organization focused on structured
-          financial access systems within correctional environments.
+          fund access systems within correctional environments.
         </p>
 
         <p className="mt-4 leading-relaxed text-gray-600">
           DBA LockedIn Systems serves as the operational platform supporting commissary and inmate
-          financial coordination services for institutional partners.
+          coordination services for institutional partners.
         </p>
       </section>
 
