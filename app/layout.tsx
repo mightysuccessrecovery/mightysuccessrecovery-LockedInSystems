@@ -16,22 +16,22 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Mighty Success Recovery Inc. — Secure Transfers & Donations",
+  title: "LockedIn Systems — Secure Commissary & Deposit Platform",
   description:
-    "Mighty Success Recovery Inc. (DBA LockedIn Systems): secure inmate fund transfers with ACH-first Stripe checkout, 501(c)(3) donations, and compliance-oriented policies.",
+    "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure commissary and inmate deposit platform.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   openGraph: {
     type: "website",
-    title: "Mighty Success Recovery Inc. — Secure Transfers & Donations",
+    title: "LockedIn Systems — Secure Commissary & Deposit Platform",
     description:
-      "Send funds securely or donate to recovery programs. ACH-first checkout, Stripe-powered payments, published policies.",
+      "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure commissary and inmate deposit platform.",
     url: "/",
   },
   twitter: {
     card: "summary",
-    title: "Mighty Success Recovery Inc. — Secure Transfers & Donations",
+    title: "LockedIn Systems — Secure Commissary & Deposit Platform",
     description:
-      "Send funds securely or donate to recovery programs. ACH-first checkout and Stripe-powered payments.",
+      "LockedIn Systems operated by Mighty Success Recovery Inc. — A secure commissary and inmate deposit platform.",
   },
   icons: {
     icon: [

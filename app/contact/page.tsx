@@ -1,7 +1,5 @@
 "use client"
 
-import { ORG_EMAIL, ORG_PHONE, orgEinDisplay } from "@/lib/org"
-
 export default function Contact() {
   return (
     <main className="min-h-screen bg-[var(--background)] px-6 py-20">
@@ -11,29 +9,18 @@ export default function Contact() {
         For correctional facilities, government agencies, and authorized partners
       </p>
 
-      <p className="mx-auto mt-6 max-w-xl text-center text-sm text-gray-600 leading-relaxed">
-        {orgEinDisplay()}. This site uses SSL/TLS encryption for data in transit. Payments are processed
-        by Stripe; we do not store full card or bank numbers on our servers.
-      </p>
-
-      {ORG_PHONE ? (
-        <p className="mx-auto mt-2 max-w-xl text-center text-sm text-gray-700">
-          <strong>Phone:</strong> {ORG_PHONE}
-        </p>
-      ) : null}
-
       <a
-        href={`mailto:${ORG_EMAIL}?subject=Partnership%20Request`}
+        href="mailto:info@mightysuccessrecovery.org?subject=Partnership%20Request"
         className="email-box mx-auto mt-10 block max-w-xl text-black no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
       >
         <strong>Email Support Only</strong>
         <br />
-        {ORG_EMAIL}
+        info@mightysuccessrecovery.org
       </a>
       <p className="mx-auto mt-3 max-w-xl text-center text-xs text-gray-600">
         If your device doesn’t open email automatically, use{" "}
         <a
-          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(ORG_EMAIL)}&su=Partnership%20Request`}
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mightysuccessrecovery.org&su=Partnership%20Request"
           target="_blank"
           rel="noreferrer"
           className="font-medium text-[#0F2A44] underline"
@@ -42,7 +29,7 @@ export default function Contact() {
         </a>{" "}
         or{" "}
         <a
-          href={`https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(ORG_EMAIL)}&subject=Partnership%20Request`}
+          href="https://outlook.office.com/mail/deeplink/compose?to=info@mightysuccessrecovery.org&subject=Partnership%20Request"
           target="_blank"
           rel="noreferrer"
           className="font-medium text-[#0F2A44] underline"

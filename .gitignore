@@ -15,6 +15,3 @@ node_modules
 .next/
 .DS_Store
 .vercel
-
-# Local webhook / checkout log (ephemeral; use a database in production)
-data/transactions.ndjson
