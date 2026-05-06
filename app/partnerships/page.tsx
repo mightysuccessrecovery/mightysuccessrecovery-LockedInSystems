@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { SITE_EMAIL, SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site"
 
 export default function PartnershipsPage() {
   return (
@@ -32,6 +33,22 @@ export default function PartnershipsPage() {
             >
               Request Demonstration
             </Link>
+          </div>
+          <div className="mt-6 space-y-2 border-t border-border pt-5 text-sm text-muted-foreground">
+            <p>
+              <span className="font-semibold text-foreground">Phone:</span>{" "}
+              <a href={`tel:${SITE_PHONE_TEL}`} className="font-medium text-[#0F2A44] hover:underline">
+                {SITE_PHONE_DISPLAY}
+              </a>{" "}
+              <span className="text-muted-foreground">(verified partners &amp; urgent inquiries)</span>
+            </p>
+            <p>
+              <span className="font-semibold text-foreground">Email:</span>{" "}
+              <a href={`mailto:${SITE_EMAIL}`} className="font-medium text-[#0F2A44] hover:underline">
+                {SITE_EMAIL}
+              </a>
+            </p>
+            <p className="text-xs">Response time: 24–48 business hours</p>
           </div>
         </div>
 

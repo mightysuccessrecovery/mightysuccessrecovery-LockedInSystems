@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { SITE_EMAIL, SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site"
 
 export function Footer() {
   return (
@@ -97,9 +98,25 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 text-center text-xs text-gray-500">
-          <p>All payments are processed securely via licensed third-party payment providers.</p>
-          <p className="mt-2">&copy; Mighty Success Recovery Inc. &bull; All Rights Reserved</p>
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-700">
+            <span className="font-semibold text-[#0F2A44]">Phone</span>:{" "}
+            <a
+              href={`tel:${SITE_PHONE_TEL}`}
+              className="font-medium text-[#0F2A44] underline-offset-2 hover:underline"
+            >
+              {SITE_PHONE_DISPLAY}
+            </a>{" "}
+            <span className="text-gray-600">
+              (verified partners &amp; urgent inquiries)
+            </span>
+          </p>
+          <p className="mt-4 text-xs text-gray-500">
+            All payments are processed securely via licensed third-party payment providers.
+          </p>
+          <p className="mt-2 text-xs text-gray-500">
+            &copy; Mighty Success Recovery Inc. &bull; All Rights Reserved
+          </p>
         </div>
       </div>
     </footer>

@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { Menu, X, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site"
 
 const supportLinks = [
   { href: "/support", label: "Support" },
@@ -48,23 +49,39 @@ export function Header() {
       {/* Main Header */}
       <div className="border-b border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            {/* Logo/Brand */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                <Image
-                  src="/images/lockedin-logo.png"
-                  alt="LockedIn Systems Logo"
-                  width={48}
-                  height={48}
-                  className="rounded-full ring-2 ring-gold/30 group-hover:ring-gold/50 transition-all"
-                />
-              </div>
-              <div className="hidden sm:block">
-                <p className="font-bold text-foreground group-hover:text-gold transition-colors">LockedIn Systems</p>
-                <p className="text-xs text-muted-foreground">operated by Mighty Success Recovery Inc.</p>
-              </div>
-            </Link>
+          <div className="flex h-16 items-center justify-between gap-3">
+            {/* Logo/Brand + phone (agency-ready contact) */}
+            <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4 lg:max-w-none lg:flex-[0_1_auto]">
+              <Link href="/" className="flex min-w-0 items-center gap-3 group">
+                <div className="relative shrink-0">
+                  <Image
+                    src="/images/lockedin-logo.png"
+                    alt="LockedIn Systems Logo"
+                    width={48}
+                    height={48}
+                    className="rounded-full ring-2 ring-gold/30 group-hover:ring-gold/50 transition-all"
+                  />
+                </div>
+                <div className="hidden min-w-0 sm:block">
+                  <p className="font-bold text-foreground group-hover:text-gold transition-colors">
+                    LockedIn Systems
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    operated by Mighty Success Recovery Inc.
+                  </p>
+                </div>
+              </Link>
+              <a
+                href={`tel:${SITE_PHONE_TEL}`}
+                aria-label={`Call ${SITE_PHONE_DISPLAY}`}
+                className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold text-[#0F2A44] hover:text-[#0F2A44]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44] sm:text-sm"
+              >
+                <span aria-hidden className="select-none">
+                  📞
+                </span>
+                <span className="whitespace-nowrap">{SITE_PHONE_DISPLAY}</span>
+              </a>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden flex-wrap items-center gap-6 text-sm lg:flex">
