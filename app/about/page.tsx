@@ -40,6 +40,30 @@ export default function AboutPage() {
           </section>
 
           <section>
+            <h2 className="text-lg font-semibold">Accessibility &amp; inclusive access</h2>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              LockedIn Systems is committed to supporting users who are{" "}
+              <span className="text-foreground font-medium">blind or have low vision</span>, users with{" "}
+              <span className="text-foreground font-medium">intellectual or developmental disabilities</span>, and users with{" "}
+              <span className="text-foreground font-medium">speech impairments</span>. We work to present
+              clear, structured information and to assist through our support channels when additional
+              help is needed to complete a transaction or understand available services.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              If you or someone you support needs accommodations or step-by-step guidance, please reach
+              out through{" "}
+              <Link href="/support" className="font-medium text-gold hover:underline">
+                Support
+              </Link>{" "}
+              or{" "}
+              <Link href="/contact" className="font-medium text-gold hover:underline">
+                Contact
+              </Link>
+              , and our team will work with you to address your request.
+            </p>
+          </section>
+
+          <section>
             <h2 className="text-lg font-semibold">Reentry &amp; Transitional Support</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">
               Through structured funding support and program development, the organization contributes
