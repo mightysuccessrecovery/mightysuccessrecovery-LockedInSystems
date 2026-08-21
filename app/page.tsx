@@ -4,7 +4,7 @@ export default function Home() {
       {/* HERO */}
       <section className="text-center py-24 px-6 bg-white">
         <h1 className="text-4xl md:text-5xl font-bold text-[#0F2A44]">
-          Correctional Commissary &amp; Inmate Support Services
+          LockedIn Systems: Inmate Care &amp; Facility Solutions
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
