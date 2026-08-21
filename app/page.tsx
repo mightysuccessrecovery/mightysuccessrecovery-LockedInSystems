@@ -8,8 +8,8 @@ export default function Home() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
-          A 501(c)(3) Public Charity providing secure, structured, and transparent commissary and
-          inmate support services for correctional facilities and their families.
+          Delivering secure inmate services, transparent family connection, and structured sober
+          living and halfway housing support.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
