@@ -1,15 +1,19 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useMemo, useState, type ReactNode } from "react"
 import Link from "next/link"
 import { ChevronRight, Search } from "lucide-react"
 import {
   collectIds,
   FACILITY_LOOKUP,
   filterFacilityTree,
+  mapSearchHref,
+  telHref,
+  webSearchHref,
   type FacilityNode,
   type FacilitySelection,
 } from "@/lib/facility-lookup"
+import { UsStateMap } from "@/components/us-state-map"
 import { SITE_EMAIL, SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site"
 
 const feeRows = [
@@ -72,7 +76,12 @@ export function FacilityLookup() {
         <h2 id="usa-map-heading" className="text-lg font-semibold text-[#0F2A44]">
           Map of USA
         </h2>
-        <p className="mt-2 text-sm text-muted-foreground">Select Below</p>
+        <UsStateMap
+          states={FACILITY_LOOKUP}
+          selectedIds={searching ? new Set() : openIds}
+          onSelect={selectState}
+        />
+        <p className="mt-6 text-sm text-muted-foreground">Select Below</p>
         <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {FACILITY_LOOKUP.map((state) => {
             const selected = openIds.has(state.id) && !searching
@@ -128,7 +137,7 @@ export function FacilityLookup() {
                   key={state.id}
                   node={state}
                   depth={0}
-                  path={[]}
+                  ancestors={[]}
                   openIds={openIds}
                   searching={searching}
                   selectedId={selection?.node.id}
@@ -151,7 +160,7 @@ export function FacilityLookup() {
 function TreeBranch({
   node,
   depth,
-  path,
+  ancestors,
   openIds,
   searching,
   selectedId,
@@ -160,7 +169,7 @@ function TreeBranch({
 }: {
   node: FacilityNode
   depth: number
-  path: string[]
+  ancestors: FacilityNode[]
   openIds: Set<string>
   searching: boolean
   selectedId?: string
@@ -169,7 +178,7 @@ function TreeBranch({
 }) {
   const hasChildren = Boolean(node.children?.length)
   const open = hasChildren && (searching || openIds.has(node.id))
-  const nextPath = [...path, node.name]
+  const nextAncestors = [...ancestors, node]
 
   if (!hasChildren) {
     const label = node.code ? `${node.name} (${node.code})` : node.name
@@ -178,7 +187,7 @@ function TreeBranch({
       <li>
         <button
           type="button"
-          onClick={() => onSelect({ node, path: nextPath })}
+          onClick={() => onSelect({ node, ancestors })}
           aria-pressed={selected}
           className={`flex min-h-11 w-full items-center px-4 py-2 text-left text-sm focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#0F2A44] ${
             selected ? "bg-[#0F2A44]/10 font-semibold text-[#0F2A44]" : "text-foreground hover:bg-gray-50"
@@ -210,7 +219,7 @@ function TreeBranch({
               key={child.id}
               node={child}
               depth={depth + 1}
-              path={nextPath}
+              ancestors={nextAncestors}
               openIds={openIds}
               searching={searching}
               selectedId={selectedId}
@@ -224,24 +233,95 @@ function TreeBranch({
   )
 }
 
+const linkClass =
+  "text-[#0F2A44] underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
+
+function ExternalLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={`break-words font-medium ${linkClass}`}>
+      {children}
+    </a>
+  )
+}
+
+function FacilityContact({ selection }: { selection: FacilitySelection }) {
+  const { node, ancestors } = selection
+  const state = ancestors[0]
+  const agency = ancestors.length > 2 ? ancestors[ancestors.length - 1] : undefined
+  const place = `${node.name}, ${state?.name ?? ""}`
+  const website = node.website ?? agency?.website
+
+  return (
+    <section className="mt-6">
+      <h3 className="text-sm font-semibold text-foreground">Facility contact information</h3>
+      <dl className="mt-3 space-y-3 text-sm">
+        <div>
+          <dt className="font-semibold text-[#0F2A44]">Phone</dt>
+          <dd className="mt-1">
+            {node.phone ? (
+              <a href={telHref(node.phone)} className={`font-medium ${linkClass}`}>
+                {node.phone}
+              </a>
+            ) : (
+              <ExternalLink href={mapSearchHref(place)}>Find this facility&apos;s phone number on Google Maps</ExternalLink>
+            )}
+          </dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-[#0F2A44]">Address</dt>
+          <dd className="mt-1">
+            {node.address ? (
+              <>
+                <span className="block text-foreground">{node.address}</span>
+                <ExternalLink href={mapSearchHref(node.address)}>Get directions</ExternalLink>
+              </>
+            ) : (
+              <ExternalLink href={mapSearchHref(place)}>Find this facility&apos;s address on Google Maps</ExternalLink>
+            )}
+          </dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-[#0F2A44]">Website</dt>
+          <dd className="mt-1">
+            {website ? (
+              <>
+                <ExternalLink href={website}>{website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}</ExternalLink>
+                {!node.website && agency ? (
+                  <span className="mt-1 block text-xs text-muted-foreground">Official website of {agency.name}</span>
+                ) : null}
+              </>
+            ) : (
+              <ExternalLink href={webSearchHref(`${agency?.name ?? node.name} official website`)}>
+                Search for the official website
+              </ExternalLink>
+            )}
+          </dd>
+        </div>
+      </dl>
+    </section>
+  )
+}
+
 function FacilityDetail({ selection }: { selection: FacilitySelection | null }) {
   return (
     <aside id="facility-detail" className="rounded-lg border border-border bg-white p-5 lg:sticky lg:top-24">
       {selection ? (
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-            {selection.path.slice(0, -1).join(" / ")}
+            {selection.ancestors.map((item) => item.name).join(" / ")}
           </p>
           <h2 className="mt-2 text-lg font-semibold text-[#0F2A44]">{selection.node.name}</h2>
           {selection.node.code ? (
             <p className="mt-1 text-sm text-muted-foreground">Facility code: {selection.node.code}</p>
           ) : null}
 
+          <FacilityContact selection={selection} />
+
           <section className="mt-6">
-            <h3 className="text-sm font-semibold text-foreground">Contact information</h3>
+            <h3 className="text-sm font-semibold text-foreground">LockedIn Systems support</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Questions about this facility go through LockedIn Systems, operated by Mighty Success
-              Recovery Inc.
+              Questions about deposits, commissary, or fees for this facility go through LockedIn
+              Systems, operated by Mighty Success Recovery Inc.
             </p>
             <p className="mt-3 text-sm">
               <span className="font-semibold text-[#0F2A44]">Phone: </span>
@@ -310,8 +390,8 @@ function FacilityDetail({ selection }: { selection: FacilitySelection | null }) 
         <div>
           <h2 className="text-lg font-semibold text-[#0F2A44]">Availability &amp; Pricing</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Select a facility in the list to see its contact information, service availability, and
-            pricing.
+            Select a facility in the list to see its phone number, address, website, service
+            availability, and pricing.
           </p>
         </div>
       )}

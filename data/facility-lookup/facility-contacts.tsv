@@ -1,0 +1,4 @@
+# Verified contact details for individual facilities. One tab-separated line per facility.
+# Columns: state	agency	facility	phone	address	website
+# state, agency, and facility must match the names in the facility list exactly. Leave a column empty if unknown.
+# Run `node scripts/build-facility-lookup.mjs` after editing.

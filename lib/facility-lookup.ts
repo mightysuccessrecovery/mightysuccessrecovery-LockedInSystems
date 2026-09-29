@@ -4,6 +4,9 @@ export type FacilityNode = {
   id: string
   name: string
   code?: string
+  phone?: string
+  address?: string
+  website?: string
   children?: FacilityNode[]
 }
 
@@ -11,7 +14,19 @@ export const FACILITY_LOOKUP = facilities as FacilityNode[]
 
 export type FacilitySelection = {
   node: FacilityNode
-  path: string[]
+  ancestors: FacilityNode[]
+}
+
+export function telHref(phone: string) {
+  return `tel:${phone.replace(/[^\d+]/g, "")}`
+}
+
+export function mapSearchHref(query: string) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
+}
+
+export function webSearchHref(query: string) {
+  return `https://www.google.com/search?q=${encodeURIComponent(query)}`
 }
 
 export function filterFacilityTree(nodes: FacilityNode[], query: string): FacilityNode[] {
