@@ -1,0 +1,336 @@
+S	Alabama
+C	County Jails
+A	Chilton County Jail, AL
+F	Chilton County Jail, AL	01303
+S	Arizona
+C	State Facilities
+A	AZ Community Supervision
+F	Cochise Regional Parole Office	102
+F	Electronic Monitoring Unit	128
+F	Flagstaff Parole Office	103
+F	Kingman Parole Office	110
+F	Mesa Regional Parole Office	127
+F	Northeastern Maricopa Parole Office	119
+F	Pinal Regional Parole Office	113
+F	Prescott Valley Parole Office	114
+F	Safford Parole Office	104
+F	Snowflake Parole Office	101
+F	Tucson Regional Parole Office	134
+F	Western Regional Parole Office	133
+F	Yuma Parole Office	115
+A	AZ DOC Inmate Services
+F	A33-ASPC-E Browning CDU	A33
+F	A89-ASPC-E Meadows MHMT	A89
+F	A91-ASPC-E Cook Medical	A91
+F	A92-ASPC-E Browning	A92
+F	ASPC-E BROWNING RMHPII	A86
+F	ASPC-E BROWNING UNIT II	A87
+F	ASPC-E BROWNING UNIT III	A88
+F	ASPC-E Rynning Unit -A13	A13
+F	ASPC-E-RYNNING UNIT	A37
+F	ASPC-L BARCHEY	L72
+F	ASPC-L BUCKLEY TMHP	L71
+F	ASPC-L Eagle Point MH	L73
+F	ASPC-L Eagle Point MHW	L74
+F	ASPC-L RAST L76	L76
+F	ASPC-L STINER UNIT MDM I	L68
+F	ASPC-L STINER UNIT MDM II	L69
+F	ASPC-L STINER UNIT MHWT	L70
+F	ASPC-L SUNRISE MINORS INTAKE I	L66
+F	ASPC-L Sunrise Minors MHW Close Mental Health	L75
+F	ASPC-PV Complex MHW	B82
+F	B64 - Phoenix - Quiet MHW	B64
+F	B78- ASPC-PV LUMLEY PC	B78
+F	B79 - ASPC-PHX GEORGE MHW	B79
+F	B81 -ASPC-PHX JOHN MHW	B81
+F	B86-ASPC-PV San Pedro	B86
+F	C63- Tucson - Rincon	C63
+F	C64- Tucson - Rincon	C64
+F	Central Arizona Correctional Facility	M70
+F	Central Arizona Correctional Facility	013
+F	Central Arizona Correctional Facility - Detention	M71
+F	Douglas - Eggers - D17	D17
+F	Douglas - Eggers - D21	D21
+F	Douglas - Gila - D18	D18
+F	Douglas - Gila Unit - D08	D08
+F	Douglas - Mohave - D06	D06
+F	Douglas - Mohave - D19	D19
+F	Douglas - Mohave CDU - D11	D11
+F	Eyman	012
+F	Eyman	A65
+F	Eyman - Browning	A21
+F	Eyman - Browning 805	A55
+F	Eyman - Browning BMU	A79
+F	Eyman - Browning Close Management	A71
+F	Eyman - Browning Death Row	A27
+F	Eyman - Browning Intake	A50
+F	Eyman - Browning Mental Health	A32
+F	Eyman - Browning Restrictive Housing	A73
+F	Eyman - Browning STG	A52
+F	Eyman - Browning Temp Complex Detention Center	A68
+F	Eyman - Cook	A14
+F	Eyman - Meadows Complex Detention Unit	A19
+F	Eyman - Meadows D/ROW	A82
+F	Eyman - Meadows MASH	A83
+F	Eyman - Meadows Medium	A44
+F	Eyman - Pinal / Kingman Overflow	P01
+F	Eyman - Restricted Housing	A51
+F	Eyman - Rynning CLS MGM	A56
+F	Eyman - Rynning Complex Detention Unit	A60
+F	Eyman - Rynning East	A12
+F	Eyman - Rynning Max	A46
+F	Eyman - Rynning Medical	A42
+F	Eyman - Rynning Medical	A62
+F	Eyman - Rynning Mixed	A64
+F	Eyman - Rynning West	A69
+F	Eyman - SMU 1	A08
+F	Eyman - SMU 1 Detention	A34
+F	Eyman - SMU 1 Protected Segregation	A30
+F	Eyman - SMU BMU	A43
+F	Eyman - SMU Close	A70
+F	Eyman - SMU East	A38
+F	Eyman - SMU Mental Health Watch	A40
+F	Eyman - SMU Temp Complex Detention Unit	A67
+F	Eyman - South	A84
+F	Eyman-Browning D/RW II	A75
+F	Eyman-Browning OCM	A81
+F	Florence	005
+F	Florence - Central / U Medical	A23
+F	Florence - Central Close Mental Health	A58
+F	Florence - CU Death Row Close	A72
+F	Florence - East	A03
+F	Florence - North	A04
+F	Florence - South	A02
+F	Florence -North Yard II	A77
+F	Florence West	004
+F	Florence West	M65
+F	Florence West - M55	M55
+F	Florence West - M57	M57
+F	Florence West - RTC	M54
+F	Florence West II	M66
+F	Fort Grant	S04
+F	Fort Grant - Mile Detention	S05
+F	Globe	B19
+F	Globe - Detention	B23
+F	IPC Unit	L11
+F	Kingman	M60
+F	Kingman	003
+F	Kingman - Medical Hualapai	M59
+F	Kingman - Cerbat	M61
+F	Kingman - Complex Detention Unit 1	M62
+F	Kingman - Complex Detention Unit 2	M58
+F	Kingman - MTC Otero (New Mexico)	M30
+F	L05 - ASPC-L Morey CDU	L05
+F	L77-ASPC-L Rast Max	L77
+F	L78-ASPC-L Rast Max	L78
+F	L79-ASPC-L Morey	L79
+F	L80-ASPC-L	L80
+F	L81-ASPC-L	L81
+F	L82-ASPC-L	L82
+F	L83-ASPC-L	L83
+F	L84-ASPC-L	L84
+F	L85-ASPC-L	L85
+F	La Palma	J11
+F	La Palma	J12
+F	LA PALMA CDU	J17
+F	LA PALMA CLS I - J15	J15
+F	LA PALMA CLS II	J16
+F	LA PALMA MDM I - J13	J13
+F	LA PALMA MDM II - J14	J14
+F	Lewis	007
+F	Lewis - Barchey MDM III	L47
+F	Lewis - Bachman	L08
+F	Lewis - Bachman Complex Detention Unit	L09
+F	Lewis - Bachman Medical PC	L35
+F	Lewis - Bachman Medium	L44
+F	Lewis - Bachman Minimum PC	L34
+F	Lewis - Bachman RSAT	L65
+F	Lewis - Bachman Transitory	L16
+F	Lewis - Barchey Medical PS	L31
+F	Lewis - Barchey MHW Transition	L43
+F	Lewis - Barchey PS	L25
+F	Lewis - Buckley PS	L29
+F	Lewis - Buckley PS / SU	L14
+F	Lewis - Eagle Point General Population	L45
+F	Lewis - Eagle Point Minimum / General Population	L36
+F	Lewis - Eagle Point Transitory	L41
+F	Lewis - Minor Females	L51
+F	Lewis - Morey Close	L23
+F	Lewis - Morey I	L04
+F	Lewis - Morey II	L56
+F	Lewis - Morey Mash Unit	L50
+F	Lewis - Rast Close	L32
+F	Lewis - Rast Close 2	L42
+F	Lewis - Rast Close IV	L64
+F	Lewis - Rast Close Management	L37
+F	Lewis - Rast CLS III	L46
+F	Lewis - Rast Max	L21
+F	Lewis - Rast Mental Health Watch	L39
+F	Lewis - Stiner Complex Detention Unit	L03
+F	Lewis - Stiner II	L52
+F	Lewis - Stiner L3	L02
+F	Lewis - Stiner Transfer Unit	L49
+F	Lewis - Sunrise	L24
+F	Lewis - Sunrise Employment Center	L40
+F	Lewis - Sunrise MINORS CDU	L59
+F	Lewis - Sunrise MINORS FEMALES	L60
+F	Lewis - Sunrise MINORS MALES I	L57
+F	Lewis - Sunrise MINORS MALES II	L58
+F	Lewis - Sunrise PC	L38
+F	Lewis - Transitory Unit	L17
+F	Lewis -Minors Males	L53
+F	Lewis – Rast TMHP - L63	L63
+F	Lewis- Buckley II	L48
+F	Lewis- Minors CDU	L54
+F	Marana - CCTF	008
+F	Marana - Detention	M51
+F	Marana - South	M52
+F	Perryville	014
+F	Perryville - ASPC-PV RECEPTION	B27
+F	Perryville - Complex	B00
+F	Perryville - Hickman Beds	B73
+F	Perryville - Lumley 1	B02
+F	Perryville - Lumley 2	B53
+F	Perryville - Lumley 3	B60
+F	Perryville - Lumley 4	B63
+F	Perryville - Lumley CC SMI - B83	B83
+F	Perryville - Lumley Close Management	B59
+F	Perryville - Lumley Death Row	B50
+F	Perryville - Lumley Long Term Care	B56
+F	Perryville - Lumley Medium	B62
+F	Perryville - Lumley Mental Health	B58
+F	Perryville - Lumley Mental Health	B30
+F	Perryville - Lumley Mental Health Watch	B57
+F	Perryville - MH	B69
+F	Perryville - Piestewa	B36
+F	Perryville - Piestewa Employment Center	B61
+F	PERRYVILLE - PV LUMLEY	B77
+F	Perryville - San Carlos - B42	B42
+F	Perryville - San Pedro 1	B01
+F	Perryville - Santa Cruz	B03
+F	Perryville - Santa Maria II	B66
+F	Perryville - Santa Maria Medium	B51
+F	Perryville - Santa Maria Reception	B67
+F	Perryville - Santa Rosa	B35
+F	Perryville - Special Management	B28
+F	Perryville - Special Needs	B41
+F	Perryville- Santa Cruz 2	B65
+F	Phoenix	006
+F	Phoenix - Alhambra	B06
+F	Phoenix - Aspen / SPU	B22
+F	Phoenix - Baker - ASPC-PHX BAKER IPC	B76
+F	Phoenix - Flamenco Female	B13
+F	Phoenix - Flamenco IDA Watch	B45
+F	Phoenix - Flamenco John Ward	B43
+F	Phoenix - Flamenco King Ward	B44
+F	Phoenix - Flamenco Male	B08
+F	Phoenix - Inmate Worker	B11
+F	Phoenix West	M53
+F	Phoenix West - 2nd Chance	M49
+F	Red Rock Correctional Center	M80
+F	Red Rock Correctional Center	M90
+F	Rynning CLS Unit	A85
+F	Safford	002
+F	Safford - Detention	S03
+F	Safford - Globe	S07
+F	Safford - Globe CDU	S08
+F	Safford - Graham	S01
+F	Safford - Tonto	S02
+F	Safford - Tonto PC	S06
+F	Tucson	015
+F	Tucson	C00
+F	Tucson - Catalina	C35
+F	Tucson - Catalina - C58	C58
+F	Tucson - Catalina - C59	C59
+F	Tucson - Cimarron C62	C62
+F	Tucson - Cimarron Detention	C13
+F	Tucson - Cimarron L3	C23
+F	Tucson - Complex Detention (CDU)	C04
+F	Tucson - ICE Trans	C43
+F	Tucson - Manzanita	C14
+F	Tucson - Manzanita Detention	C15
+F	Tucson - Manzanita MIRC	C55
+F	Tucson - Manzanita RMH	C44
+F	Tucson - Manzanita S.N.U.GP	C19
+F	Tucson - Minors	C09
+F	Tucson - Minors 2	C46
+F	Tucson - Minors Female	C51
+F	Tucson - Minors GP II	C40
+F	Tucson - Rincon	C01
+F	Tucson - Rincon - C57	C57
+F	Tucson - Rincon - C61	C61
+F	Tucson - Rincon BHU	C34
+F	Tucson - Rincon II	C50
+F	Tucson - Rincon Mental Health	C29
+F	Tucson - Rincon MH Program MH MH	C53
+F	Tucson - Rincon MHW II MH MH	C54
+F	Tucson - Rincon SNU / General Population	C42
+F	Tucson - Santa Cruz County Jail	D36
+F	Tucson - Santa Rita	C02
+F	Tucson - Transitory - C22	C22
+F	Tucson - Whetstone	C37
+F	Tucson - Whetstone-C56	C56
+F	Tucson - Winchester	C41
+F	Tucson -St Marys Hsp - C60	C60
+F	Tucson Rincon Reception	C52
+F	Tuscon - Manzanita MHW Transition	C48
+F	Winslow	011
+F	Winslow - Apache	W05
+F	Winslow - Apache County Jail	W16
+F	Winslow - Apache Detention	W06
+F	Winslow - Complex Detention Unit	W03
+F	Winslow - Coronado	W01
+F	Winslow - Kaibab	W02
+F	Winslow - Kaibab North	W12
+F	Winslow - Kaibab W19	W19
+F	Winslow - Navajo County Jail	W15
+F	Winslow - W20	W20
+F	Winslow - W20-PRINT	W20-PRINT
+F	Winslow- Kaibab - W18	W18
+F	Winslow- Kaibab WRKR	W17
+F	Yuma	009
+F	Yuma - Dakota II	Y13
+F	Yuma - Dakota MHW	Y12
+A	AZ Visitor background
+F	AZ Visitor Background Fee	AZVB
+C	County Jails
+A	Apache County Jail, AZ
+F	Apache County Jail	06320
+A	Pinal County
+F	Pinal County, AZ	07077
+A	Yavapai County Sheriff’s Office, AZ
+F	Yavapai County Sheriff's Office	06835
+S	Arkansas
+C	State Facilities
+A	Arkansas DOC
+F	AR DOC BENTON UNIT	09322
+F	AR DOC Cummins Unit	09323
+F	AR DOC Delta Unit	09324
+F	AR DOC DR MARY L PARKER-REED WOMEN'S UNIT	11707
+F	AR DOC East AR Unit	09325
+F	AR DOC Ester Unit	07981
+F	AR DOC Grimes Unit	09326
+F	AR DOC HEADQUARTERS	11647
+F	AR DOC J Aaron Hawkins	09340
+F	AR DOC Larry B. Norris Unit	09327
+F	AR DOC McPherson Unit	09328
+F	AR DOC Mississippi WR	09329
+F	AR DOC North Central Unit	09330
+F	AR DOC NW AR WR CTR	09331
+F	AR DOC Ouachita River Unit	09332
+F	AR DOC PHILLIPS COUNTY DETENTION CENTER	11657
+F	AR DOC Pine Bluff Re-Entry Ctr	07715
+F	AR DOC Pine Bluff Unit	09333
+F	AR DOC Randall L Williams	09334
+F	AR DOC State Police Brrks	09097
+F	AR DOC Texarkana Reg Ctr	09335
+F	AR DOC Tucker Re-Entry Ctr	07806
+F	AR DOC Tucker Unit	09336
+F	AR DOC Varner Unit	09337
+F	AR DOC White River Correctional Center	11651
+F	AR DOC Wrightsville Unit	09338
+C	County Jails
+A	MISSISSIPPI COUNTY DETENTION CENTER, AR
+F	Mississippi County Detention Center	06070
+A	Osceola Criminal Justice Center, AR
+F	Osceola Criminal Justice Center, AR	00722

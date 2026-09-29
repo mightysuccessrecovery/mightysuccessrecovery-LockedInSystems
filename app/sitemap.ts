@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: "/", changeFrequency: "weekly", priority: 1 },
     { url: "/about", changeFrequency: "monthly", priority: 0.6 },
+    { url: "/facility-lookup", changeFrequency: "monthly", priority: 0.7 },
     { url: "/support", changeFrequency: "monthly", priority: 0.6 },
     { url: "/fees", changeFrequency: "monthly", priority: 0.5 },
     { url: "/legal", changeFrequency: "monthly", priority: 0.5 },

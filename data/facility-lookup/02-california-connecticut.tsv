@@ -1,0 +1,137 @@
+S	California
+C	State Facilities
+A	California Department of Corrections & Rehabilitation
+F	(De-Installed) Parlin Fork Conservation Camp	PFC
+F	(De-Installed)Alder Conservation Camp	ALD
+F	(De-Installed)La Cima Conservation Camp	LCI
+F	(De-Installed)Mt. Bullion Conservation Camp	MBC
+F	(OLD)NOT USED	12345
+F	Acton Conservation Camp	ACT
+F	Antelope Conservation Camp	ANT
+F	Avenal State Prison	ASP
+F	Bautista Conservation Camp	BCC
+F	Ben Lomond Adult Conservation Camp	BLACC
+F	California City Correctional Facility	CAC
+F	California Correctional Center	CCC
+F	California Correctional Institution	CCI
+F	California Health Care Facility	CHCF
+F	California Institution for Men	CIM
+F	California Institution for Women	CIW
+F	California Medical Facility	CMF
+F	California Men's Colony	CMC
+F	California Rehabilitation Center	CRC
+F	Calipatria State Prison	CAL
+F	Centinela State Prison	CEN
+F	Central California Women’s Facility	CCWF
+F	Chuckawalla Valley State Prison	CVSP
+F	Correctional Training Facility	CTF
+F	CSP-Corcoran	COR
+F	CSP-Los Angeles County	LAC
+F	CSP-Sacramento	SAC
+F	CSP-Solano	SOL
+F	Deadwood Conservation Camp	DEACC
+F	Delta Conservation Camp	DELT
+F	Eel River Conservation Camp	EEL
+F	Fenner Canyon Conservation Camp	FEN
+F	Folsom State Prison	FOL
+F	Francisquito Conservation Camp	FRAN
+F	Gabilan Conservation Camp	GAB
+F	Growlersburg Consevation Camp	GRO
+F	High Desert State Prison	HDSP
+F	Holton Conservation Camp	HOL
+F	Intermountain Conservation Camp	INT
+F	Ironwood State Prison	ISP
+F	Ishi Conservation Camp	ISH
+F	Julius Klein Conservation Camp	JKC
+F	Kern Valley State Prison	KVSP
+F	Konocti Conservation Camp	KON
+F	Malibu Conservation Camp	MAL
+F	Miramonte Conservation Camp	MIR
+F	Mountain Home Conservation Camp	MHC
+F	Mule Creek State Prison	MCSP
+F	N.A. Chaderjian Youth Correctional Facility	NACYCF
+F	North Kern State Prison	NKSP
+F	O.H. Close Youth Correctional Facility	OHCYCF
+F	Oak Glen Conservation Camp	OGC
+F	Owens Valley Conservation Camp	OVC
+F	Pelican Bay State Prison	PBSP
+F	PineGrove Youth Conservation Camp	PGY
+F	Pleasant Valley State Prison	PVSP
+F	Prado Conservation Camp	PCC
+F	Puerta La Cruz Conservation Camp	PLC
+F	Richard J. Donovan Correctional Facility	RJD
+F	Salinas Valley State Prison	SVSP
+F	Salt Creek Conservation Camp	SAL
+F	San Quentin Rehabilitation Center	SQ
+F	Sierra Conservation Center	SCC
+F	Substance Abuse Treatment Facility	SATF
+F	Sugar Pine Conservation Camp	SPC
+F	Trinity River Conservation Camp	TRC
+F	Vallecito Conservation Camp	VAL
+F	Valley State Prison	VSP
+F	Ventura Youth Correctional Facility	VYCF
+F	Wasco State Prison	WSP
+F	Washington Ridge ConservationCamp	WRC
+A	CDCR Lantern Test
+F	QA Test	QAT
+C	County Jails
+A	AMADOR COUNTY JAIL, CA
+F	AMADOR COUNTY JAIL	01218
+A	DEL NORTE COUNTY SHERIFF'S OFFICE, CA
+F	DEL NORTE COUNTY SHERIFF'S OFFICE	05676
+A	Kern County, CA
+F	Kern County Lerdo Justice Facility	05841
+F	Kern County Lerdo Pretrial Facility	03677
+A	Mesa Verde Detention Facility, CA
+F	Mesa Verde Detention Facility	01
+A	Sacramento Co, CA
+F	Sacramento Co Main Jail	06983
+F	Sacramento Co Rio Cosumnes Corr Ctr	77016
+F	Sacramento County Youth Detention Facility YDF	05839
+A	Sacramento Youth DF
+F	Sacramento Youth DF	11613
+A	San Joaquin Co Jail, CA
+F	San Joaquin Co Jail, CA	05650
+A	Taft Community Correctional Facility, CA
+F	Taft Community Correctional Facility, CA	03675
+A	Ventura County, CA
+F	East Valley Jail	07397
+F	Todd Road Jail Facility	06744
+F	Ventura County Pretrial Detention Facility	06972
+S	Colorado
+C	County Jails
+A	Chaffee County Jail, CO
+F	Chaffee County Jail, CO	08186
+A	Clear Creek County Jail
+F	Clear Creek County Jail	04983
+A	Denver County Jail, CO
+F	Denver County Jail	16012
+F	Denver Downtown Det Ctr	16011
+A	Jefferson County Sheriff's Detention Facility
+F	JEFFERSON COUNTY SHERIFF'S DETENTION, CO	05152
+A	LINCOLN COUNTY SHERIFF'S OFFICE, CO
+F	LINCOLN COUNTY SHERIFF'S OFFICE, CO	08177
+A	Summit County Jail, CO
+F	Summit County Jail	05544
+S	Connecticut
+C	State Facilities
+A	Connecticut Department of Correction
+F	Bridgeport Correctional Center	123
+F	Brooklyn Correctional Institution	128
+F	Cheshire Correctional Institution	125
+F	Cheshire Correctional Institution - Annex	126
+F	Corrigan Correctional Center	140
+F	DOC Central Office	09215
+F	Garner Correctional Institution	136
+F	Hartford Correctional Center	121
+F	MacDougall Correctional Institution	137
+F	Manson Youth Institution	111
+F	New Haven Correctional Center	122
+F	Northern Correctional Institution	141
+F	Osborn Correctional Institution	115
+F	Radgowski Correctional Center	124
+F	Robinson Correctional Institution	116
+F	Virtual Site	148
+F	Walker Correctional Institution	114
+F	Willard Cybulski Correctional Institution	142
+F	York Correctional Institution	139

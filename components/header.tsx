@@ -19,6 +19,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "Mission & Purpose" },
   { href: "/services", label: "Services" },
+  { href: "/facility-lookup", label: "Facility Lookup" },
   { href: "/partnerships", label: "Partnerships" },
   { href: "/fees", label: "Fees" },
   { href: "/support", label: "Support" },

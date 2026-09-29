@@ -1,0 +1,430 @@
+S	Tennessee
+C	State Facilities
+A	Community Supervision Fees - Tennessee Department of Correction
+F	Athens Probation and Parole Office (Criminal Justice Center)	P54F
+F	Blountville Probation and Parole	P82F
+F	Chattanooga Probation and Parole Office (District Office)	P33D1
+F	Clarksville Probation and Parole Office (District Office)	P63F
+F	Cleveland Probation and Parole Office	P06F
+F	Clinton Probation and Parole Office (District Office)	P01F2
+F	Columbia Probation and Parole Office (District Office)	P60D
+F	Cookeville Probation and Parole Office (District Office)	P71F
+F	Covington Probation and Parole Office	P84F
+F	Crossville Probation and Parole Office	P18F
+F	Dandridge Probation and Parole Office	P45F
+F	Dickson Probation and Parole Office	P22F
+F	Dresden Probation and Parole Office (District Office)	P92F
+F	Dyersburg Probation and Parole Office	P23F
+F	Elizabethton Probation and Parole Office	P10F
+F	Franklin Probation and Parole Office	P94F
+F	Gallatin Probation and Parole Office (District Office)	P83F
+F	Greeneville Probation and Parole Office	P30F
+F	Jacksboro Probation and Parole Office	P07F
+F	Jackson Probation and Parole Office (District Office)	P57R
+F	Jasper Probation and Parole Office	P58F
+F	Johnson City Probation and Parole Office (District Office)	P90D
+F	Knoxville Probation and Parole Office (District Office)	P47R
+F	Lawrenceburg Probation and Parole Office	P50F
+F	Lebanon Probation and Parole Office	P95F
+F	Madisonville Probation and Parole Office	P62F
+F	Maryville Probation and Parole Office	P05F
+F	McMinnville Probation and Parole Office	P89F
+F	Memphis Probation and Parole Office (Hickory Hill District Office)	P79F1
+F	Memphis Probation and Parole Office (One Commerce Square)	P79D
+F	Memphis Probation and Parole Office (West Memphis District Office)	P79R
+F	Morristown Probation and Parole Office	P32F
+F	Murfreesboro Probation and Parole Office (District Office)	P75F
+F	Nashville Probation and Parole Office (Blanton District Office)	DRC19
+F	Nashville Probation and Parole Office (Pavilion District Office)	P19D
+F	New Tazewell Probation and Parole Office	P13F
+F	Newport Probation and Parole Office	P15F
+F	Paris Probation and Parole Office	P40F
+F	Sevierville Probation and Parole Office	P78F
+F	Somerville Probation and Parole Office	P24F
+F	Springfield Probation and Parole Office	P74F
+F	Tullahoma Probation and Parole Office	P16F
+F	Union City Probation and Parole Office	P66F
+F	Wildersville Probation and Parole Office	P39F
+A	Tennessee Department Of Correction
+F	Bledsoe County Correctional Complex	BCCX
+F	Debra K. Johnson Rehabilitation Center	DJRC
+F	Hardeman County Correctional Facility	HCCF
+F	Lois M DeBerry Special Needs Facility	SPND
+F	Mark H Luttrell Correctional Center	MLRC
+F	Morgan County Correctional Complex	MCCX
+F	Northeast Correctional Complex (Main)	NECX
+F	Northwest Correctional Complex	NWCX
+F	Riverbend Maximum Security Institution	RMSI
+F	Southcentral Correctional Center	SCCF
+F	Trousdale Turner Correctional Center	TTCC
+F	Turney Center Industrial Complex	TCIX
+F	West Tennessee State Penitentiary	WTSP
+F	Whiteville Correctional Facility	WCFA
+C	County Jails
+A	Bedford County Sheriffs Department, TN
+F	Bedford County Sheriffs Department	00300
+A	Bradley County Jail, TN
+F	Bradley County Jail, TN	05475
+A	Carter County Jail, TN
+F	Carter County Jail, TN	07735
+A	CHEATHAM COUNTY JAIL, TN
+F	Cheatham County Jail, TN NEW	11716
+A	DEKALB COUNTY JAIL, TN
+F	Dekalb County Jail	04943
+A	Hamilton County Alternative Sentencing, TN
+F	Hamilton County Alternative Sentencing	HCC
+A	Johnson County Jail, TN
+F	Johnson County Jail, TN	09196
+A	Marion County Jail, TN
+F	MARION COUNTY JAIL, TN	04376
+A	MCMINN COUNTY JUSTICE CENTER, TN
+F	MCMINN COUNTY JUSTICE CENTER,TN	09080
+A	Montgomery Co Jail, TN
+F	Montgomery Co Jail, TN	09205
+F	Montgomery Co WH, TN	00669
+A	Rhea County Jail TN
+F	Rhea County Jail	09181
+A	WARREN COUNTY JAIL, TN
+F	WARREN COUNTY JAIL	WRN
+S	Texas
+C	State Facilities
+A	TDCJ Confinee Centers
+F	Dolph Briscoe	DBU
+F	Manuel A Segovia	MASU
+F	Reynaldo V Lopez	LPZU
+A	Texas Department of Criminal Justice
+F	ADVANCED HOUSTON SPECIALTY HOSPITAL	HH
+F	ADVANCED HOUSTON SPECIALTY HOSPITAL-PRINT	HH-PRINT
+F	ADVANCED HOUSTON SPECIALTY HOSPITAL-PROG	HH-PROG
+F	Allred Unit	JA
+F	Bartlett	BL
+F	Baten Correctional	NJ
+F	Bell	CV
+F	Beto Unit	B
+F	Boyd Unit	BY
+F	Bradshaw	BH
+F	Bridgeport	BR
+F	Bridgeport PPT	T1
+F	Briscoe Unit	DB
+F	Byrd Unit	DU
+F	CAROLE S YOUNG MEDICAL FACILITY	GC
+F	Chase Field Transfer	W6
+F	Clemens Trusty 2 (Scott)	RV
+F	Clemens Unit	CN
+F	Clements Unit	BC
+F	Coffield Unit	CO
+F	Cole State Jail	CL
+F	Coleman (Lockhart)	LC
+F	Coleman (Lockhart) Work Facility	T3
+F	Connally Unit	CY
+F	Cotulla Transfer	N4
+F	Crain Correctional	GV
+F	Dalby	GD
+F	Dalhart Unit	DH
+F	Daniel Unit	DL
+F	Dawson	JD
+F	Diboll	DO
+F	Dominguez State Jail	BX
+F	Duncan Transfer	N6
+F	East Texas ISF	XQ
+F	Ellis Unit	E
+F	Estelle Unit	E2
+F	Estes	VS
+F	Ferguson Unit	FE
+F	Formby State Jail	FB
+F	Fort Stockton Transfer	N5
+F	Garza East Transfer	NI
+F	Garza West Transfer	NH
+F	Gist State Jail	BJ
+F	Glossbrenner SAFP	SO
+F	Goodman Transfer	GG
+F	Goree Unit	GR
+F	Gurney Transfer	ND
+F	Halbert SAFP	BB
+F	Hamilton Unit	JH
+F	Havins State Jail	TH
+F	Henley State Jail	LT
+F	Hightower Unit	HI
+F	Hilltop Unit	HT
+F	HOBBY (FEMALE) UNIT	HB
+F	Hodge MROP Unit	HD
+F	Holliday Transfer	NF
+F	Hospital Galveston	HG
+F	Hughes Unit	AH
+F	Huntsville Unit	HV
+F	Hutchins State Jail	HJ
+F	Jester I SAFP	J1
+F	Jester III Unit	J3
+F	Johnston SAFP	JT
+F	Jordan Unit	JN
+F	Kegans State Jail	HM
+F	Kyle	KY
+F	LeBlanc Unit	BA
+F	Lewis Unit	GL
+F	Lindsey	LN
+F	Lopez State Jail	RL
+F	Luther Unit	P2
+F	Lychner State Jail	AJ
+F	Lynaugh Unit	LH
+F	Marlin Correctional	N1
+F	McConnell Unit	ML
+F	Mechler (Tulia) Transfer	N3
+F	Memorial (Darrington) Unit	DA
+F	Michael Unit	MI
+F	Middleton Transfer	NE
+F	Mineral Wells PPT	T2
+F	Montford Psychiatric Unit	JM
+F	Moore, B	BM
+F	Moore, C	CM
+F	Mountain View Unit	MV
+F	Murray Unit	LM
+F	Neal Unit	KN
+F	Ney State Jail	HF
+F	Pack Unit	P1
+F	Plane State Jail	LJ
+F	Polunsky Unit	TL
+F	Powledge Unit	B2
+F	Ramsey I	R1
+F	Roach Boot Camp	C1
+F	Roach Unit	RH
+F	Roach Work CMP	W9
+F	Robertson Unit	RB
+F	Rudd Transfer	RD
+F	San Saba	N2
+F	Sanchez State Jail	RZ
+F	Sayle SAFP	SY
+F	SCOTT JIV (JESTER IV) Psychiatric Unit	J4
+F	Segovia Transfer	EN
+F	Skyview Psychiatric Unit	SV
+F	Smith Unit	SM
+F	Stevenson Unit	SB
+F	Stiles Unit	ST
+F	Stringfellow Correctional	R2
+F	Telford Unit	TO
+F	Terrell Unit	R3
+F	Torres Unit	TE
+F	Travis Co. State Jail	TI
+F	Vance Unit	J2
+F	Wainwright (Eastham) Unit	EA
+F	Wallace Unit	WL
+F	Ware Transfer	DW
+F	West Texas Regional - Montford Hospital	HP
+F	Wheeler State Jail	WR
+F	Willacy County	WI
+F	Woodman State Jail	WM
+F	Wynne Unit	WY
+C	County Jails
+A	Dallas County CSCD, TX
+F	Dallas County CSCD, TX	11644
+A	Dallas County Jail, TX
+F	Dallas Co Lew Sterrett North Tower	49027
+F	Dallas Co Lew Sterrett West Tower	49026
+F	Dallas Co Suzanne Kays Det Ctr	49034
+F	Dallas County Jail	DCJ
+A	Fannin County Detention, TX
+F	Fannin County Detention, TX	06663
+F	FANNIN COUNTY JAIL ANNEX	49188
+A	Fort Bend County Correctional Facility, TX
+F	FORT BEND COUNTY CORRECTIONAL FACILITY	05252
+A	Gateway Foundation - Atascocita Men's Facility, TX
+F	Gateway Foundation - Atascocita Men's Facility, TX	01242
+A	Grand Prairie Police Dept, TX
+F	GRAND PRAIRIE POLICE DEPT	49049
+A	Harris County Sheriffs Office, TX
+F	Harris County Sheriff’s Office	07265
+F	Harris County Sheriff’s Office	49069
+F	Harris County Sheriff’s Office	49163
+F	Harris County Sheriff’s Office	49181
+A	Hays Co Law Enforcement Ctr, TX
+F	Hays Co Law Enforcement Ctr, TX	01051
+A	Montgomery County Jail, TX
+F	MONTGOMERY COUNTY JAIL	05113
+A	Rockwall County Jail, TX
+F	Rockwall County Jail, TX	05084
+A	Travis County Correctional Complex
+F	Travis County Correctional Complex	01186
+A	UVALDE COUNTY
+F	UVALDE COUNTY	07183
+S	Utah
+C	County Jails
+A	Box Elder County Jail, UT
+F	Box Elder County Jail	08943
+A	SANPETE COUNTY JAIL, UT
+F	Sanpete County Jail	08725
+A	UTAH COUNTY JAIL, UT
+F	UTAH COUNTY JAIL	50009
+A	Weber County Correctional Facility, UT
+F	Weber County Correctional Facility	50018
+S	Virginia
+C	State Facilities
+A	Virginia Department of Corrections
+F	Administrative Verification	2154
+F	Appalachian CCAP	1606
+F	Baskerville Correctional Center	1879
+F	Beaumont Correctional Center	7540
+F	Bland Correctional Center	1912
+F	Brunswick Work Center	00001
+F	Buckingham Correctional Center	1928
+F	Caroline Correctional Unit	1877
+F	Central Virginia Correctional Unit	1888
+F	Chesterfield Womens' CCAP	1612
+F	Coffeewood Correctional Center	1929
+F	Cold Springs CCAP	6676
+F	Cold Springs Correctional Unit	1885
+F	Cold Springs Work Center	2151
+F	Deerfield Correctional Center	1948
+F	Deerfield Correctional Center (Brunswick Work Center For Women)	1907
+F	Deerfield Mens Work Center	2153
+F	Deerfield Mens Work Center 2	7490
+F	Dillwyn Correctional Center	1941
+F	Fluvanna Correctional Center	1951
+F	Fluvanna Infirmary	1963
+F	Fluvanna Reception Center	2185
+F	Green Rock Correctional Center	2587
+F	Greensville Correctional Center	1932
+F	Greensville Correctional Unit	1908
+F	Greensville Segregation	1936
+F	Halifax Correctional Unit	1897
+F	Harrisonburg CCAP	1599
+F	Haynesville Correctional Center	1942
+F	Indian Creek Correctional Center	1943
+F	Keen Mountain Correctional Center	1940
+F	Lawrenceville Correctional Center	1950
+F	Lunenburg Correctional Center	1931
+F	Marion Correctional Treatment Center	1961
+F	Mecklenburg Correctional Center	1923
+F	Nottoway Correctional Center	1930
+F	Nottoway Work Center	1910
+F	Patrick Henry Correctional Unit	1902
+F	Pocahontas State Correctional Center	2586
+F	Powhatan Correctional Center	1915
+F	Powhatan County Jail	2100
+F	Powhatan Medical Center	1925
+F	Powhatan-M Bldg	2182
+F	Red Onion State Prison	1945
+F	River North Correctional Center	6264
+F	Rustburg Correctional Unit	1884
+F	St. Brides Correctional Center	1947
+F	Stafford CCAP	1611
+F	State Farm Correctional Center	1922
+F	State Farm Work Center	7515
+F	Sussex I State Prison	1938
+F	System Verification	2503
+F	Vanguard Services	2595
+F	Virginia Correctional Center For Women	1916
+F	Wallens Ridge State Prison	1946
+F	White Post Men’s Diversion Center	1603
+F	Wise Correctional Unit	1893
+C	County Jails
+A	Accomack County Jail, VA
+F	Accomack County Jail, VA	06753
+A	Arlington County Detention Center, VA
+F	Arlington County Det Ctr	51019
+A	Chesapeake Correctional Center, VA
+F	Chesapeake Correctional Center	51054
+A	Lancaster County Corrections Center, VA
+F	Lancaster County Jail	51059
+A	Middle Peninsula Reg Jail, VA
+F	Middle Peninsula Reg Jail, VA	07211
+A	Northern Neck Reg Jail, VA
+F	Northern Neck Reg Jail, VA	51064
+A	SUSSEX COUNTY JAIL, VA
+F	SUSSEX COUNTY JAIL, VA	51075
+S	Washington
+C	State Facilities
+A	Washington State Department of Corrections
+F	Ahtanum Work Release	719
+F	Airway Heights Corrections Center	P01
+F	Airway Heights Corrections Center-Min	P03
+F	Bellingham Work Release	716
+F	Bishop Work Release	726
+F	Brownstone Work Release	710
+F	Cedar Creek Corrections Center	O01
+F	Clallam Bay Corrections Center	B01
+F	Clallam Bay Corrections Center - F Unit	B04
+F	Clallam Bay Corrections Center - Medium	B02
+F	Clallam Bay Corrections Center -Step Down	B06
+F	Coyote Ridge Corrections Center	R01
+F	Coyote Ridge Corrections Center - IMU	R04
+F	Coyote Ridge Corrections Center - WEC	R03
+F	Coyote Ridge Corrections Center - WEP	R02
+F	Eleaner Work Release	712
+F	Larch Corrections Center	N01
+F	Longview Reentry Center	704
+F	McNeil Island Corrections Center	I01
+F	McNeil Island Corrections Center	I04
+F	McNeil Island Corrections Center- Minimum	I03
+F	McNeil Island Corrections Center- WEC	I02
+F	Monroe Correctional Complex	D04
+F	Monroe Correctional Complex- Minimum	D03
+F	Monroe Correctional Complex- SOU	D05
+F	Monroe Correctional Complex- TRU	D02
+F	Monroe Correctional Complex-WSR	D01
+F	Olympia Work Release	705
+F	Olympic Corrections Center	M01
+F	Progress Work Release	718
+F	Reynolds Work Release	714
+F	Stafford Creek Corrections Center	S01
+F	Stafford Creek Corrections Center 2	S04
+F	Tri-Cities Work Release	706
+F	Washington Corrections Center	H01
+F	Washington Corrections Center	H04
+F	Washington Corrections Center - R6 Unit	CR6
+F	Washington Corrections Center for Women	F01
+F	Washington Corrections Center for Women-Minimum	F03
+F	Washington Corrections Center for Women-RDC	F05
+F	Washington Corrections Center for Women-WEC	F02
+F	Washington Corrections Center- RDC	C01
+F	Washington Corrections Center-Hospital	H06
+F	Washington State Penitentiary	E04
+F	Washington State Penitentiary-IMU	EDP
+F	Washington State Penitentiary-Main	E01
+F	Washington State Penitentiary-Medium	E02
+F	Washington State Penitentiary-Minimum	E03
+F	Yakima County Jail	BF1
+C	County Jails
+A	City of Kent, WA
+F	CITY OF KENT	53070
+A	King County, WA
+F	King County Correctional Facility	53004
+F	King County Maleng Regional Justice Center	53039
+A	Lynnwood Police Department, WA
+F	Lynnwood Police Department	07592
+A	Score-South Correctional Entity, WA
+F	Score-South Correctional Entity	08146
+A	Spokane County Detention Services-WA
+F	Spokane County Geiger Corrections Center	53033
+F	Spokane County Jail	53005
+A	Walla Walla County
+F	Walla Walla County Jail	04315
+A	Whatcom County Jail
+F	Whatcom County Jail - Workcenter	10012
+F	Whatcom County Main Jail	53009
+A	Yakima County Jail Main and Annex, WA
+F	Yakima County Jail Main and Annex, WA	53016
+S	Wisconsin
+C	County Jails
+A	Brown Co Jail, WI
+F	Brown Co Jail, WI	07481
+F	Brown County Work Release, WI	09081
+A	Eau Claire County Sheriffs Office, WI
+F	Eau Claire County Jail - Main	09164
+A	Green County Sheriffs Dept
+F	Green County Sheriffs Dept	08519
+A	Juneau Co Justice Ctr, WI
+F	Juneau Co Justice Ctr, WI	04750
+A	LA CROSSE COUNTY JAIL
+F	La Crosse County Jail, WI	05627
+A	Monroe Co, WI
+F	Monroe County Sheriffs Office	08277
+A	Portage County Sherriff's Office
+F	Portage County Sheriff's Office	Portage County Sheriff's Office
+A	RACINE COUNTY JAIL, WI
+F	Racine County Jail - Doc Inmates, WI	05855
+F	RACINE COUNTY JAIL, WI	05853
+A	Sheboygan Co Det Ctr, WI
+F	Sheboygan County Detention Center	04367
+F	Sheboygan County Jail	04368
+A	Vilas County Jail
+F	Vilas County Sheriff	08496
+F	VILAS DOC INMATES	11705

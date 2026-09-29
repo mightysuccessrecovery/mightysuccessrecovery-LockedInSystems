@@ -1,0 +1,233 @@
+S	Georgia
+C	State Facilities
+A	Georgia Department of Corrections
+F	Appling Pre-Release Center	S_50001198
+F	Arrendale Probation Substance Abuse Treatment Center	S_50001213
+F	Arrendale State Prison	S_50000256
+F	Augusta State Medical Prison	S_50000190
+F	Autry State Prison	S_50000200
+F	Bacon Probation Detention Center	S_50001145
+F	Bainbridge Probation Substance Abuse Treatment Center	S_50001115
+F	Baldwin State Prison	S_50000210
+F	Bleckley Probation Detention Center	S_50001201
+F	Bostick State Prison	S_50000194
+F	Burruss Correctional Training Center	S_50000192
+F	Calhoun State Prison	S_50000204
+F	CCA Jenkins Correctional Center	S_50001244
+F	Central Probation Detention Center	S_50000521
+F	Central State Prison	S_50000189
+F	Coastal State Prison	S_50000181
+F	Coffee Correctional Facility	S_50000067
+F	Colwell Probation Detention Center	S_50000508
+F	Consolidated Banking Unit	S_50001236
+F	Dodge State Prison	S_50000251
+F	Dooly State Prison	S_50000205
+F	Emanuel Probation Detention	S_50000583
+F	Emanuel Unit	S_50001266
+F	Emanuel Women's Facility	S_50001202
+F	GA Diagnostic and Classification State Prison	S_50000269
+F	Georgia State Prison	S_50000265
+F	Hancock State Prison	S_50000198
+F	Hays State Prison & Camp Hays	S_50000197
+F	Helms Facility	S_50000657
+F	Johnson State Prison	S_50000202
+F	Lamar Pre-Release	S_50001214
+F	Lee State Prison	S_50000258
+F	Long Pre-Release Center	S_50001197
+F	Macon State Prison	S_50000206
+F	McEver Probation Detention Center	S_50001022
+F	McRae Women's Facility	S_50001261
+F	Men's State Prison	S_50000267
+F	Metro Re-Entry	S_50001252
+F	Montgomery State Prison	S_50000257
+F	Northwest Probation Detention Center	S_50000599
+F	Patten Probation Detention Center	S_50000009
+F	Paulding Probation Detention Center	S_50001021
+F	Phillips State Prison	S_50000253
+F	Pulaski State Prison	S_50000214
+F	Riverbend Correctional Facility	S_50001243
+F	Rogers State Prison	S_50000191
+F	Rutledge State Prison	S_50000188
+F	Scott State Prison	25
+F	Smith State Prison	S_50000207
+F	southeast Probation Detention Center	49
+F	Southwest Probation Detention Center	S_50000011
+F	Telfair State Prison	S_50000199
+F	Treutlen Probation Detention Center	S_50001122
+F	Turner Pre-release Center	S_50001209
+F	Valdosta State Prison & Valdosta Annex	S_50000195
+F	W. Central Pre-Release	S_50000533
+F	Walker State Prison	S_50000254
+F	Ware State Prison	S_50000249
+F	Washington State Prison	S_50000209
+F	Western Pre-Release	S_50000013
+F	Wheeler Correctional Facility	S_50000066
+F	Whitworth Parole Detention	S_50000512
+F	Wilcox State Prison	S_50000203
+F	Wilkes Pre-Release	S_50001215
+F	Women's Probation Detention	S_50000014
+A	Georgia Department of Juvenile Justice
+F	ATLANTA	1027
+F	AUGUSTA	1002
+F	CADWELL	32
+F	EASTMAN	1007
+F	MACON	1006
+F	MILLEDGEVILLE	1028
+F	MUSCOGEE	1025
+F	ROCKDALE	30
+F	TERRELL	23
+F	Terrell RYDC	01226
+F	THOMAS JEFFERSON	21
+F	WILKES	31
+A	Georgia Probation Payments
+F	Georgia Probation Payments	S_50001237
+C	County Jails
+A	Bulloch County Sheriff's Office, GA
+F	Bulloch County Sheriff's Office, GA	00430
+A	Forsyth County Detention Center
+F	Forsyth County Detention Center	08982
+A	Grady County Jail, GA
+F	Grady County Jail	20052
+A	Gwinnett County Sheriffs Office
+F	Gwinnett County Sheriffs Office	07032
+A	Muscogee County Prison, GA
+F	Muscogee County Prison, GA	MUSCOGEE CO. PRISON
+A	Rockdale County Sheriff's Office, GA
+F	Rockdale County Sheriff's Office, GA	05349
+S	Idaho
+C	County Jails
+A	Bannock County Jail, ID
+F	Bannock County Jail	09395
+S	Illinois
+C	State Facilities
+A	Alton City Police Dept
+F	Alton City Police Dept	00092
+A	Illinois Department of Corrections
+F	Big Muddy River Correctional Center	BMR
+F	Centralia Correctional Center	CEN
+F	Danville Correctional Center	DAN
+F	Decatur Correctional Center	DCT
+F	Dwight Correctional Center	DWI
+F	East Moline Correctional Center	EMO
+F	Fox Valley ATC	FOX
+F	Graham Correctional Center	GRA
+F	Hill Correctional Center	HIL
+F	Illinois River Correctional Center	IRI
+F	Illinois Youth Center - Chicago	CHI
+F	Illinois Youth Center - Harrisburg	HRB
+F	Illinois Youth Center - Pere Marquette	PER
+F	Illinois Youth Center - St. Charles	STC
+F	Illinois Youth Center - Warrenville	WRV
+F	Jacksonville Correctional Center	JAC
+F	Joliet Treatment Center	JTC
+F	Kewanee Life Skills Reentry Center	KCC
+F	Lawrence Correctional Center	LAW
+F	Lincoln Correctional Center	LIN
+F	Logan Correctional Center	LOG
+F	Menard Correctional Center	MEN
+F	Monarch Youth Center	MON
+F	Peoria ATC	PEO
+F	Pinckneyville Correctional Center	PNK
+F	Pontiac Correctional Center	PON
+F	Robinson Correctional Center	ROB
+F	Shawnee Correctional Center	SHA
+F	Sheridan Correctional Center	SHE
+F	Southern Illinois ATC	SIL
+F	Southwestern Illinois Correctional Center	SWC
+F	Stateville Correctional Center	STA
+F	Tamms Correctional Center	TAM
+F	Taylorville Correctional Center	TAY
+F	Vandalia Correctional Center	VAN
+F	Vienna Correctional Center	VIE
+F	Western Illinois Correctional Center	WIL
+F	Westside ATC	WSD
+C	County Jails
+A	Boone County Jail, IL
+F	Boone County Jail, IL	04698
+A	Saline Co Jail, IL
+F	Saline County Jail, IL	00135
+A	Vermilion County Jail, IL
+F	VERMILION COUNTY JAIL	00122
+A	Washington County Jail, IL
+F	Washington County Jail, IL	00125
+S	Indiana
+C	County Jails
+A	Elkhart Co Jail IN
+F	Elkhart Co Jail IN	06230
+A	GRANT COUNTY SHERIFF'S DEPT
+F	GRANT COUNTY SHERIFF'S DEPT	06316
+A	HARRISON CO SHERIFF'S DEPT, IN
+F	HARRISON COUNTY SHERIFF'S DEPT	00647
+A	Kosciusko County Jail, IN
+F	Kosciusko County Jail	08199
+A	Kosciusko County Work Release, IN
+F	KOSCIUSKO COUNTY WORK RELEASE	08915
+A	LaPorte County Jail, IN
+F	LaPorte County Jail, IN	00741
+A	Lawrence County Sheriff's Office, IN
+F	Lawrence County Sheriff's Office, IN	06115
+A	Madison Co Sheriff Dept, IN
+F	Madison Co Sheriff Dept, IN	06378
+A	Madison County Correctional Complex IN
+F	Madison County Correctional Complex	11527
+F	Madison County Work Release	11573
+A	Marion County Juvenile Detention Center, IN
+F	Marion County Juvenile Detention Center	11654
+A	Montgomery Co Sheriffs Dept, IN
+F	Montgomery Co Sheriffs Dept, IN	05883
+S	Iowa
+C	State Facilities
+A	Iowa Department Of Corrections
+F	Anamosa State Penitentiary	ASP
+F	Clarinda Correctional Facility	CCF
+F	Fort Dodge Correctional Facility	FDCF
+F	Iowa Correctional Institute for Women	ICIW
+F	Iowa Medical & Classification Center	IMCF
+F	Iowa State Penitentiary	ISP
+F	Mount Pleasant Correctional Facility	MPCF
+F	Newton Correctional Facility	NCF
+F	North Central Correctional Facility	NCCF
+C	County Jails
+A	STORY COUNTY JAIL, IA
+F	STORY COUNTY JAIL, IA	04625
+S	Kansas
+C	County Jails
+A	McPherson Co Jail, KS
+F	McPherson Co Jail	08365
+A	Ottawa Co Jail, KS
+F	OTTAWA COUNTY JAIL	08703
+S	Kentucky
+C	State Facilities
+A	Kentucky Adult Institutions
+F	Bell County Forestry Camp	0020643
+F	Blackburn Correctional Complex	0020428
+F	Eastern Kentucky Correctional Complex	0020645
+F	Green River Correctional Complex	0020642
+F	KCIW Assessment	0021860
+F	Kentucky Adult Institutions	0021804
+F	Kentucky Correctional Institution for Women	0020462
+F	Kentucky State Penitentiary	0020485
+F	Kentucky State Reformatory	0020460
+F	KY Correctional Psychiatric Center	0021841
+F	Lee Adjustment Center	0020641
+F	Little Sandy Correctional Complex	0020419
+F	Luther Luckett Correctional Complex	0020449
+F	Northpoint Training Center	0020464
+F	Roederer Assessment Center	0034813
+F	Roederer Correctional Complex	0020456
+F	Ross-Cash Center	2035920
+F	Southeast State Correctional Complex	3058145
+F	Western Kentucky Correctional Complex	0020488
+C	County Jails
+A	Clay County Detention Ctr, KY
+F	Clay County Detention Center, KY	04606
+A	Hart County Jail, KY
+F	HART COUNTY JAIL	03882
+A	Henderson County Detention Center, KY
+F	Henderson County Detention Center	HENDERSONKY
+A	Meade County Jail, KY
+F	Meade County Jail	00638
+A	Scott Co Det Ctr, KY
+F	Scott Co Det Ctr, KY	00565
+A	Warren County Regional Jail, KY
+F	Warren County Regional Jail, KY	WARRENKY

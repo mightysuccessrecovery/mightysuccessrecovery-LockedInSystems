@@ -1,0 +1,330 @@
+S	Louisiana
+C	State Facilities
+A	Louisiana Department of Corrections
+F	Allen Correctional Center	ALC
+F	BB "Sixty" Rayburn Correctional Center	RCC
+F	C. Paul Phelps Correctional Center	PCC
+F	David Wade Correctional Center	WCC
+F	Dixon Correctional Institute	DCI
+F	Elayn Hunt Correctional Center	HCC
+F	Forcht-Wade Correctional Center	FWC
+F	J. Levy Dabadie Correctional Center	DCC
+F	Louisiana Correctional Institute for Women	LCW
+F	Louisiana State Penitentiary	LSP
+F	Raymond Laborde Correctional Center	RLC
+S	Maine
+C	State Facilities
+A	Penobscot County Jail
+F	Penobscot County Jail	29021
+C	County Jails
+A	Aroostook County Jail, ME
+F	Aroostook County Jail, ME	07067
+A	Oxford County Jail, ME
+F	Oxford County Jail, ME	29026
+A	Waldo County Jail, ME
+F	Waldo County Jail, ME	29031
+A	Washington County Jail, ME
+F	WASHINGTON COUNTY JAIL, ME	29020
+A	York County Jail, ME
+F	York County Jail, ME	29032
+S	Maryland
+C	State Facilities
+A	QUEEN ANNES COUNTY DETENTION CENTER, MD
+F	QUEEN ANNE'S COUNTY DETENTION CENTER	30013
+C	County Jails
+A	PRINCE GEORGES COUNTY DOC
+F	Prince Georges County DOC	00369
+A	Washington County Detention Center, MD
+F	Washington County Detention Center, MD	WAS
+A	Worcester County Detention Center
+F	WORCESTER COUNTY DETENTION CENTER	30022
+S	Massachusetts
+C	State Facilities
+A	Massachusetts Dept of Corrections
+F	MA DOC- MCI Cedar Junction	28014
+F	MA DOC- Souza Baranowski Correctional	28028
+A	NORFOLK COUNTY CORRECTIONAL CENTER, MA
+F	NORFOLK COUNTY CORRECTIONAL CENTER	04174
+C	County Jails
+A	Berkshire County House of Corrections, MA
+F	Money Kiosk Berkshire	04229
+A	Bristol County, MA
+F	Ash Street Jail & Regional Lock Up	00294
+F	Bristol County Faunce Corner	00296
+A	Essex County Middleton Jail, MA
+F	Essex County Middleton Jail, MA	05699
+F	Essex County Women in Transit	05672
+F	Essex County Women in Transit	05698
+A	Middlesex Co, MA
+F	Middlesex county MA	00676
+A	Plymouth County Correctional Facility, MA
+F	PLYMOUTH COUNTY CORRECTIONAL FACILITY	28003
+A	Suffolk Co Sheriffs Dept, MA
+F	Suffolk County Jail	04639
+S	Michigan
+C	State Facilities
+A	Michigan Department of Corrections
+F	Alger Maximum Correctional Facility	LMF
+F	Baraga Maximum Correctional Facility	AMF
+F	Bellamy Creek Correctional Facility	IBC
+F	Carson City Correctional Facility	DRF
+F	Central Michigan Correctional Facility	STF
+F	Charles Egeler Reception and Guidance Center	RGC
+F	Chippewa Correctional Facility	URF
+F	Cooper Street Correctional Facility	JCS
+F	Detroit Re-entry Center	PRF
+F	Duane L Waters Hospital	DWH
+F	Earnest C. Brooks Correctional Facility	LRF
+F	G. Robert Cotton Correctional Facility	JCF
+F	Gus Harrison Correctional Facility	ARF
+F	Ionia Maximum Correctional Facility	ICF
+F	Kinross Correctional Facility	KCF
+F	Lakeland Correctional Facility	LCF
+F	Macomb Correctional Facility	MRF
+F	Marquette Branch Prison	MBP
+F	Muskegon Correctional Facility	MCF
+F	Newberry Correctional Facility	NCF
+F	Oaks Correctional Facility	ECF
+F	Parnall Correctional Facility	SMT
+F	Richard A Handlon Correctional Facility	MTU
+F	Ryan Correctional Facility	RRF
+F	Saginaw Correctional Facility	SRF
+F	St. Louis Correctional Facility	SLF
+F	Thumb Correctional Facility	TCF
+F	Women's Huron Valley Correctional Facility	WHV
+F	Woodland Correctional Center	WCC
+A	St. Joseph Co Jail, MI
+F	St. Joseph County Jail	08467
+C	County Jails
+A	Alger County Sheriff's Dept., MI
+F	ALGER COUNTY SHERIFF'S DEPT	04162
+A	Chippewa County Jail, MI
+F	Chippewa County Jail	31031
+A	Clinton Co Jail, MI
+F	Clinton Co Jail, MI	31046
+A	DELTA COUNTY JAIL, MI
+F	DELTA COUNTY CORRECTIONAL FACILITY	07137
+A	Gogebic Co Sheriff's Dept, MI
+F	Gogebic Co Sheriff's Dept, MI	05156
+A	Jackson County Jail
+F	Jackson County Jail	06386
+F	Jackson County-Chanter Rd Facility	06401
+A	Macomb County Jail
+F	Macomb County Jail	6737
+A	Midland County Jail, MI
+F	Midland County Jail, MI	06677
+A	Muskegon Co Jail, MI
+F	Muskegon Co Jail, MI	31075
+A	Sanilac County Jail
+F	Sanilac County Jail	31010
+S	Minnesota
+C	State Facilities
+A	Minnesota Department of Corrections
+F	MCF - Faribault	09
+F	MCF - Lino Lakes	05
+F	MCF - Oak Park Heights	02
+F	MCF - Red Wing	08
+F	MCF - Rush City	80
+F	MCF - Shakopee	04
+F	MCF - St. Cloud	03
+F	MCF - Stillwater	01
+F	MCF - Togo	53
+F	MCF - Willow River/Moose Lake	06
+A	Minnesota Department of Human Services
+F	MSOP - Moose Lake	ML
+F	MSOP - St. Peter	SP
+A	Northwest Regional Corr Ctr, MN
+F	NORTHWEST REGIONAL CORRECTIONS CENT	06718
+C	County Jails
+A	Dakota Co Sheriffs Dept, MN
+F	Dakota Co Sheriffs Dept, MN	08768
+A	Mille Lacs County Jail, MN
+F	Mille Lacs County Jail	08853
+A	WASHINGTON COUNTY JAIL, MN.
+F	WASHINGTON COUNTY JAIL	04124
+S	Mississippi
+C	County Jails
+A	Chickasaw County Jail, MS
+F	CHICKASAW COUNTY JAIL	CHICKASAW COUNTY JAIL
+F	CHICKASAW COUNTY REGIONAL CORRECTIONAL FACILITY	CHICKASAW COUNTY REGIONAL CORRECTIONAL FACILITY
+A	Issaquena County Correctional, MS
+F	Issaquena County Correctional	07113
+F	Issaquena County Correctional State	11610
+A	Oktibbeha County Jail
+F	Oktibbeha County Jail	05816
+F	Oktibbeha County-Trustee	06714
+C	Parole and Probation Locations
+A	Mississippi DOC Community Corrections
+F	Central Office	MSDOC Community Corrections
+S	Missouri
+C	State Facilities
+A	Missouri Department of Corrections
+F	Algoa Correctional Center	ACC
+F	Boonville Correctional Center	BCC
+F	Chillicothe Correctional Center	CCC
+F	Cremer Therapeutic Community Center	CTCC
+F	Crossroads Correctional Center	CRCC
+F	Eastern Reception, Diagnostic and Correctional Center	ERDCC
+F	Farmington Correctional Center	FCC
+F	Fulton Reception and Diagnostic Center	FRDC
+F	Jefferson City Correctional Center	JCCC
+F	Kansas City Reentry Center	KCRC
+F	Maryville Treatment Center	MTC
+F	Missouri Eastern Correctional Center	MECC
+F	Missouri Headquarters	MODOCHQ Under JPay test
+F	Moberly Correctional Center	MCC
+F	Northeast Correctional Center	NECC
+F	Ozark Correctional Center	OCC
+F	Potosi Correctional Center	PCC
+F	South Central Correctional Center	SCCC
+F	Southeast Correctional Center	SECC
+F	St. Louis Community Release Center	SLCRC
+F	Tipton Correctional Center	TCC
+F	Western Missouri Correctional Center	WMCC
+F	Western Reception, Diagnostic and Correctional Center	WRDCC
+F	Women's Eastern Reception, Diagnostic and Correctional Center	WERDCC
+C	County Jails
+A	CAPE GIRARDEAU COUNTY JAIL, MO
+F	CAPE GIRARDEAU COUNTY JAIL	08305
+A	Pettis Co Jail, MO
+F	Pettis Co Jail, MO	05272
+A	St Louis Co Jail, MO
+F	St Louis Co Jail, MO	06801
+S	Montana
+C	County Jails
+A	Lincoln County Sheriffs Dept, MT
+F	Lincoln County Sheriffs Dept, MT	00564
+S	Nebraska
+C	County Jails
+A	Sarpy Co, NE
+F	Sarpy Co Jail	08399
+F	Sarpy Co Juvy Justice Ctr	11540
+A	Saunders County Jail
+F	Saunders County Jail, NE	06392
+S	Nevada
+C	County Jails
+A	Churchill County Sheriff's Office NV
+F	Churchill County Sheriff's Office NV	06348
+A	Henderson Detention Center, NV
+F	Henderson Detention Center, NV	04095
+A	Humboldt County, NV
+F	Humboldt County, NV	00841
+S	New Hampshire
+C	County Jails
+A	Belknap County HOC, NH
+F	Belknap County HOC	37004
+A	Rockingham County DOC, NH
+F	Rockingham DOC, NH	06851
+S	New Jersey
+C	State Facilities
+A	New Jersey Department of Corrections
+F	Adult Diagnostic and Treatment Center	ADTC
+F	Albert C. Wagner Youth Correctional Facility	WYCF
+F	Bayside State Prison	BSP
+F	Central Reception and Assignment Facility	CRAF
+F	East Jersey State Prison	EJSP
+F	Edna Mahan Correctional Facility for Women	EMCF
+F	Garden State Youth Correctional Facility	GYCF
+F	Mid State Correctional Facility	MSCF
+F	New Jersey State Prison	NJSP
+F	Northern State Prison	NSP
+F	South Woods State Prison	SWSP
+F	Southern State Correctional Facility - NJ	SSCF
+F	William H. Fauver Youth Correctional Facility	MYCF
+S	New Mexico
+C	State Facilities
+A	LUNA COUNTY DETENTION FACILITY, NM
+F	LUNA COUNTY DETENTION FACILITY	77122
+C	County Jails
+A	Eddy County Adult Detention NM
+F	Eddy County Adult Detention, NM	39028
+F	Eddy County Bldg 2 NM	39029
+A	HIDALGO COUNTY DETENTION CENTER, NM
+F	HIDALGO COUNTY DETENTION CENTER, NM	05515
+A	Roosevelt County Adult Detention Center, NM
+F	Roosevelt County Adult Detention Center, NM	39031
+A	San Miguel County Detention Center, NM
+F	San Miguel County Detention Center	05095
+S	New York
+C	State Facilities
+A	NYS DOCCS Inmate Services
+F	Adirondack Correctional Facility	23
+F	Albion Correctional Facility	09
+F	Altona Correctional Facility	54
+F	Attica Correctional Facility	00
+F	Auburn Correctional Facility	01
+F	Bare Hill Correctional Facility	56
+F	Bedford Hills Correctional Facility	12
+F	Cape Vincent Correctional Facility	58
+F	Cayuga Correctional Facility	55
+F	Clinton Correctional Facility	02
+F	Collins Correctional Facility	47
+F	Coxsackie Correctional Facility	13
+F	Eastern New York Correctional Facility	10
+F	Edgecombe Residential Treatment Facility	32
+F	Elmira Correctional Facility	11
+F	Fishkill Correctional Facility	05
+F	Five Points Correctional Facility	37
+F	Franklin Correctional Facility	53
+F	Gouverneur Correctional Facility	81
+F	Gowanda Correctional Facility	45
+F	Great Meadow Correctional Facility	04
+F	Green Haven Correctional Facility	08
+F	Greene Correctional Facility	67
+F	Groveland Correctional Facility	46
+F	Hale Creek Alcohol Substance Abuse Comprehensive Treatment Center	85
+F	Hudson Correctional Facility	27
+F	Lakeview Shock Incarceration Correctional Facility	60
+F	Marcy Correctional Facility	49
+F	Mid-State Correctional Facility	48
+F	Mohawk Correctional Facility	39
+F	Orleans Correctional Facility	64
+F	Otisville Correctional Facility	29
+F	Queensboro Correctional Facility	17
+F	Riverview Correctional Facility	57
+F	Shawangunk Correctional Facility	68
+F	Sing Sing Correctional Facility	07
+F	Sullivan Correctional Facility	69
+F	Taconic Correctional Facility	25
+F	Ulster Correctional Facility	61
+F	Upstate Correctional Facility	84
+F	Wallkill Correctional Facility	06
+F	Washington Correctional Facility	65
+F	Watertown Correctional Facility	03
+F	Wende Correctional Facility	43
+F	Woodbourne Correctional Facility	14
+F	Wyoming Correctional Facility	66
+C	County Jails
+A	Cattaraugus County Jail, NY
+F	Cattaraugus County Jail	41093
+A	FRANKLIN COUNTY SHERIFF DEPT, NY
+F	Franklin County Sheriff's Dept, NY	07779
+A	Fulton County Correctional Facility, NY
+F	Fulton County Correctional Facility	41039
+A	HILLBROOK JUVENILE DETENTION CENTER
+F	Hillbrook Juvenile Detention Center	11515
+A	Jefferson County Correctional Facility, NY
+F	Jefferson County Correctional Facility, NY	07597
+A	New York City Department of Correction
+F	Anna M. Kross Center	AMKC
+F	Brooklyn Detention Complex	BKDC
+F	Eric M. Taylor Center	EMTC
+F	George Motchan Detention Center	GMDC
+F	George R. Vierno Center	GRVC
+F	James A. Thomas Center	JATC
+F	Manhattan Detention Complex	MDC
+F	North Infirmary Command	NIC
+F	Otis Bantum Correctional Center	OBCC
+F	Outpatient Therapeutic Unit at Bellevue	OTxB
+F	Queens Detention Complex	QDC
+F	Robert N. Davoren Complex	RNDC
+F	Rose Enhanced Security Housing	RESH
+F	Rose M. Singer Center	RMSC
+F	West Facility	WF
+A	Suffolk County, NY
+F	Suffolk County Riverhead, NY	06704
+F	Suffolk County Yaphank, NY	06705
+A	SULLIVAN COUNTY JAIL
+F	SULLIVAN COUNTY JAIL	41049
+A	Tompkins County Jail, NY
+F	Tompkins County Jail	07876

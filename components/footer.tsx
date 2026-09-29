@@ -24,6 +24,9 @@ export function Footer() {
           <Link href="/services" className="block hover:text-[#0F2A44]">
             Services
           </Link>
+          <Link href="/facility-lookup" className="block hover:text-[#0F2A44]">
+            Facility Lookup
+          </Link>
           <Link href="/partnerships" className="block hover:text-[#0F2A44]">
             Partnerships
           </Link>

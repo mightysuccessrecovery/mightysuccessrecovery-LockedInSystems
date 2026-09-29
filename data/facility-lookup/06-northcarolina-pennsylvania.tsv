@@ -1,0 +1,251 @@
+S	North Carolina
+C	State Facilities
+A	CLEVELAND COUNTY DETENTION FACILITY, NC
+F	CLEVELAND COUNTY DETENTION FACILITY	04990
+F	CLEVELAND COUNTY JAIL ANNEX	04991
+A	NCDPS- Inmate Trust Fund Deposit
+F	Alexander CI	4870
+F	Anson CI	4575
+F	Avery/Mitchell CI	4680
+F	Bertie CI	4880
+F	Brown Creek CI	3510
+F	Burke CRV	3725
+F	Caldwell CC	4625
+F	Carteret CC	4110
+F	Caswell CC	4415
+F	Catawba CC	4555
+F	Central Prison	3100
+F	Columbus CI	4355
+F	Craggy CC	4630
+F	Craven CI	3085
+F	Dan River PWF	3080
+F	Davidson CC	4420
+F	Eastern CI	3400
+F	Foothills CI	3720
+F	Forsyth CC	4430
+F	Fountain CCW	3020
+F	Franklin CC	4215
+F	Gaston CC	4515
+F	Granville CI	3980
+F	Greene CI	4140
+F	Harnett CI	3805
+F	Hoke CI	4320
+F	Hyde CI	4180
+F	Johnston CI	4230
+F	Lanesboro CI	4865
+F	Lincoln CC	4525
+F	Lumberton CI	4365
+F	Marion CI	3730
+F	Maury CI	4875
+F	Mountain View CI	4855
+F	Nash CI	3710
+F	NC Correction Institution for Women	3010
+F	Neuse CI	3060
+F	New Hanover CC	4170
+F	North Piedmont CCW	3090
+F	North Piedmont CRV	3095
+F	Odom CI	3310
+F	Orange CC	4240
+F	Pamlico CI	4850
+F	Pasquotank CI	3740
+F	Pender CI	4150
+F	Piedmont CI	3500
+F	Randolph CC	4445
+F	Richmond CI	3930
+F	Roanoke River CI	3305
+F	Rutherford CC	4655
+F	Sampson CI	4345
+F	Sanford CC	4360
+F	Scotland CI	4860
+F	Southern CI	3600
+F	Tabor CI	4885
+F	Tyrrell PWF	3070
+F	Wake CC	4265
+F	Warren CI	4290
+F	Western CCW	4635
+F	Western YI	3905
+F	Wilkes CC	4665
+A	Stanly County Jail, NC
+F	STANLY COUNTY JAIL	07647
+C	County Jails
+A	Brunswick Co Jail, NC
+F	Brunswick Co Jail	05647
+A	Franklin County Detention Center, NC
+F	Franklin County Detention Center, NC	00692
+A	Johnston Co Det Ctr, NC
+F	Johnston Co Det Ctr, NC	11530
+F	Johnston Co Jail	00351
+A	ONSLOW COUNTY JAIL, NC
+F	ONSLOW COUNTY JAIL, NC	01832
+A	Pamlico Co Det Fac, NC
+F	Pamlico Co Det Fac	06947
+A	Rutherford County Detention Center, NC
+F	Rutherford County Detention Center	04531
+S	North Dakota
+C	State Facilities
+A	Dakota Womens Correctional Rehab Center Money Transfer Only
+F	DWCRC Money Only	DWCRC
+A	Heart of America Correctional & Treatment Cntr, ND
+F	Heart of America Correctional, ND	05896
+F	HOA DOC	11704
+A	North Dakota Department of Corrections
+F	Bismarck Transition Center	BTC
+F	Dakota Womens Corr and Rehab Center	DWCRC
+F	Heart of America Correctional and Treatment Center	HOACT
+F	Heart River Correctional Center	HRCC
+F	James River Correctional Center - ND	JRCC
+F	Missouri River Correctional Center	MRCC
+F	North Dakota State Penitentiary	NDSP
+F	Youth Correction Center	YCC
+A	North Dakota Parole and Probation
+F	North Dakota Parole and Probation	NDPP
+C	County Jails
+A	Cass County Jail
+F	Cass County Jail	Cass County Jail
+S	Ohio
+C	State Facilities
+A	Western Ohio Regional Treatment & Rehabilitation Center
+F	Western Ohio Treatment Center	08485
+C	County Jails
+A	Butler County Adult Probation, OH
+F	Butler County Adult Probation	824MLK
+A	Clermont Detention Center
+F	Clermont Detention Center	CLT
+A	Clinton County Adult Detention, OH
+F	Clinton County Adult Detention, OH	04278
+A	Cuyahoga County Justice Center, OH
+F	Cuyahoga County Juvenile Detention	02407
+A	East Ohio Correctional Center, OH
+F	East Ohio Correctional Center Annex, OH	04171
+F	East Ohio Correctional Center, OH	08312
+A	Hancock County Sheriff’s Office, OH
+F	Hancock County Sheriff's Office	HANCOCKOH
+A	Tri-County Regional Jail
+F	Tri-County Regional Jail	Tri-County Regional Jail
+S	Oklahoma
+C	State Facilities
+A	Oklahoma Department of Corrections
+F	Allen Gamble Correctional Center	AGCC
+F	Bill Johnson Correctional Center	BJC
+F	Chief James Smith Correctional Center	JSCC
+F	Clara Waters Community Corrections Center and Oklahoma County Correction	CWCC
+F	Dick Conner Correctional Center	DCC
+F	Dr. Eddie Warrior Community Correction Center	EWCC
+F	Dr. Eddie Warrior Correctional Center	EWC
+F	ENID COMMUNITY CORRECTIONS CENTER	ECC
+F	GREAT PLAINS CORRECTIONAL CENTER	GPCC
+F	Howard McLeod Correctional Center	HMC
+F	Jackie Brannon Correctional Center	JBC
+F	James Crabtree Correctional Center	JCC
+F	Jess Dunn Correctional Center	JDC
+F	Jim E. Hamilton Correctional Center	JEH
+F	John Lilley Correctional Center	JLC
+F	Joseph Harp Correctional Center	JHC
+F	Kate Barnard and Female Community Corrections	OCS
+F	Lawton Community Corrections Center	LAW
+F	Lexington Assessment and Reception Center	LARC
+F	Lexington Correctional Center	LCC
+F	Mabel Bassett Assessment and Reception Center	MBARC
+F	Mabel Bassett Correctional Center	MBC
+F	Mack Alford Correctional Center	MAC
+F	North Fork Correctional Center	NFC
+F	Northeast Oklahoma Correctional Center	NOCCC
+F	Northwest District Community Corrections	NWD
+F	Oklahoma State Penitentiary	OSP
+F	Oklahoma State Reformatory	OSR
+F	Southeast District Community Corrections	SED
+F	Southwest District Community Corrections	SWD
+F	Union City Community Corrections	UNC
+F	William Key Correctional Center	WKC
+C	County Jails
+A	Oklahoma County Jail
+F	Oklahoma County Jail	OKC
+S	Oregon
+C	State Facilities
+A	Oregon Department of Corrections
+F	Coffee Creek Correctional Facility	CCCF
+F	Columbia River Correctional Institution	CRCI
+F	Deer Ridge Correctional Institution	DRCI
+F	Eastern Oregon Correctional Institution	EOCI
+F	Mill Creek Correctional Facility	MCCF
+F	Oregon State Correctional Institution	OSCI
+F	Oregon State Penitentiary	OSP
+F	Powder River Correctional Facility	PRCF
+F	Santiam Correctional Institution	SCI
+F	Shutter Creek Correctional Institution	SCCI
+F	Snake River Correctional Institution	SRCI
+F	South Fork Forest Camp	SFFC
+F	Two Rivers Correctional Institution	TRCI
+F	Warner Creek Correctional Facility	WCCF
+C	County Jails
+A	Washington County, OR
+F	Washington CCC, OR	09034
+F	Washington County, OR	06746
+S	Pennsylvania
+C	State Facilities
+A	Pennsylvania Department of Corrections
+F	SCI Albion	ALB
+F	SCI Benner	BEN
+F	SCI Cambridge Springs	CBS
+F	SCI Camp Hill	CAM
+F	SCI Chester	CHS
+F	SCI Coal Township	COA
+F	SCI Cresson	CRE
+F	SCI Dallas	DAL
+F	SCI Fayette	FYT
+F	SCI Forest	FRS
+F	SCI Frackville	FRA
+F	SCI Graterford	GRA
+F	SCI Greene	GRN
+F	SCI Houtzdale	HOU
+F	SCI Huntingdon	HUN
+F	SCI Laurel Highlands	LAU
+F	SCI Mahanoy	MAH
+F	SCI Muncy	MUN
+F	SCI Phoenix	PHX
+F	SCI Pine Grove	PNG
+F	SCI Pittsburgh	PIT
+F	SCI Retreat	RET
+F	SCI Rockview	ROC
+F	SCI Smithfield	SMI
+F	SCI Somerset	SMR
+F	SCI Waymart	WAM
+F	SRCF Mercer	MER
+C	County Jails
+A	Adams County Clerk of Courts, PA
+F	Adams County Clerk Of Courts	09508
+A	Monroe Co Corr Fac, PA
+F	Monroe County Correctional Facility	07227
+A	MONROE COUNTY CORRECTIONAL FACILITY
+F	Monroe County Correctional Facility	07227
+A	Wyoming County Corr Facility, PA
+F	Wyoming County Correctional, PA	45057
+S	Rhode Island
+C	State Facilities
+A	Rhode Island Department of Correction
+F	Anthony Travisono Intake Center	ISC
+F	Gloria McDonald Womens Facility	WOM
+F	High Security Center	HSC
+F	John J. Moran Medium Security	MED
+F	Maximum Security Facility	MAX
+F	Minimum Security Facility	MIN
+S	South Carolina
+C	County Jails
+A	Anderson City Jail, SC
+F	Anderson City Jail, SC	07854
+A	Charleston Co Det Ctr, SC
+F	Charleston Co Det Ctr	07843
+F	Charleston Co Juvy Det Ctr	11539
+A	Dillon County Jail, SC
+F	Dillon County Jail, SC	01815
+A	Fairfield Co Det Ctr, SC
+F	Fairfield Co Det Ctr	01817
+A	Hampton County Jail, SC
+F	HAMPTON COUNTY JAIL, SC	00544
+A	Lexington County Jail
+F	GEO - BAY CORRECTIONAL FACILITY	05093
+F	Lexington County Jail	01824
+A	Pickens County Detention Facility, SC
+F	Pickens County Detention Facility, SC	05386
+A	SUMTER COUNTY DETENTION CENTER, SC
+F	SUMTER COUNTY DETENTION CENTER	05829
