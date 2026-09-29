@@ -83,20 +83,6 @@ export function UsStateMap({
             )
           })}
       </svg>
-      <figcaption className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
-        <span className="inline-flex items-center gap-2">
-          <span className="h-3 w-3 rounded-sm bg-[#8AA4BF]" aria-hidden="true" />
-          Facilities listed — click a state
-        </span>
-        <span className="inline-flex items-center gap-2">
-          <span className="h-3 w-3 rounded-sm bg-[#0F2A44]" aria-hidden="true" />
-          Selected state
-        </span>
-        <span className="inline-flex items-center gap-2">
-          <span className="h-3 w-3 rounded-sm bg-[#E5E7EB]" aria-hidden="true" />
-          No facilities listed
-        </span>
-      </figcaption>
     </figure>
   )
 }

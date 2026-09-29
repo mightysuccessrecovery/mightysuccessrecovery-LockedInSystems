@@ -78,33 +78,6 @@ export function FacilityLookup() {
           selectedIds={searching ? new Set() : openIds}
           onSelect={selectState}
         />
-        <p className="mt-6 text-sm text-muted-foreground">Select Below</p>
-        <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {FACILITY_LOOKUP.map((state) => {
-            const selected = openIds.has(state.id) && !searching
-            return (
-              <button
-                key={state.id}
-                type="button"
-                onClick={() => selectState(state)}
-                aria-pressed={selected}
-                className={`min-h-11 rounded border px-3 py-2 text-left text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44] ${
-                  selected
-                    ? "border-[#0F2A44] bg-[#0F2A44] text-white"
-                    : "border-border bg-white text-[#0F2A44] hover:bg-[#0F2A44]/5"
-                }`}
-              >
-                {state.name}
-              </button>
-            )
-          })}
-        </div>
-        <a
-          href="#facility-list"
-          className="mt-4 inline-flex text-sm font-medium text-[#0F2A44] underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
-        >
-          Skip Navigation Links.
-        </a>
       </section>
 
       <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_340px]">
