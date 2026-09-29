@@ -46,7 +46,7 @@ export function FacilityLookup() {
 
   const selectState = (state: FacilityNode) => {
     setQuery("")
-    setExpanded(new Set([state.id]))
+    setExpanded(collectIds([state]))
     window.setTimeout(() => {
       document.getElementById(`branch-${state.id}`)?.scrollIntoView({ block: "start" })
     }, 0)
