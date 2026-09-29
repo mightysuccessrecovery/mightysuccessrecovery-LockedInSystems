@@ -17,7 +17,7 @@ const supportLinks = [
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "Platform Overview" },
+  { href: "/about", label: "Mission & Purpose" },
   { href: "/services", label: "Services" },
   { href: "/partnerships", label: "Partnerships" },
   { href: "/fees", label: "Fees" },

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { IntakeActions } from "@/components/intake-actions"
 
 export default function ServicesPage() {
   return (
@@ -11,6 +12,17 @@ export default function ServicesPage() {
             correctional facilities and authorized users.
           </p>
         </div>
+
+        <section className="mt-10">
+          <h2 className="text-lg font-semibold text-foreground">Get Started</h2>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            Whether you need help finding resources and employment or are seeking supportive recovery
+            housing, complete the appropriate intake form below and our team will review your request.
+          </p>
+          <div className="mt-6">
+            <IntakeActions />
+          </div>
+        </section>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="rounded-lg border border-border bg-secondary p-6">

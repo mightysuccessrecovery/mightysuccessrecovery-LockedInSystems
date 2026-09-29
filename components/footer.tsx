@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { IntakeFormButtons } from "@/components/intake-form-buttons"
 import { SITE_EMAIL, SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site"
 
 export function Footer() {
@@ -18,7 +19,7 @@ export function Footer() {
             Home
           </Link>
           <Link href="/about" className="block hover:text-[#0F2A44]">
-            Platform Overview
+            Mission &amp; Purpose
           </Link>
           <Link href="/services" className="block hover:text-[#0F2A44]">
             Services
@@ -55,6 +56,16 @@ export function Footer() {
                 Terms of Service
               </Link>
             </nav>
+          </div>
+
+          <div>
+            <p className="font-semibold text-[#0F2A44]">Program Intake</p>
+            <p className="mt-2 text-sm text-gray-600">
+              Apply for resources, employment support, or sober living housing.
+            </p>
+            <div className="mt-3">
+              <IntakeFormButtons stacked />
+            </div>
           </div>
 
           <div>

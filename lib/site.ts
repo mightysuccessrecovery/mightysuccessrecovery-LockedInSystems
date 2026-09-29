@@ -6,3 +6,9 @@ export const SITE_PHONE_DISPLAY = "(216) 510-3312"
 export const SITE_PHONE_TEL = "+12165103312"
 
 export const SITE_EMAIL = "info@mightysuccessrecovery.org"
+
+export const RESOURCE_JOB_INTAKE_URL =
+  "https://form.jotform.com/mightysuccessrecoveryinc/mighty-success-recovery-help"
+
+export const RECOVERY_HOUSING_APPLY_URL =
+  "https://form.jotform.com/mightysuccessrecoveryinc/mighty-success-recovery-gemstone"

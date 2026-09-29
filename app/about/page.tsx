@@ -1,23 +1,52 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+import { IntakeActions } from "@/components/intake-actions"
+
+export const metadata: Metadata = {
+  title: "Mission & Purpose — LockedIn Systems",
+  description:
+    "Mighty Success Recovery Inc. helps individuals and families build stability, independence, and a stronger future through practical support, recovery resources, housing, and community services.",
+}
 
 export default function AboutPage() {
   return (
     <div className="min-h-[calc(100vh-8rem)] bg-background py-10 md:py-14">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground sm:text-3xl">
-            Mighty Success Recovery Inc. – Mission &amp; Purpose
-          </h1>
+          <h1 className="text-2xl font-bold text-foreground sm:text-3xl">Mission &amp; Purpose</h1>
           <p className="mt-2 text-sm text-muted-foreground">501(c)(3) Public Charity</p>
+          <p className="mt-6 text-lg font-semibold text-[#0F2A44]">
+            Building Stability. Supporting Recovery. Creating Opportunity.
+          </p>
+          <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-muted-foreground">
+            Mighty Success Recovery Inc. helps individuals and families build stability, independence,
+            and a stronger future by connecting people with practical support, recovery resources,
+            housing opportunities, life-skills development, employment resources, and community
+            services.
+          </p>
         </div>
 
         <div className="mt-10 space-y-10 text-foreground">
           <section>
-            <h2 className="text-lg font-semibold">Mission Overview</h2>
+            <h2 className="text-lg font-semibold">Sober Living &amp; Recovery Housing</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">
-              Mighty Success Recovery Inc. is a nonprofit organization committed to structured,
-              recovery-informed support and community stabilization efforts. Programs are designed to
-              strengthen long-term stability, accountability, and reintegration outcomes.
+              Mighty Success Recovery Inc. provides sober living and recovery housing designed to give
+              individuals a safe, structured, and supportive place to build stability and continue
+              working toward recovery and independence.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              Our recovery housing focuses on accountability, community, life skills, employment
+              readiness, recovery support, and connection to community resources. Residents are expected
+              to participate in applicable programming and follow house and community standards.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              Clinical therapy and licensed behavioral health treatment are provided by outside qualified
+              providers when needed. Mighty Success Recovery Inc. focuses on housing, recovery support,
+              practical resources, life skills, and community stability.
+            </p>
+            <p className="mt-4 rounded-lg border border-border bg-secondary p-5 font-medium leading-relaxed text-foreground">
+              Our goal is not simply to provide a place to sleep. Our goal is to help individuals build
+              the stability, skills, support, and confidence they need to move forward.
             </p>
           </section>
 
@@ -43,9 +72,12 @@ export default function AboutPage() {
             <h2 className="text-lg font-semibold">Accessibility &amp; inclusive access</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">
               LockedIn Systems is committed to supporting users who are{" "}
-              <span className="text-foreground font-medium">blind or have low vision</span>, users with{" "}
-              <span className="text-foreground font-medium">intellectual or developmental disabilities</span>, and users with{" "}
-              <span className="text-foreground font-medium">speech impairments</span>. We work to present
+              <span className="font-medium text-foreground">blind or have low vision</span>, users with{" "}
+              <span className="font-medium text-foreground">
+                intellectual or developmental disabilities
+              </span>
+              , and users with{" "}
+              <span className="font-medium text-foreground">speech impairments</span>. We work to present
               clear, structured information and to assist through our support channels when additional
               help is needed to complete a transaction or understand available services.
             </p>
@@ -133,6 +165,10 @@ export default function AboutPage() {
               </Link>{" "}
               page.
             </p>
+          </section>
+
+          <section>
+            <IntakeActions />
           </section>
         </div>
       </div>
