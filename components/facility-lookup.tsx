@@ -72,10 +72,7 @@ export function FacilityLookup() {
         </p>
       </div>
 
-      <section className="mt-10" aria-labelledby="usa-map-heading">
-        <h2 id="usa-map-heading" className="text-lg font-semibold text-[#0F2A44]">
-          Map of USA
-        </h2>
+      <section className="mt-6" aria-label="Select a state">
         <UsStateMap
           states={FACILITY_LOOKUP}
           selectedIds={searching ? new Set() : openIds}
