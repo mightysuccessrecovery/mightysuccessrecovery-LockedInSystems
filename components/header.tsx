@@ -5,8 +5,6 @@ import Image from "next/image"
 import { useState } from "react"
 import { Menu, X, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site"
-
 const supportLinks = [
   { href: "/support", label: "Support" },
   {
@@ -72,13 +70,6 @@ export function Header() {
                   </p>
                 </div>
               </Link>
-              <a
-                href={`tel:${SITE_PHONE_TEL}`}
-                aria-label={`Call ${SITE_PHONE_DISPLAY}`}
-                className="-my-2 inline-flex min-h-[44px] shrink-0 items-center whitespace-nowrap rounded-md px-1 py-2 text-xs font-semibold text-[#0F2A44] underline decoration-[#0F2A44]/60 underline-offset-2 hover:bg-[#0F2A44]/5 hover:text-[#0F2A44] hover:decoration-[#0F2A44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44] active:bg-[#0F2A44]/10 sm:text-sm sm:min-h-[40px]"
-              >
-                {SITE_PHONE_DISPLAY}
-              </a>
             </div>
 
             {/* Desktop Navigation */}
