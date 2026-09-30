@@ -19,7 +19,7 @@ export default function Home() {
             Institutional &amp; Reentry Solutions
           </span>
           <h1 className="mt-6 text-4xl font-bold text-[#0F2A44] md:text-5xl">
-            LockedIn Systems: Inmate Care &amp; Facility Solutions
+            LockedIn Systems: Correctional Technology &amp; Facility Solutions
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
             Delivering secure inmate services, transparent family connection, and structured sober
