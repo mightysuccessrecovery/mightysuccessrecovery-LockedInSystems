@@ -19,7 +19,7 @@ export default function Home() {
             Institutional &amp; Reentry Solutions
           </span>
           <h1 className="mt-6 text-4xl font-bold text-[#0F2A44] md:text-5xl">
-            LockedIn Systems: Correctional Technology &amp; Facility Solutions
+            LockedIn Systems: Technology &amp; Facility Solutions
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
             Delivering secure inmate services, transparent family connection, and structured sober
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="rounded-lg border bg-white p-6">
           <h3 className="font-semibold text-[#0F2A44]">Operational Efficiency</h3>
           <p className="mt-3 text-sm text-gray-600">
-            Streamlined payment workflows reduce administrative burden on correctional staff and
+            Streamlined payment workflows reduce administrative burden on facility staff and
             ensure transaction consistency.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
             Facility Support &amp; System Integration
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-gray-600">
-            Designed for correctional facilities seeking structured commissary and inmate fund
+            Designed for facilities seeking structured commissary and inmate fund
             workflows without disrupting existing operational systems.
           </p>
           <ul className="mx-auto mt-10 max-w-4xl space-y-4 text-sm text-gray-700">
@@ -107,7 +107,7 @@ export default function Home() {
           <p className="mt-4 leading-relaxed text-gray-600">
             <strong className="text-[#0F2A44]">Mighty Success Recovery Inc.</strong> operates as a
             nonprofit organization focused on structured fund access and reentry systems within
-            correctional environments.
+            institutional environments.
           </p>
           <p className="mt-4 leading-relaxed text-gray-600">
             <strong className="text-[#0F2A44]">DBA LockedIn Systems</strong> serves as the operational

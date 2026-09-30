@@ -16,20 +16,20 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "LockedIn Systems | Correctional Technology & Facility Solutions",
+  title: "LockedIn Systems | Technology & Facility Solutions",
   description:
     "LockedIn Systems, a DBA of Mighty Success Recovery Inc., delivers secure inmate services, transparent family connection, and structured sober living and halfway housing support.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   openGraph: {
     type: "website",
-    title: "LockedIn Systems | Correctional Technology & Facility Solutions",
+    title: "LockedIn Systems | Technology & Facility Solutions",
     description:
       "LockedIn Systems, a DBA of Mighty Success Recovery Inc., delivers secure inmate services, transparent family connection, and structured sober living and halfway housing support.",
     url: "/",
   },
   twitter: {
     card: "summary",
-    title: "LockedIn Systems | Correctional Technology & Facility Solutions",
+    title: "LockedIn Systems | Technology & Facility Solutions",
     description:
       "LockedIn Systems, a DBA of Mighty Success Recovery Inc., delivers secure inmate services, transparent family connection, and structured sober living and halfway housing support.",
   },
