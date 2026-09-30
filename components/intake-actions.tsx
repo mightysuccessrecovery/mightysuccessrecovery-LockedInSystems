@@ -15,8 +15,8 @@ const actions = [
   },
 ]
 
-const buttonClassName =
-  "inline-flex min-h-12 w-full items-center justify-center rounded px-6 py-4 text-center text-base font-semibold leading-snug text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
+const linkClassName =
+  "inline-flex min-h-11 items-center text-base font-semibold leading-snug text-[#0F2A44] underline underline-offset-4 hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
 
 export function IntakeActions() {
   return (
@@ -30,12 +30,11 @@ export function IntakeActions() {
             href={action.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={buttonClassName}
-            style={{ background: "#0F2A44" }}
+            className={linkClassName}
           >
             {action.label}
           </a>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{action.description}</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{action.description}</p>
         </div>
       ))}
     </div>

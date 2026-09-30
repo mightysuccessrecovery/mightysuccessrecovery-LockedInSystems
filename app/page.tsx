@@ -1,5 +1,8 @@
 import { IntakeFormButtons } from "@/components/intake-form-buttons"
 
+const textLinkClassName =
+  "inline-flex min-h-11 items-center font-semibold text-[#0F2A44] underline underline-offset-4 hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2A44]"
+
 export default function Home() {
   return (
     <main>
@@ -23,23 +26,15 @@ export default function Home() {
             living and halfway housing support.
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="/procurement"
-              className="rounded px-6 py-3 font-semibold text-white"
-              style={{ background: "#0F2A44" }}
-            >
+          <div className="mt-10 flex flex-col items-center justify-center gap-x-8 gap-y-1 sm:flex-row sm:flex-wrap">
+            <a href="/procurement" className={textLinkClassName}>
               Request Demonstration
             </a>
-            <a
-              href="/contact"
-              className="rounded border px-6 py-3 font-semibold"
-              style={{ borderColor: "#0F2A44", color: "#0F2A44" }}
-            >
+            <a href="/contact" className={textLinkClassName}>
               Contact for Partnership
             </a>
           </div>
-          <div className="mt-6">
+          <div className="mt-2">
             <IntakeFormButtons />
           </div>
           <p className="mt-6 text-sm text-gray-500">
@@ -168,11 +163,7 @@ export default function Home() {
         <p className="mt-3 text-gray-600">
           Request evaluation materials, system demonstrations, or procurement documentation.
         </p>
-        <a
-          href="/contact"
-          className="mt-8 inline-block rounded px-8 py-3 font-semibold text-white"
-          style={{ background: "#0F2A44" }}
-        >
+        <a href="/contact" className={`mt-6 ${textLinkClassName}`}>
           Submit Partnership Request
         </a>
       </section>
